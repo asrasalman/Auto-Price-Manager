@@ -1,0 +1,6 @@
+D:\Sites\EbayShipping\EBayDAL\bin\Release\EBayDAL.dll.config
+D:\Sites\EbayShipping\EBayDAL\bin\Release\EBayDAL.dll
+D:\Sites\EbayShipping\EBayDAL\bin\Release\EBayDAL.pdb
+D:\Sites\EbayShipping\EBayDAL\obj\Release\ResolveAssemblyReference.cache
+D:\Sites\EbayShipping\EBayDAL\obj\Release\EBayDAL.dll
+D:\Sites\EbayShipping\EBayDAL\obj\Release\EBayDAL.pdb

@@ -1,0 +1,33 @@
+D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe.config
+D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe
+D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.pdb
+D:\Sites\EbayShipping\PSEmailService\bin\Debug\EBayDAL.dll
+D:\Sites\EbayShipping\PSEmailService\bin\Debug\EBayDAL.pdb
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ProjectInstaller.resources
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ParcelSolutionsEmailService.resources
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csproj.GenerateResource.Cache
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.exe
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.pdb
+D:\sites\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csprojResolveAssemblyReference.cache
+D:\Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe.config
+D:\Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe
+D:\Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.pdb
+D:\Projects\EbayShipping\PSEmailService\bin\Debug\EBayDAL.dll
+D:\Projects\EbayShipping\PSEmailService\bin\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csprojResolveAssemblyReference.cache
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ProjectInstaller.resources
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ParcelSolutionsEmailService.resources
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csproj.GenerateResource.Cache
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.exe
+D:\Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.pdb
+D:\External Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe.config
+D:\External Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe
+D:\External Projects\EbayShipping\PSEmailService\bin\Debug\PSEmailService.pdb
+D:\External Projects\EbayShipping\PSEmailService\bin\Debug\EBayDAL.dll
+D:\External Projects\EbayShipping\PSEmailService\bin\Debug\EBayDAL.pdb
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csprojResolveAssemblyReference.cache
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ProjectInstaller.resources
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.ParcelSolutionsEmailService.resources
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.csproj.GenerateResource.Cache
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.exe
+D:\External Projects\EbayShipping\PSEmailService\obj\x86\Debug\PSEmailService.pdb

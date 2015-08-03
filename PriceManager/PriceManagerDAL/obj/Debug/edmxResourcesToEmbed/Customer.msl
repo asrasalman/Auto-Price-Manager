@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CustomerDBModelStoreContainer" CdmEntityContainer="CustomerDBEntities">
+    <FunctionImportMapping FunctionImportName="GetRoleAccesses" FunctionName="CustomerDBModel.Store.RoleAccess_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CustomerDBModel.GetRoleAccesses_Result">
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="CustomerDBModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="CustomerDBModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Country_Abbr" ColumnName="Country_Abbr" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CustomerDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Sales_Tax_Code" ColumnName="Sales_Tax_Code" />
+          <ScalarProperty Name="Taxable" ColumnName="Taxable" />
+          <ScalarProperty Name="Sales_Comm" ColumnName="Sales_Comm" />
+          <ScalarProperty Name="Sales_Rep_Code" ColumnName="Sales_Rep_Code" />
+          <ScalarProperty Name="Credit_Limit" ColumnName="Credit_Limit" />
+          <ScalarProperty Name="Term_Code" ColumnName="Term_Code" />
+          <ScalarProperty Name="Shipping_Type_Code" ColumnName="Shipping_Type_Code" />
+          <ScalarProperty Name="Resale_Number" ColumnName="Resale_Number" />
+          <ScalarProperty Name="Price_Level_Code" ColumnName="Price_Level_Code" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Telephone_2" ColumnName="Telephone_2" />
+          <ScalarProperty Name="Telephone_1" ColumnName="Telephone_1" />
+          <ScalarProperty Name="Wedding_Anniversary" ColumnName="Wedding_Anniversary" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Alt_Contact" ColumnName="Alt_Contact" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Middle_Initial" ColumnName="Middle_Initial" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Salute" ColumnName="Salute" />
+          <ScalarProperty Name="Customer_Group_Code" ColumnName="Customer_Group_Code" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Customer_Code" ColumnName="Customer_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER2">
+      <EntityTypeMapping TypeName="CustomerDBModel.CUSTOMER2">
+        <MappingFragment StoreEntitySet="CUSTOMER2">
+          <ScalarProperty Name="TRANSFER_FLAG" ColumnName="TRANSFER_FLAG" />
+          <ScalarProperty Name="TRANSFER_DT" ColumnName="TRANSFER_DT" />
+          <ScalarProperty Name="DATE_ADDED" ColumnName="DATE_ADDED" />
+          <ScalarProperty Name="LAST_MODIFIED" ColumnName="LAST_MODIFIED" />
+          <ScalarProperty Name="CUST_WEB_ID" ColumnName="CUST_WEB_ID" />
+          <ScalarProperty Name="CUST_ANNIV_DATE" ColumnName="CUST_ANNIV_DATE" />
+          <ScalarProperty Name="CUST_BIRTH_DATE" ColumnName="CUST_BIRTH_DATE" />
+          <ScalarProperty Name="CUST_STATUS" ColumnName="CUST_STATUS" />
+          <ScalarProperty Name="SALUTE" ColumnName="SALUTE" />
+          <ScalarProperty Name="FULL_COMPANY" ColumnName="FULL_COMPANY" />
+          <ScalarProperty Name="FORMAT_PH" ColumnName="FORMAT_PH" />
+          <ScalarProperty Name="TAX_CD" ColumnName="TAX_CD" />
+          <ScalarProperty Name="TAXABLE" ColumnName="TAXABLE" />
+          <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+          <ScalarProperty Name="OPENINGBALANCE" ColumnName="OPENINGBALANCE" />
+          <ScalarProperty Name="TRANSFERED" ColumnName="TRANSFERED" />
+          <ScalarProperty Name="EDITSEQ" ColumnName="EDITSEQ" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="LAST_UPDATED" ColumnName="LAST_UPDATED" />
+          <ScalarProperty Name="DATE_CREATED" ColumnName="DATE_CREATED" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="TERMID" ColumnName="TERMID" />
+          <ScalarProperty Name="CREDIT_LIMIT" ColumnName="CREDIT_LIMIT" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="SHIPID" ColumnName="SHIPID" />
+          <ScalarProperty Name="SALES_COMMISSION" ColumnName="SALES_COMMISSION" />
+          <ScalarProperty Name="SALES_REP_ID" ColumnName="SALES_REP_ID" />
+          <ScalarProperty Name="RESALE_NUM" ColumnName="RESALE_NUM" />
+          <ScalarProperty Name="PRICE_LEVEL" ColumnName="PRICE_LEVEL" />
+          <ScalarProperty Name="ALT_CONTACT" ColumnName="ALT_CONTACT" />
+          <ScalarProperty Name="WEB" ColumnName="WEB" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="CELL" ColumnName="CELL" />
+          <ScalarProperty Name="PHONE2" ColumnName="PHONE2" />
+          <ScalarProperty Name="PHONE1" ColumnName="PHONE1" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+          <ScalarProperty Name="MIDINIT" ColumnName="MIDINIT" />
+          <ScalarProperty Name="FNAME" ColumnName="FNAME" />
+          <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+          <ScalarProperty Name="QBID" ColumnName="QBID" />
+          <ScalarProperty Name="CUSTID" ColumnName="CUSTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerAddresses">
+      <EntityTypeMapping TypeName="CustomerDBModel.CustomerAddress">
+        <MappingFragment StoreEntitySet="CustomerAddress">
+          <ScalarProperty Name="Is_Default" ColumnName="Is_Default" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="Address_Line" ColumnName="Address_Line" />
+          <ScalarProperty Name="Customer_Code" ColumnName="Customer_Code" />
+          <ScalarProperty Name="Address_Type" ColumnName="Address_Type" />
+          <ScalarProperty Name="Customer_Address_Code" ColumnName="Customer_Address_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerGroups">
+      <EntityTypeMapping TypeName="CustomerDBModel.CustomerGroup">
+        <MappingFragment StoreEntitySet="CustomerGroup">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Tax_Class_Code" ColumnName="Tax_Class_Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Customer_Group_Name" ColumnName="Customer_Group_Name" />
+          <ScalarProperty Name="Customer_Group_Code" ColumnName="Customer_Group_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="CustomerDBModel.MenuItem">
+        <MappingFragment StoreEntitySet="MenuItem">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceLevels">
+      <EntityTypeMapping TypeName="CustomerDBModel.PriceLevel">
+        <MappingFragment StoreEntitySet="PriceLevel">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price_Level_Name" ColumnName="Price_Level_Name" />
+          <ScalarProperty Name="Price_Level_Code" ColumnName="Price_Level_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="CustomerDBModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleAccesses">
+      <EntityTypeMapping TypeName="CustomerDBModel.RoleAccess">
+        <MappingFragment StoreEntitySet="RoleAccess">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Role_Access_Code" ColumnName="Role_Access_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesReps">
+      <EntityTypeMapping TypeName="CustomerDBModel.SalesRep">
+        <MappingFragment StoreEntitySet="SalesRep">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="Phone_2" ColumnName="Phone_2" />
+          <ScalarProperty Name="Phone_1" ColumnName="Phone_1" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+          <ScalarProperty Name="Address_2" ColumnName="Address_2" />
+          <ScalarProperty Name="Address_1" ColumnName="Address_1" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Sales_Rep_Code" ColumnName="Sales_Rep_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesTaxes">
+      <EntityTypeMapping TypeName="CustomerDBModel.SalesTax">
+        <MappingFragment StoreEntitySet="SalesTax">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Default" ColumnName="Is_Default" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Tax_Agency_Code" ColumnName="Tax_Agency_Code" />
+          <ScalarProperty Name="Sales_Tax_Name" ColumnName="Sales_Tax_Name" />
+          <ScalarProperty Name="Sales_Tax_Code" ColumnName="Sales_Tax_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShippingTypes">
+      <EntityTypeMapping TypeName="CustomerDBModel.ShippingType">
+        <MappingFragment StoreEntitySet="ShippingType">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Shipping_Type_Name" ColumnName="Shipping_Type_Name" />
+          <ScalarProperty Name="Shipping_Type_Code" ColumnName="Shipping_Type_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="CustomerDBModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxAgencies">
+      <EntityTypeMapping TypeName="CustomerDBModel.TaxAgency">
+        <MappingFragment StoreEntitySet="TaxAgency">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Tax_Agency_Name" ColumnName="Tax_Agency_Name" />
+          <ScalarProperty Name="Tax_Agency_Code" ColumnName="Tax_Agency_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaxClasses">
+      <EntityTypeMapping TypeName="CustomerDBModel.TaxClass">
+        <MappingFragment StoreEntitySet="TaxClass">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Tax_Class_Name" ColumnName="Tax_Class_Name" />
+          <ScalarProperty Name="Tax_Class_Code" ColumnName="Tax_Class_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terms">
+      <EntityTypeMapping TypeName="CustomerDBModel.Term">
+        <MappingFragment StoreEntitySet="Term">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Term_Total_Days" ColumnName="Term_Total_Days" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Term_Name" ColumnName="Term_Name" />
+          <ScalarProperty Name="Term_Code" ColumnName="Term_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CustomerDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Customer_Field_Preference" ColumnName="Customer_Field_Preference" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

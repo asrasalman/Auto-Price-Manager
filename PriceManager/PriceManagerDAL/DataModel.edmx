@@ -1,0 +1,2941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ParcelSolutionsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ParcelSolutionsModelStoreContainer">
+          <EntitySet Name="AccessFunction" EntityType="ParcelSolutionsModel.Store.AccessFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Account" EntityType="ParcelSolutionsModel.Store.Account" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ChargeCode" EntityType="ParcelSolutionsModel.Store.ChargeCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="City" EntityType="ParcelSolutionsModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="ParcelSolutionsModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Currency" EntityType="ParcelSolutionsModel.Store.Currency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExpressSetupUser" EntityType="ParcelSolutionsModel.Store.ExpressSetupUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Invoice" EntityType="ParcelSolutionsModel.Store.Invoice" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InvoiceDetail" EntityType="ParcelSolutionsModel.Store.InvoiceDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Items" EntityType="ParcelSolutionsModel.Store.Items" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ItemTitles" EntityType="ParcelSolutionsModel.Store.ItemTitles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoginDetail" EntityType="ParcelSolutionsModel.Store.LoginDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItem" EntityType="ParcelSolutionsModel.Store.MenuItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Packages" EntityType="ParcelSolutionsModel.Store.Packages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParcelItem" EntityType="ParcelSolutionsModel.Store.ParcelItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PostCode" EntityType="ParcelSolutionsModel.Store.PostCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PricingHistory" EntityType="ParcelSolutionsModel.Store.PricingHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCategories" EntityType="ParcelSolutionsModel.Store.ProductCategories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="ParcelSolutionsModel.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleAccess" EntityType="ParcelSolutionsModel.Store.RoleAccess" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleAccessFunction" EntityType="ParcelSolutionsModel.Store.RoleAccessFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SellerItem" EntityType="ParcelSolutionsModel.Store.SellerItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SellerItemFile" EntityType="ParcelSolutionsModel.Store.SellerItemFile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="State" EntityType="ParcelSolutionsModel.Store.State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StockLedger" EntityType="ParcelSolutionsModel.Store.StockLedger" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subscription" EntityType="ParcelSolutionsModel.Store.Subscription" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TitleHistory" EntityType="ParcelSolutionsModel.Store.TitleHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="ParcelSolutionsModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAccount" EntityType="ParcelSolutionsModel.Store.UserAccount" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__InvoiceDe__Invoi__3F9B6DFF" Association="ParcelSolutionsModel.Store.FK__InvoiceDe__Invoi__3F9B6DFF">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpressSetupUser_Packages" Association="ParcelSolutionsModel.Store.FK_ExpressSetupUser_Packages">
+            <End Role="Packages" EntitySet="Packages" />
+            <End Role="ExpressSetupUser" EntitySet="ExpressSetupUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Items_Country" Association="ParcelSolutionsModel.Store.FK_Items_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemTitles_SellerItems" Association="ParcelSolutionsModel.Store.FK_ItemTitles_SellerItems">
+            <End Role="SellerItem" EntitySet="SellerItem" />
+            <End Role="ItemTitles" EntitySet="ItemTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginDetail_User" Association="ParcelSolutionsModel.Store.FK_LoginDetail_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginDetail" EntitySet="LoginDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_Country" Association="ParcelSolutionsModel.Store.FK_ParcelItem_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="ParcelItem" EntitySet="ParcelItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_User" Association="ParcelSolutionsModel.Store.FK_ParcelItem_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="ParcelItem" EntitySet="ParcelItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_UserAccount" Association="ParcelSolutionsModel.Store.FK_ParcelItem_UserAccount">
+            <End Role="UserAccount" EntitySet="UserAccount" />
+            <End Role="ParcelItem" EntitySet="ParcelItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PricingHistory_SellerItem" Association="ParcelSolutionsModel.Store.FK_PricingHistory_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItem" />
+            <End Role="PricingHistory" EntitySet="PricingHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccess_MenuItem" Association="ParcelSolutionsModel.Store.FK_RoleAccess_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="RoleAccess" EntitySet="RoleAccess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccess_Role" Association="ParcelSolutionsModel.Store.FK_RoleAccess_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RoleAccess" EntitySet="RoleAccess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccessFunction_MenuItem" Association="ParcelSolutionsModel.Store.FK_RoleAccessFunction_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="RoleAccessFunction" EntitySet="RoleAccessFunction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccessFunction_Role" Association="ParcelSolutionsModel.Store.FK_RoleAccessFunction_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RoleAccessFunction" EntitySet="RoleAccessFunction" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItem_Country" Association="ParcelSolutionsModel.Store.FK_SellerItem_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="SellerItem" EntitySet="SellerItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItem_User" Association="ParcelSolutionsModel.Store.FK_SellerItem_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="SellerItem" EntitySet="SellerItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItem_UserAccount" Association="ParcelSolutionsModel.Store.FK_SellerItem_UserAccount">
+            <End Role="UserAccount" EntitySet="UserAccount" />
+            <End Role="SellerItem" EntitySet="SellerItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItemFile_SellerItem" Association="ParcelSolutionsModel.Store.FK_SellerItemFile_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItem" />
+            <End Role="SellerItemFile" EntitySet="SellerItemFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TitleHistory_SellerItem" Association="ParcelSolutionsModel.Store.FK_TitleHistory_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItem" />
+            <End Role="TitleHistory" EntitySet="TitleHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Country" Association="ParcelSolutionsModel.Store.FK_User_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Currency" Association="ParcelSolutionsModel.Store.FK_User_Currency">
+            <End Role="Currency" EntitySet="Currency" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Package" Association="ParcelSolutionsModel.Store.FK_User_Package">
+            <End Role="Packages" EntitySet="Packages" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="ParcelSolutionsModel.Store.FK_User_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAccount_Account" Association="ParcelSolutionsModel.Store.FK_UserAccount_Account">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="UserAccount" EntitySet="UserAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAccount_User" Association="ParcelSolutionsModel.Store.FK_UserAccount_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserAccount" EntitySet="UserAccount" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccessFunction">
+          <Key>
+            <PropertyRef Name="Access_Function_Code" />
+          </Key>
+          <Property Name="Access_Function_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Access_Function_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Account_Code" />
+          </Key>
+          <Property Name="Account_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Account_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Auth_Type" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ChargeCode">
+          <Key>
+            <PropertyRef Name="Charge_Code" />
+          </Key>
+          <Property Name="Charge_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Charge_Code_Name" Type="varchar" MaxLength="20" />
+          <Property Name="Ebay_Code" Type="varchar" MaxLength="50" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Created_By" Type="int" />
+          <Property Name="Modified_By" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="City_Name" />
+          </Key>
+          <Property Name="City_Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Country_Code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Country_Code" />
+          </Key>
+          <Property Name="Country_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Country_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Country_Abbr" Type="varchar" MaxLength="3" />
+          <Property Name="Is_Ebay_Site" Type="bit" />
+          <Property Name="Ebay_Site_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="Currency_Code" />
+          </Key>
+          <Property Name="Currency_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Currency_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Currency_Short_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Is_Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="ExpressSetupUser">
+          <Key>
+            <PropertyRef Name="Express_Setup_User_Code" />
+          </Key>
+          <Property Name="Express_Setup_User_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Package_Id" Type="int" />
+          <Property Name="First_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Business_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Ebay_Store_URL" Type="varchar" MaxLength="500" />
+          <Property Name="Daily_Orders" Type="int" />
+          <Property Name="Is_Registered_PS" Type="bit" />
+          <Property Name="Login_Email_PS" Type="varchar" MaxLength="150" />
+          <Property Name="Time_Using_EParcel" Type="varchar" MaxLength="150" />
+          <Property Name="Phone_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Best_Time_Call" Type="varchar" MaxLength="50" />
+          <Property Name="Email_Address" Type="varchar" MaxLength="150" />
+          <Property Name="Status_Code" Type="int" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Modified_By" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="Invoice_Code" />
+          </Key>
+          <Property Name="Invoice_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="From_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="From_Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="From_Address2" Type="nvarchar" MaxLength="200" />
+          <Property Name="From_Suburb" Type="varchar" MaxLength="50" />
+          <Property Name="From_State" Type="varchar" MaxLength="50" />
+          <Property Name="From_Postcode" Type="varchar" MaxLength="50" />
+          <Property Name="From_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="From_Email" Type="varchar" MaxLength="50" />
+          <Property Name="ABN_Number" Type="varchar" MaxLength="100" />
+          <Property Name="From_Country" Type="varchar" MaxLength="50" />
+          <Property Name="To_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="To_Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="To_Address2" Type="nvarchar" MaxLength="200" />
+          <Property Name="To_Country" Type="varchar" MaxLength="50" />
+          <Property Name="Currency" Type="varchar" MaxLength="25" />
+          <Property Name="Total_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Invoice_Date" Type="datetime" />
+          <Property Name="Invoice_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Shipping_Cost" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Seller_Discount" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Shipping_Method" Type="varchar" MaxLength="100" />
+          <Property Name="Company_Logo" Type="varchar" MaxLength="200" />
+          <Property Name="BuyerId" Type="varchar" MaxLength="200" />
+          <Property Name="Tax_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Grand_Total" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="InvoiceDetail">
+          <Key>
+            <PropertyRef Name="Invoice_Detail_Code" />
+          </Key>
+          <Property Name="Invoice_Detail_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Invoice_Code" Type="int" />
+          <Property Name="Item_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="300" />
+          <Property Name="Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="BuyerId" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CustomLabel" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="1000" />
+          <Property Name="Weight" Type="varchar" MaxLength="50" />
+          <Property Name="Height" Type="varchar" MaxLength="50" />
+          <Property Name="Length" Type="varchar" MaxLength="50" />
+          <Property Name="UserCode" Type="int" />
+          <Property Name="User_Account_Code" Type="int" />
+          <Property Name="Width" Type="varchar" MaxLength="50" />
+          <Property Name="Balance_Quantity" Type="int" />
+          <Property Name="Opening_Quantity" Type="int" />
+          <Property Name="Minimum_Threshold" Type="int" />
+          <Property Name="Current_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="BIN_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Picture_URL" Type="varchar" MaxLength="500" />
+          <Property Name="Item_View_URL" Type="varchar" MaxLength="500" />
+          <Property Name="Item_Category_ID" Type="varchar" MaxLength="100" />
+          <Property Name="Item_Category_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Start_Date" Type="datetime" />
+          <Property Name="End_Date" Type="datetime" />
+          <Property Name="Detail_Description" Type="varchar(max)" />
+          <Property Name="Item_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Country_Code" Type="int" />
+        </EntityType>
+        <EntityType Name="ItemTitles">
+          <Key>
+            <PropertyRef Name="ItemTitleId" />
+          </Key>
+          <Property Name="ItemTitleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemId" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="250" />
+          <Property Name="TotalSales" Type="int" />
+          <Property Name="Added_Date" Type="datetime" />
+          <Property Name="Updated_Date" Type="datetime" />
+          <Property Name="Added_By" Type="int" />
+          <Property Name="Updated_By" Type="int" />
+          <Property Name="Is_Locked" Type="bit" />
+          <Property Name="Is_Current" Type="bit" />
+          <Property Name="Title_Index" Type="int" />
+        </EntityType>
+        <EntityType Name="LoginDetail">
+          <Key>
+            <PropertyRef Name="Login_Detail_Code" />
+          </Key>
+          <Property Name="Login_Detail_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Login_Date_Time" Type="datetime" />
+          <Property Name="Browser" Type="varchar" MaxLength="50" />
+          <Property Name="Operating_System" Type="nchar" MaxLength="10" />
+          <Property Name="Logout_Date_Time" Type="datetime" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Created_By" Type="int" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="Modified_By" Type="int" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="Menu_Item_Code" />
+          </Key>
+          <Property Name="Menu_Item_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Menu_Item_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Menu_URL" Type="varchar" MaxLength="100" />
+          <Property Name="Parent_Menu_Item_Code" Type="int" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+          <Property Name="Order" Type="int" />
+        </EntityType>
+        <EntityType Name="Packages">
+          <Key>
+            <PropertyRef Name="Package_Id" />
+          </Key>
+          <Property Name="Package_Id" Type="int" Nullable="false" />
+          <Property Name="Package_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Paypal_Button_Id" Type="nvarchar" MaxLength="150" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="SetupFee" Type="decimal" Scale="2" />
+          <Property Name="NoOfTransaction" Type="varchar" MaxLength="50" />
+          <Property Name="Unlimited" Type="bit" />
+          <Property Name="Ebay_Accounts" Type="int" />
+          <Property Name="Is_Eparcel_Active" Type="bit" />
+          <Property Name="Shopify_Accounts" Type="int" />
+          <Property Name="Magento_Accounts" Type="int" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Is_ClicknSend_Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="ParcelItem">
+          <Key>
+            <PropertyRef Name="Parcel_Item_Code" />
+          </Key>
+          <Property Name="Parcel_Item_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Parcel_Status_Code" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="100" />
+          <Property Name="ItemID" Type="varchar" MaxLength="100" />
+          <Property Name="TransactionID" Type="varchar" MaxLength="100" />
+          <Property Name="RecordNumber" Type="varchar" MaxLength="100" />
+          <Property Name="CustomLabel" Type="varchar" MaxLength="500" />
+          <Property Name="CustomLabelText" Type="varchar" MaxLength="500" />
+          <Property Name="ItemName" Type="varchar" MaxLength="1000" />
+          <Property Name="State" Type="varchar" MaxLength="100" />
+          <Property Name="BuyerID" Type="varchar" MaxLength="300" />
+          <Property Name="BuyerName" Type="varchar" MaxLength="300" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="150" />
+          <Property Name="Street" Type="varchar" MaxLength="500" />
+          <Property Name="Street2" Type="varchar" MaxLength="500" />
+          <Property Name="Street3" Type="varchar" MaxLength="500" />
+          <Property Name="City" Type="varchar" MaxLength="200" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="100" />
+          <Property Name="Country" Type="varchar" MaxLength="150" />
+          <Property Name="Phone" Type="varchar" MaxLength="200" />
+          <Property Name="ShippingMethod" Type="varchar" MaxLength="1000" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="Currency" Type="varchar" MaxLength="100" />
+          <Property Name="ShippingCost" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="SaleRecordId" Type="varchar" MaxLength="100" />
+          <Property Name="Insurance" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="HasInsurance" Type="bit" />
+          <Property Name="PostCodeImageURL" Type="varchar" MaxLength="1000" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="Messages" Type="varchar(max)" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="AddressID" Type="int" />
+          <Property Name="IsIncomplete" Type="bit" />
+          <Property Name="Country_Code" Type="int" />
+        </EntityType>
+        <EntityType Name="PostCode">
+          <Key>
+            <PropertyRef Name="Post_Code_Int" />
+          </Key>
+          <Property Name="Post_Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Post_Code_Int" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="PricingHistory">
+          <Key>
+            <PropertyRef Name="Price_History_Code" />
+          </Key>
+          <Property Name="Price_History_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Item_Code" Type="int" />
+          <Property Name="Old_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="New_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Algo" Type="varchar" MaxLength="100" />
+          <Property Name="Keyword" Type="varchar" MaxLength="250" />
+          <Property Name="Currency" Type="varchar" MaxLength="3" />
+          <Property Name="Created_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductCategories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="500" />
+          <Property Name="CategoryLevel" Type="int" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="ShowInSideBar" Type="bit" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Code" />
+          </Key>
+          <Property Name="Role_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="RoleAccess">
+          <Key>
+            <PropertyRef Name="Role_Access_Code" />
+          </Key>
+          <Property Name="Role_Access_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Code" Type="int" />
+          <Property Name="Menu_Item_Code" Type="int" />
+          <Property Name="Has_Access" Type="bit" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="RoleAccessFunction">
+          <Key>
+            <PropertyRef Name="Role_Access_Function_Code" />
+          </Key>
+          <Property Name="Role_Access_Function_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Access_Function_Code" Type="int" />
+          <Property Name="Role_Code" Type="int" />
+          <Property Name="Menu_Item_Code" Type="int" />
+        </EntityType>
+        <EntityType Name="SellerItem">
+          <Key>
+            <PropertyRef Name="Item_Code" />
+          </Key>
+          <Property Name="Item_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Item_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Item_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Item_SKU" Type="varchar" MaxLength="50" />
+          <Property Name="Current_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="BIN_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Ceiling_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Floor_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Algo" Type="varchar" MaxLength="100" />
+          <Property Name="Start_Date" Type="datetime" />
+          <Property Name="End_Date" Type="datetime" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Keywords" Type="varchar" MaxLength="250" />
+          <Property Name="Is_Automated" Type="bit" />
+          <Property Name="User_Account_Code" Type="int" />
+          <Property Name="Picture_URL" Type="varchar" MaxLength="500" />
+          <Property Name="Item_View_URL" Type="varchar" MaxLength="500" />
+          <Property Name="Is_Promo_Item" Type="bit" />
+          <Property Name="Minimum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Quantity" Type="int" />
+          <Property Name="Maximum_Quantity" Type="int" />
+          <Property Name="Inclued_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Exclude_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Maximum_Handling_Time" Type="int" />
+          <Property Name="Is_Fixed_Price" Type="bit" />
+          <Property Name="Is_Auctions" Type="bit" />
+          <Property Name="Is_Returns_Accepted" Type="bit" />
+          <Property Name="Is_Location_AU" Type="bit" />
+          <Property Name="Is_Hide_Duplicates" Type="bit" />
+          <Property Name="Is_Top_Rated_Only" Type="bit" />
+          <Property Name="Exclude_Category_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="Include_Condtion_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="Item_Category_ID" Type="varchar" MaxLength="100" />
+          <Property Name="Item_Category_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Item_Rank" Type="int" />
+          <Property Name="Less_To_Lowest_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Ignore_Words" Type="varchar(max)" />
+          <Property Name="Is_Round_To_Nearest" Type="bit" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="3" />
+          <Property Name="File_Item_Code" Type="int" />
+          <Property Name="Country_Code" Type="int" />
+          <Property Name="LocatedIn" Type="varchar" MaxLength="500" />
+          <Property Name="Rotate_Order" Type="int" />
+          <Property Name="Rotate_Days" Type="int" />
+          <Property Name="Rotate_Sales" Type="int" />
+          <Property Name="Current_Sales" Type="int" />
+          <Property Name="Is_Title_Automated" Type="bit" />
+          <Property Name="QuantityAvailable" Type="int" />
+        </EntityType>
+        <EntityType Name="SellerItemFile">
+          <Key>
+            <PropertyRef Name="File_Item_Code" />
+          </Key>
+          <Property Name="File_Item_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Item_Code" Type="int" />
+          <Property Name="Is_Automated" Type="bit" />
+          <Property Name="Algo" Type="varchar" MaxLength="100" />
+          <Property Name="Ceiling_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Floor_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Less_To_Lowest_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Keywords" Type="varchar" MaxLength="250" />
+          <Property Name="Ignore_Words" Type="varchar(max)" />
+          <Property Name="Minimum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Quantity" Type="int" />
+          <Property Name="Maximum_Quantity" Type="int" />
+          <Property Name="Inclued_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Exclude_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Maximum_Handling_Time" Type="int" />
+          <Property Name="Is_Fixed_Price" Type="bit" />
+          <Property Name="Is_Auctions" Type="bit" />
+          <Property Name="Is_Returns_Accepted" Type="bit" />
+          <Property Name="Is_Location_AU" Type="bit" />
+          <Property Name="Is_Hide_Duplicates" Type="bit" />
+          <Property Name="Is_Top_Rated_Only" Type="bit" />
+          <Property Name="Exclude_Category_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="Include_Condtion_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="Is_Round_To_Nearest" Type="bit" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Country_Code" Type="int" />
+          <Property Name="LocatedIn" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="State_Name" />
+          </Key>
+          <Property Name="State_Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Country_Code" Type="int" />
+        </EntityType>
+        <EntityType Name="StockLedger">
+          <Key>
+            <PropertyRef Name="Stock_Ledger_Code" />
+          </Key>
+          <Property Name="Stock_Ledger_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="AccountID" Type="varchar" MaxLength="100" />
+          <Property Name="Type" Type="varchar" MaxLength="100" />
+          <Property Name="TransactionID" Type="varchar" MaxLength="100" />
+          <Property Name="ItemID" Type="varchar" MaxLength="100" />
+          <Property Name="CustomLabel" Type="varchar" MaxLength="500" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Narration" Type="varchar" MaxLength="500" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Modifed_Date" Type="datetime" />
+          <Property Name="Stock_Ledger_Type" Type="int" />
+          <Property Name="ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Scale="2" />
+          <Property Name="Subscription_Date" Type="datetime" />
+          <Property Name="Transaction_Id" Type="varchar" MaxLength="500" />
+          <Property Name="Expiry_Date" Type="datetime" />
+          <Property Name="PayPal_Email_Address" Type="nvarchar" MaxLength="150" />
+          <Property Name="Paypal_Buyer_ID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Package_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="TitleHistory">
+          <Key>
+            <PropertyRef Name="Title_History_Code" />
+          </Key>
+          <Property Name="Title_History_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Item_Code" Type="int" />
+          <Property Name="Old_Title" Type="varchar(max)" />
+          <Property Name="New_Title" Type="varchar(max)" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Total_Sales" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_Code" />
+          </Key>
+          <Property Name="User_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="First_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="150" />
+          <Property Name="Email_Address" Type="varchar" MaxLength="150" />
+          <Property Name="Company" Type="varchar" MaxLength="150" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Confirmation_Code" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address1" Type="varchar" MaxLength="200" />
+          <Property Name="Address2" Type="varchar" MaxLength="200" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Zip" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="200" />
+          <Property Name="Phone_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Company_Logo" Type="varchar" MaxLength="200" />
+          <Property Name="Role_Code" Type="int" />
+          <Property Name="Customer_Field_Preference" Type="nvarchar" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Modified_By" Type="int" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+          <Property Name="Is_Paypal_Paid" Type="bit" />
+          <Property Name="Is_Paypal_Expired" Type="bit" />
+          <Property Name="Paypal_Email_Address" Type="varchar" MaxLength="150" />
+          <Property Name="Paypal_Buyer_ID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Paypal_Subscription_ID" Type="nvarchar" MaxLength="200" />
+          <Property Name="ABN_Number" Type="nvarchar" MaxLength="100" />
+          <Property Name="Charge_Code_Standard" Type="varchar" MaxLength="50" />
+          <Property Name="Charge_Code_Express" Type="varchar" MaxLength="50" />
+          <Property Name="Charge_Code_StandardInt" Type="varchar" MaxLength="50" />
+          <Property Name="Charge_Code_ExpressInt" Type="varchar" MaxLength="50" />
+          <Property Name="Charge_Code_AirMailInt" Type="varchar" MaxLength="50" />
+          <Property Name="Charge_Code_AusPostRegInt" Type="varchar" MaxLength="50" />
+          <Property Name="Flat_Rate_Client" Type="bit" />
+          <Property Name="Package_Id" Type="int" />
+          <Property Name="Is_Locked" Type="bit" />
+          <Property Name="Minimum_Threshold_Alert" Type="bit" />
+          <Property Name="Floor_Limit_Alert" Type="bit" />
+          <Property Name="Automation_Time_Delay" Type="int" />
+          <Property Name="Automation_Include_Shipping" Type="bit" />
+          <Property Name="Search_Only_Top_Items" Type="int" />
+          <Property Name="Is_Verified" Type="bit" />
+          <Property Name="Is_Free_Traffic" Type="bit" />
+          <Property Name="Is_Password_Reset_Request" Type="bit" />
+          <Property Name="Is_Subscribed" Type="bit" />
+          <Property Name="Country_Code" Type="int" />
+          <Property Name="Currency_Code" Type="int" />
+          <Property Name="Ceiling_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Floor_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Algo" Type="varchar" MaxLength="100" />
+          <Property Name="Less_To_Lowest_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Keywords" Type="varchar" MaxLength="250" />
+          <Property Name="Minimum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Feedback" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Maximum_Price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Minimum_Quantity" Type="int" />
+          <Property Name="Maximum_Quantity" Type="int" />
+          <Property Name="Inclued_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Exclude_Sellers" Type="varchar" MaxLength="500" />
+          <Property Name="Maximum_Handling_Time" Type="int" />
+          <Property Name="Is_Fixed_Price" Type="bit" />
+          <Property Name="Is_Auctions" Type="bit" />
+          <Property Name="Is_Returns_Accepted" Type="bit" />
+          <Property Name="Is_Location_AU" Type="bit" />
+          <Property Name="Is_Hide_Duplicates" Type="bit" />
+          <Property Name="Is_Top_Rated_Only" Type="bit" />
+          <Property Name="Is_Round_To_Nearest" Type="bit" />
+          <Property Name="Exclude_Category_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="Include_Condtion_Codes" Type="varchar" MaxLength="500" />
+          <Property Name="LocatedIn" Type="varchar" MaxLength="500" />
+          <Property Name="Automate_Title_Display" Type="int" />
+          <Property Name="Notify_Title_Locked" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserAccount">
+          <Key>
+            <PropertyRef Name="User_Account_Code" />
+          </Key>
+          <Property Name="User_Account_Code" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Code" Type="int" />
+          <Property Name="Account_Code" Type="int" />
+          <Property Name="Application_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Config_Value1" Type="varchar" MaxLength="4000" />
+          <Property Name="Config_Value2" Type="varchar" MaxLength="4000" />
+          <Property Name="Config_Value3" Type="varchar" MaxLength="4000" />
+          <Property Name="Config_Value4" Type="varchar" MaxLength="4000" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Is_Active" Type="bit" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="User_IP" Type="varchar" MaxLength="25" />
+          <Property Name="Ebay_User_Name" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK__InvoiceDe__Invoi__3F9B6DFF">
+          <End Role="Invoice" Type="ParcelSolutionsModel.Store.Invoice" Multiplicity="0..1" />
+          <End Role="InvoiceDetail" Type="ParcelSolutionsModel.Store.InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="Invoice_Code" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="Invoice_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpressSetupUser_Packages">
+          <End Role="Packages" Type="ParcelSolutionsModel.Store.Packages" Multiplicity="0..1" />
+          <End Role="ExpressSetupUser" Type="ParcelSolutionsModel.Store.ExpressSetupUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Packages">
+              <PropertyRef Name="Package_Id" />
+            </Principal>
+            <Dependent Role="ExpressSetupUser">
+              <PropertyRef Name="Package_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Items_Country">
+          <End Role="Country" Type="ParcelSolutionsModel.Store.Country" Multiplicity="0..1" />
+          <End Role="Items" Type="ParcelSolutionsModel.Store.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemTitles_SellerItems">
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="0..1" />
+          <End Role="ItemTitles" Type="ParcelSolutionsModel.Store.ItemTitles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="ItemTitles">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginDetail_User">
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="0..1" />
+          <End Role="LoginDetail" Type="ParcelSolutionsModel.Store.LoginDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="LoginDetail">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_Country">
+          <End Role="Country" Type="ParcelSolutionsModel.Store.Country" Multiplicity="0..1" />
+          <End Role="ParcelItem" Type="ParcelSolutionsModel.Store.ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_User">
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="0..1" />
+          <End Role="ParcelItem" Type="ParcelSolutionsModel.Store.ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_UserAccount">
+          <End Role="UserAccount" Type="ParcelSolutionsModel.Store.UserAccount" Multiplicity="0..1" />
+          <End Role="ParcelItem" Type="ParcelSolutionsModel.Store.ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAccount">
+              <PropertyRef Name="User_Account_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PricingHistory_SellerItem">
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="0..1" />
+          <End Role="PricingHistory" Type="ParcelSolutionsModel.Store.PricingHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="PricingHistory">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccess_MenuItem">
+          <End Role="MenuItem" Type="ParcelSolutionsModel.Store.MenuItem" Multiplicity="0..1" />
+          <End Role="RoleAccess" Type="ParcelSolutionsModel.Store.RoleAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Principal>
+            <Dependent Role="RoleAccess">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccess_Role">
+          <End Role="Role" Type="ParcelSolutionsModel.Store.Role" Multiplicity="0..1" />
+          <End Role="RoleAccess" Type="ParcelSolutionsModel.Store.RoleAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="RoleAccess">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccessFunction_MenuItem">
+          <End Role="MenuItem" Type="ParcelSolutionsModel.Store.MenuItem" Multiplicity="0..1" />
+          <End Role="RoleAccessFunction" Type="ParcelSolutionsModel.Store.RoleAccessFunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Principal>
+            <Dependent Role="RoleAccessFunction">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccessFunction_Role">
+          <End Role="Role" Type="ParcelSolutionsModel.Store.Role" Multiplicity="0..1" />
+          <End Role="RoleAccessFunction" Type="ParcelSolutionsModel.Store.RoleAccessFunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="RoleAccessFunction">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItem_Country">
+          <End Role="Country" Type="ParcelSolutionsModel.Store.Country" Multiplicity="0..1" />
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItem_User">
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="0..1" />
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItem_UserAccount">
+          <End Role="UserAccount" Type="ParcelSolutionsModel.Store.UserAccount" Multiplicity="0..1" />
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAccount">
+              <PropertyRef Name="User_Account_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="User_Account_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItemFile_SellerItem">
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="0..1" />
+          <End Role="SellerItemFile" Type="ParcelSolutionsModel.Store.SellerItemFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="SellerItemFile">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TitleHistory_SellerItem">
+          <End Role="SellerItem" Type="ParcelSolutionsModel.Store.SellerItem" Multiplicity="0..1" />
+          <End Role="TitleHistory" Type="ParcelSolutionsModel.Store.TitleHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="TitleHistory">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Country">
+          <End Role="Country" Type="ParcelSolutionsModel.Store.Country" Multiplicity="0..1" />
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Currency">
+          <End Role="Currency" Type="ParcelSolutionsModel.Store.Currency" Multiplicity="0..1" />
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="Currency_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Currency_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Package">
+          <End Role="Packages" Type="ParcelSolutionsModel.Store.Packages" Multiplicity="0..1" />
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Packages">
+              <PropertyRef Name="Package_Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Package_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Role="Role" Type="ParcelSolutionsModel.Store.Role" Multiplicity="0..1" />
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAccount_Account">
+          <End Role="Account" Type="ParcelSolutionsModel.Store.Account" Multiplicity="0..1" />
+          <End Role="UserAccount" Type="ParcelSolutionsModel.Store.UserAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Account_Code" />
+            </Principal>
+            <Dependent Role="UserAccount">
+              <PropertyRef Name="Account_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAccount_User">
+          <End Role="User" Type="ParcelSolutionsModel.Store.User" Multiplicity="0..1" />
+          <End Role="UserAccount" Type="ParcelSolutionsModel.Store.UserAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="UserAccount">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetSalesForOldTitles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Item_Code" Type="int" Mode="In" />
+          <Parameter Name="Current_Title" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="RoleAccess_Select" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Role_Code" Type="int" Mode="In" />
+        </Function>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'PriceManagerTest.dbo.pc_full_lat_long' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="pc_full_lat_long">
+        <Property Name="&quot;Pcode&quot;" Type="varchar" MaxLength="50" />
+        <Property Name="&quot;Locality&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;State&quot;" Type="varchar" MaxLength="50" />
+        <Property Name="&quot;Comments&quot;" Type="varchar" MaxLength="200" />
+        <Property Name="&quot;DeliveryOffice&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;PresortIndicator&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;ParcelZone&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;BSPnumber&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;BSPname&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;Category&quot;" Type="varchar" MaxLength="200" />
+        <Property Name="&quot;Lat&quot;" Type="varchar" MaxLength="100" />
+        <Property Name="&quot;Long&quot;" Type="varchar" MaxLength="100" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'PriceManagerTest.dbo.pcTemp' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="pcTemp">
+        <Property Name="Pcode" Type="varchar" MaxLength="50" />
+        <Property Name="Locality" Type="varchar" MaxLength="100" />
+        <Property Name="State" Type="varchar" MaxLength="100" />
+        <Property Name="Comments" Type="varchar" MaxLength="200" />
+        <Property Name="DeliveryOffice" Type="varchar" MaxLength="100" />
+        <Property Name="PresortIndicator" Type="varchar" MaxLength="100" />
+        <Property Name="ParcelZone" Type="varchar" MaxLength="100" />
+        <Property Name="BSPnumber" Type="varchar" MaxLength="100" />
+        <Property Name="BSPname" Type="varchar" MaxLength="100" />
+        <Property Name="Category" Type="varchar" MaxLength="200" />
+        <Property Name="Lat" Type="varchar" MaxLength="100" />
+        <Property Name="Long" Type="varchar" MaxLength="100" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ParcelSolutionsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DataModelEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetRoleAccess" ReturnType="Collection(ParcelSolutionsModel.GetRoleAccess_Result)">
+          <Parameter Name="Role_Code" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="AccessFunctions" EntityType="ParcelSolutionsModel.AccessFunction" />
+          <EntitySet Name="Accounts" EntityType="ParcelSolutionsModel.Account" />
+          <EntitySet Name="ChargeCodes" EntityType="ParcelSolutionsModel.ChargeCode" />
+          <EntitySet Name="Cities" EntityType="ParcelSolutionsModel.City" />
+          <EntitySet Name="Countries" EntityType="ParcelSolutionsModel.Country" />
+          <EntitySet Name="Currencies" EntityType="ParcelSolutionsModel.Currency" />
+          <EntitySet Name="ExpressSetupUsers" EntityType="ParcelSolutionsModel.ExpressSetupUser" />
+          <EntitySet Name="Invoices" EntityType="ParcelSolutionsModel.Invoice" />
+          <EntitySet Name="InvoiceDetails" EntityType="ParcelSolutionsModel.InvoiceDetail" />
+          <EntitySet Name="Items" EntityType="ParcelSolutionsModel.Item" />
+          <EntitySet Name="ItemTitles" EntityType="ParcelSolutionsModel.ItemTitle" />
+          <EntitySet Name="LoginDetails" EntityType="ParcelSolutionsModel.LoginDetail" />
+          <EntitySet Name="MenuItems" EntityType="ParcelSolutionsModel.MenuItem" />
+          <EntitySet Name="Packages" EntityType="ParcelSolutionsModel.Package" />
+          <EntitySet Name="ParcelItems" EntityType="ParcelSolutionsModel.ParcelItem" />
+          <EntitySet Name="PostCodes" EntityType="ParcelSolutionsModel.PostCode" />
+          <EntitySet Name="PricingHistories" EntityType="ParcelSolutionsModel.PricingHistory" />
+          <EntitySet Name="ProductCategories" EntityType="ParcelSolutionsModel.ProductCategory" />
+          <EntitySet Name="Roles" EntityType="ParcelSolutionsModel.Role" />
+          <EntitySet Name="RoleAccesses" EntityType="ParcelSolutionsModel.RoleAccess" />
+          <EntitySet Name="RoleAccessFunctions" EntityType="ParcelSolutionsModel.RoleAccessFunction" />
+          <EntitySet Name="SellerItemFiles" EntityType="ParcelSolutionsModel.SellerItemFile" />
+          <EntitySet Name="States" EntityType="ParcelSolutionsModel.State" />
+          <EntitySet Name="StockLedgers" EntityType="ParcelSolutionsModel.StockLedger" />
+          <EntitySet Name="Subscriptions" EntityType="ParcelSolutionsModel.Subscription" />
+          <EntitySet Name="TitleHistories" EntityType="ParcelSolutionsModel.TitleHistory" />
+          <EntitySet Name="Users" EntityType="ParcelSolutionsModel.User" />
+          <EntitySet Name="UserAccounts" EntityType="ParcelSolutionsModel.UserAccount" />
+          <AssociationSet Name="FK_UserAccount_Account" Association="ParcelSolutionsModel.FK_UserAccount_Account">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Items_Country" Association="ParcelSolutionsModel.FK_Items_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_Country" Association="ParcelSolutionsModel.FK_ParcelItem_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="ParcelItem" EntitySet="ParcelItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Country" Association="ParcelSolutionsModel.FK_User_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Currency" Association="ParcelSolutionsModel.FK_User_Currency">
+            <End Role="Currency" EntitySet="Currencies" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpressSetupUser_Packages" Association="ParcelSolutionsModel.FK_ExpressSetupUser_Packages">
+            <End Role="Package" EntitySet="Packages" />
+            <End Role="ExpressSetupUser" EntitySet="ExpressSetupUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__InvoiceDe__Invoi__3F9B6DFF" Association="ParcelSolutionsModel.FK__InvoiceDe__Invoi__3F9B6DFF">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginDetail_User" Association="ParcelSolutionsModel.FK_LoginDetail_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="LoginDetail" EntitySet="LoginDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccess_MenuItem" Association="ParcelSolutionsModel.FK_RoleAccess_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItems" />
+            <End Role="RoleAccess" EntitySet="RoleAccesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccessFunction_MenuItem" Association="ParcelSolutionsModel.FK_RoleAccessFunction_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItems" />
+            <End Role="RoleAccessFunction" EntitySet="RoleAccessFunctions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Package" Association="ParcelSolutionsModel.FK_User_Package">
+            <End Role="Package" EntitySet="Packages" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_User" Association="ParcelSolutionsModel.FK_ParcelItem_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ParcelItem" EntitySet="ParcelItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParcelItem_UserAccount" Association="ParcelSolutionsModel.FK_ParcelItem_UserAccount">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="ParcelItem" EntitySet="ParcelItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccess_Role" Association="ParcelSolutionsModel.FK_RoleAccess_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="RoleAccess" EntitySet="RoleAccesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleAccessFunction_Role" Association="ParcelSolutionsModel.FK_RoleAccessFunction_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="RoleAccessFunction" EntitySet="RoleAccessFunctions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="ParcelSolutionsModel.FK_User_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAccount_User" Association="ParcelSolutionsModel.FK_UserAccount_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+          </AssociationSet>
+          <FunctionImport Name="GetSalesForOldTitles" ReturnType="Collection(ParcelSolutionsModel.GetSalesForOldTitles_Result)">
+            <Parameter Name="Item_Code" Mode="In" Type="Int32" />
+            <Parameter Name="Current_Title" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="SellerItems" EntityType="ParcelSolutionsModel.SellerItem" />
+          <AssociationSet Name="FK_SellerItem_Country" Association="ParcelSolutionsModel.FK_SellerItem_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="SellerItem" EntitySet="SellerItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemTitles_SellerItems" Association="ParcelSolutionsModel.FK_ItemTitles_SellerItems">
+            <End Role="SellerItem" EntitySet="SellerItems" />
+            <End Role="ItemTitle" EntitySet="ItemTitles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PricingHistory_SellerItem" Association="ParcelSolutionsModel.FK_PricingHistory_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItems" />
+            <End Role="PricingHistory" EntitySet="PricingHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItem_User" Association="ParcelSolutionsModel.FK_SellerItem_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="SellerItem" EntitySet="SellerItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItem_UserAccount" Association="ParcelSolutionsModel.FK_SellerItem_UserAccount">
+            <End Role="UserAccount" EntitySet="UserAccounts" />
+            <End Role="SellerItem" EntitySet="SellerItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SellerItemFile_SellerItem" Association="ParcelSolutionsModel.FK_SellerItemFile_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItems" />
+            <End Role="SellerItemFile" EntitySet="SellerItemFiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TitleHistory_SellerItem" Association="ParcelSolutionsModel.FK_TitleHistory_SellerItem">
+            <End Role="SellerItem" EntitySet="SellerItems" />
+            <End Role="TitleHistory" EntitySet="TitleHistories" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="GetRoleAccess_Result">
+          <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" />
+          <Property Type="String" Name="Menu_Item_Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Menu_URL" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Parent_Menu_Item_Code" Nullable="true" />
+          <Property Type="DateTime" Name="Created_Date" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="Is_Active" Nullable="true" />
+          <Property Type="Int32" Name="User_Code" Nullable="true" />
+          <Property Type="DateTime" Name="Modified_Date" Nullable="true" Precision="23" />
+          <Property Type="String" Name="User_IP" Nullable="true" MaxLength="25" />
+          <Property Type="Int32" Name="Order" Nullable="true" />
+          <Property Type="Boolean" Name="Has_Access" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AccessFunction">
+          <Key>
+            <PropertyRef Name="Access_Function_Code" />
+          </Key>
+          <Property Type="Int32" Name="Access_Function_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Access_Function_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Account_Code" />
+          </Key>
+          <Property Type="Int32" Name="Account_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Account_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Auth_Type" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserAccounts" Relationship="ParcelSolutionsModel.FK_UserAccount_Account" FromRole="Account" ToRole="UserAccount" />
+        </EntityType>
+        <EntityType Name="ChargeCode">
+          <Key>
+            <PropertyRef Name="Charge_Code" />
+          </Key>
+          <Property Type="Int32" Name="Charge_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Charge_Code_Name" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ebay_Code" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="Created_By" />
+          <Property Type="Int32" Name="Modified_By" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="City_Name" />
+          </Key>
+          <Property Type="String" Name="City_Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Country_Code" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Country_Code" />
+          </Key>
+          <Property Type="Int32" Name="Country_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Country_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country_Abbr" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Ebay_Site" />
+          <Property Type="Int32" Name="Ebay_Site_ID" />
+          <NavigationProperty Name="Items" Relationship="ParcelSolutionsModel.FK_Items_Country" FromRole="Country" ToRole="Item" />
+          <NavigationProperty Name="ParcelItems" Relationship="ParcelSolutionsModel.FK_ParcelItem_Country" FromRole="Country" ToRole="ParcelItem" />
+          <NavigationProperty Name="Users" Relationship="ParcelSolutionsModel.FK_User_Country" FromRole="Country" ToRole="User" />
+          <NavigationProperty Name="SellerItems" Relationship="ParcelSolutionsModel.FK_SellerItem_Country" FromRole="Country" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="Currency_Code" />
+          </Key>
+          <Property Type="Int32" Name="Currency_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Currency_Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency_Short_Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <NavigationProperty Name="Users" Relationship="ParcelSolutionsModel.FK_User_Currency" FromRole="Currency" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ExpressSetupUser">
+          <Key>
+            <PropertyRef Name="Express_Setup_User_Code" />
+          </Key>
+          <Property Type="Int32" Name="Express_Setup_User_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Package_Id" />
+          <Property Type="String" Name="First_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Last_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Full_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Business_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ebay_Store_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Daily_Orders" />
+          <Property Type="Boolean" Name="Is_Registered_PS" />
+          <Property Type="String" Name="Login_Email_PS" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Time_Using_EParcel" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone_Number" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Best_Time_Call" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Address" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Status_Code" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Int32" Name="Modified_By" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Package" Relationship="ParcelSolutionsModel.FK_ExpressSetupUser_Packages" FromRole="ExpressSetupUser" ToRole="Package" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="Invoice_Code" />
+          </Key>
+          <Property Type="Int32" Name="Invoice_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="String" Name="From_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="From_Address" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="From_Address2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="From_Suburb" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="From_State" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="From_Postcode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="From_Phone" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="From_Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ABN_Number" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="From_Country" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="To_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="To_Address" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="To_Address2" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="To_Country" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Total_Price" Precision="10" Scale="2" />
+          <Property Type="DateTime" Name="Invoice_Date" />
+          <Property Type="String" Name="Invoice_Number" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Shipping_Cost" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Seller_Discount" Precision="10" Scale="2" />
+          <Property Type="String" Name="Shipping_Method" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Company_Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyerId" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Tax_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Grand_Total" Precision="10" Scale="2" />
+          <NavigationProperty Name="InvoiceDetails" Relationship="ParcelSolutionsModel.FK__InvoiceDe__Invoi__3F9B6DFF" FromRole="Invoice" ToRole="InvoiceDetail" />
+        </EntityType>
+        <EntityType Name="InvoiceDetail">
+          <Key>
+            <PropertyRef Name="Invoice_Detail_Code" />
+          </Key>
+          <Property Type="Int32" Name="Invoice_Detail_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Invoice_Code" />
+          <Property Type="String" Name="Item_Code" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="String" Name="Item_Name" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="BuyerId" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Invoice" Relationship="ParcelSolutionsModel.FK__InvoiceDe__Invoi__3F9B6DFF" FromRole="InvoiceDetail" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CustomLabel" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Weight" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Height" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Length" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserCode" />
+          <Property Type="Int32" Name="User_Account_Code" />
+          <Property Type="String" Name="Width" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Balance_Quantity" />
+          <Property Type="Int32" Name="Opening_Quantity" />
+          <Property Type="Int32" Name="Minimum_Threshold" />
+          <Property Type="Decimal" Name="Current_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="BIN_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Picture_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_View_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Category_ID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Category_Name" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Start_Date" />
+          <Property Type="DateTime" Name="End_Date" />
+          <Property Type="String" Name="Detail_Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Country_Code" />
+          <NavigationProperty Name="Country" Relationship="ParcelSolutionsModel.FK_Items_Country" FromRole="Item" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="ItemTitle">
+          <Key>
+            <PropertyRef Name="ItemTitleId" />
+          </Key>
+          <Property Type="Int32" Name="ItemTitleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ItemId" />
+          <Property Type="String" Name="Title" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TotalSales" />
+          <Property Type="DateTime" Name="Added_Date" />
+          <Property Type="DateTime" Name="Updated_Date" />
+          <Property Type="Int32" Name="Added_By" />
+          <Property Type="Int32" Name="Updated_By" />
+          <Property Type="Boolean" Name="Is_Locked" />
+          <Property Type="Boolean" Name="Is_Current" />
+          <Property Type="Int32" Name="Title_Index" />
+          <NavigationProperty Name="SellerItem" Relationship="ParcelSolutionsModel.FK_ItemTitles_SellerItems" FromRole="ItemTitle" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="LoginDetail">
+          <Key>
+            <PropertyRef Name="Login_Detail_Code" />
+          </Key>
+          <Property Type="Int32" Name="Login_Detail_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="DateTime" Name="Login_Date_Time" />
+          <Property Type="String" Name="Browser" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Operating_System" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="Logout_Date_Time" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Int32" Name="Created_By" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="Int32" Name="Modified_By" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="ParcelSolutionsModel.FK_LoginDetail_User" FromRole="LoginDetail" ToRole="User" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="Menu_Item_Code" />
+          </Key>
+          <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Menu_Item_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Menu_URL" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Parent_Menu_Item_Code" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Order" />
+          <NavigationProperty Name="RoleAccesses" Relationship="ParcelSolutionsModel.FK_RoleAccess_MenuItem" FromRole="MenuItem" ToRole="RoleAccess" />
+          <NavigationProperty Name="RoleAccessFunctions" Relationship="ParcelSolutionsModel.FK_RoleAccessFunction_MenuItem" FromRole="MenuItem" ToRole="RoleAccessFunction" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="Package_Id" />
+          </Key>
+          <Property Type="Int32" Name="Package_Id" Nullable="false" />
+          <Property Type="String" Name="Package_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Paypal_Button_Id" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="SetupFee" Precision="18" Scale="2" />
+          <Property Type="String" Name="NoOfTransaction" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Unlimited" />
+          <Property Type="Int32" Name="Ebay_Accounts" />
+          <Property Type="Boolean" Name="Is_Eparcel_Active" />
+          <Property Type="Int32" Name="Shopify_Accounts" />
+          <Property Type="Int32" Name="Magento_Accounts" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Boolean" Name="Is_ClicknSend_Active" />
+          <NavigationProperty Name="ExpressSetupUsers" Relationship="ParcelSolutionsModel.FK_ExpressSetupUser_Packages" FromRole="Package" ToRole="ExpressSetupUser" />
+          <NavigationProperty Name="Users" Relationship="ParcelSolutionsModel.FK_User_Package" FromRole="Package" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ParcelItem">
+          <Key>
+            <PropertyRef Name="Parcel_Item_Code" />
+          </Key>
+          <Property Type="Int32" Name="Parcel_Item_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="Int32" Name="Parcel_Status_Code" />
+          <Property Type="String" Name="Type" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransactionID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RecordNumber" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomLabel" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomLabelText" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemName" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyerID" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyerName" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailAddress" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Street" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Street2" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Street3" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PostalCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShippingMethod" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Decimal" Name="Price" Precision="8" Scale="2" />
+          <Property Type="String" Name="Currency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ShippingCost" Precision="8" Scale="2" />
+          <Property Type="String" Name="SaleRecordId" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Insurance" Precision="8" Scale="2" />
+          <Property Type="Boolean" Name="HasInsurance" />
+          <Property Type="String" Name="PostCodeImageURL" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AccountID" />
+          <Property Type="String" Name="Messages" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="AddressID" />
+          <Property Type="Boolean" Name="IsIncomplete" />
+          <Property Type="Int32" Name="Country_Code" />
+          <NavigationProperty Name="Country1" Relationship="ParcelSolutionsModel.FK_ParcelItem_Country" FromRole="ParcelItem" ToRole="Country" />
+          <NavigationProperty Name="User" Relationship="ParcelSolutionsModel.FK_ParcelItem_User" FromRole="ParcelItem" ToRole="User" />
+          <NavigationProperty Name="UserAccount" Relationship="ParcelSolutionsModel.FK_ParcelItem_UserAccount" FromRole="ParcelItem" ToRole="UserAccount" />
+        </EntityType>
+        <EntityType Name="PostCode">
+          <Key>
+            <PropertyRef Name="Post_Code_Int" />
+          </Key>
+          <Property Type="String" Name="Post_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Post_Code_Int" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="PricingHistory">
+          <Key>
+            <PropertyRef Name="Price_History_Code" />
+          </Key>
+          <Property Type="Int32" Name="Price_History_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Item_Code" />
+          <Property Type="Decimal" Name="Old_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="New_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Algo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Keyword" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <NavigationProperty Name="SellerItem" Relationship="ParcelSolutionsModel.FK_PricingHistory_SellerItem" FromRole="PricingHistory" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="CategoryName" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CategoryLevel" />
+          <Property Type="Int32" Name="ParentId" />
+          <Property Type="Boolean" Name="ShowInSideBar" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_Code" />
+          </Key>
+          <Property Type="Int32" Name="Role_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Role_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RoleAccesses" Relationship="ParcelSolutionsModel.FK_RoleAccess_Role" FromRole="Role" ToRole="RoleAccess" />
+          <NavigationProperty Name="RoleAccessFunctions" Relationship="ParcelSolutionsModel.FK_RoleAccessFunction_Role" FromRole="Role" ToRole="RoleAccessFunction" />
+          <NavigationProperty Name="Users" Relationship="ParcelSolutionsModel.FK_User_Role" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="RoleAccess">
+          <Key>
+            <PropertyRef Name="Role_Access_Code" />
+          </Key>
+          <Property Type="Int32" Name="Role_Access_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Role_Code" />
+          <Property Type="Int32" Name="Menu_Item_Code" />
+          <Property Type="Boolean" Name="Has_Access" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MenuItem" Relationship="ParcelSolutionsModel.FK_RoleAccess_MenuItem" FromRole="RoleAccess" ToRole="MenuItem" />
+          <NavigationProperty Name="Role" Relationship="ParcelSolutionsModel.FK_RoleAccess_Role" FromRole="RoleAccess" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="RoleAccessFunction">
+          <Key>
+            <PropertyRef Name="Role_Access_Function_Code" />
+          </Key>
+          <Property Type="Int32" Name="Role_Access_Function_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Access_Function_Code" />
+          <Property Type="Int32" Name="Role_Code" />
+          <Property Type="Int32" Name="Menu_Item_Code" />
+          <NavigationProperty Name="MenuItem" Relationship="ParcelSolutionsModel.FK_RoleAccessFunction_MenuItem" FromRole="RoleAccessFunction" ToRole="MenuItem" />
+          <NavigationProperty Name="Role" Relationship="ParcelSolutionsModel.FK_RoleAccessFunction_Role" FromRole="RoleAccessFunction" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="SellerItemFile">
+          <Key>
+            <PropertyRef Name="File_Item_Code" />
+          </Key>
+          <Property Type="Int32" Name="File_Item_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Item_Code" />
+          <Property Type="Boolean" Name="Is_Automated" />
+          <Property Type="String" Name="Algo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Ceiling_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Floor_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Less_To_Lowest_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Keywords" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ignore_Words" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Minimum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Minimum_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Price" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="Minimum_Quantity" />
+          <Property Type="Int32" Name="Maximum_Quantity" />
+          <Property Type="String" Name="Inclued_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Exclude_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Maximum_Handling_Time" />
+          <Property Type="Boolean" Name="Is_Fixed_Price" />
+          <Property Type="Boolean" Name="Is_Auctions" />
+          <Property Type="Boolean" Name="Is_Returns_Accepted" />
+          <Property Type="Boolean" Name="Is_Location_AU" />
+          <Property Type="Boolean" Name="Is_Hide_Duplicates" />
+          <Property Type="Boolean" Name="Is_Top_Rated_Only" />
+          <Property Type="String" Name="Exclude_Category_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Include_Condtion_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Round_To_Nearest" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="Country_Code" />
+          <Property Type="String" Name="LocatedIn" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SellerItem" Relationship="ParcelSolutionsModel.FK_SellerItemFile_SellerItem" FromRole="SellerItemFile" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="State_Name" />
+          </Key>
+          <Property Type="String" Name="State_Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Country_Code" />
+        </EntityType>
+        <EntityType Name="StockLedger">
+          <Key>
+            <PropertyRef Name="Stock_Ledger_Code" />
+          </Key>
+          <Property Type="Int32" Name="Stock_Ledger_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="String" Name="AccountID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Type" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransactionID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomLabel" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="String" Name="Narration" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="DateTime" Name="Modifed_Date" />
+          <Property Type="Int32" Name="Stock_Ledger_Type" />
+          <Property Type="Int32" Name="ID" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" Nullable="false" />
+          <Property Type="Decimal" Name="Amount" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="Subscription_Date" />
+          <Property Type="String" Name="Transaction_Id" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Expiry_Date" />
+          <Property Type="String" Name="PayPal_Email_Address" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Paypal_Buyer_ID" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Package_Id" />
+        </EntityType>
+        <EntityType Name="TitleHistory">
+          <Key>
+            <PropertyRef Name="Title_History_Code" />
+          </Key>
+          <Property Type="Int32" Name="Title_History_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Item_Code" />
+          <Property Type="String" Name="Old_Title" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="New_Title" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Int32" Name="Total_Sales" />
+          <NavigationProperty Name="SellerItem" Relationship="ParcelSolutionsModel.FK_TitleHistory_SellerItem" FromRole="TitleHistory" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_Code" />
+          </Key>
+          <Property Type="Int32" Name="User_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="First_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Last_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Full_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email_Address" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Company" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Confirmation_Code" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address1" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address2" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone_Number" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Company_Logo" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Role_Code" />
+          <Property Type="String" Name="Customer_Field_Preference" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="Int32" Name="Modified_By" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Paypal_Paid" />
+          <Property Type="Boolean" Name="Is_Paypal_Expired" />
+          <Property Type="String" Name="Paypal_Email_Address" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Paypal_Buyer_ID" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Paypal_Subscription_ID" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ABN_Number" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Charge_Code_Standard" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Charge_Code_Express" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Charge_Code_StandardInt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Charge_Code_ExpressInt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Charge_Code_AirMailInt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Charge_Code_AusPostRegInt" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Flat_Rate_Client" />
+          <Property Type="Int32" Name="Package_Id" />
+          <Property Type="Boolean" Name="Is_Locked" />
+          <Property Type="Boolean" Name="Minimum_Threshold_Alert" />
+          <Property Type="Boolean" Name="Floor_Limit_Alert" />
+          <Property Type="Int32" Name="Automation_Time_Delay" />
+          <Property Type="Boolean" Name="Automation_Include_Shipping" />
+          <Property Type="Int32" Name="Search_Only_Top_Items" />
+          <Property Type="Boolean" Name="Is_Verified" />
+          <Property Type="Boolean" Name="Is_Free_Traffic" />
+          <Property Type="Boolean" Name="Is_Password_Reset_Request" />
+          <Property Type="Boolean" Name="Is_Subscribed" />
+          <Property Type="Int32" Name="Country_Code" />
+          <Property Type="Int32" Name="Currency_Code" />
+          <Property Type="Decimal" Name="Ceiling_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Floor_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Algo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Less_To_Lowest_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Keywords" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Minimum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Minimum_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Price" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="Minimum_Quantity" />
+          <Property Type="Int32" Name="Maximum_Quantity" />
+          <Property Type="String" Name="Inclued_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Exclude_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Maximum_Handling_Time" />
+          <Property Type="Boolean" Name="Is_Fixed_Price" />
+          <Property Type="Boolean" Name="Is_Auctions" />
+          <Property Type="Boolean" Name="Is_Returns_Accepted" />
+          <Property Type="Boolean" Name="Is_Location_AU" />
+          <Property Type="Boolean" Name="Is_Hide_Duplicates" />
+          <Property Type="Boolean" Name="Is_Top_Rated_Only" />
+          <Property Type="Boolean" Name="Is_Round_To_Nearest" />
+          <Property Type="String" Name="Exclude_Category_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Include_Condtion_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocatedIn" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Automate_Title_Display" />
+          <Property Type="Boolean" Name="Notify_Title_Locked" />
+          <NavigationProperty Name="Country1" Relationship="ParcelSolutionsModel.FK_User_Country" FromRole="User" ToRole="Country" />
+          <NavigationProperty Name="Currency" Relationship="ParcelSolutionsModel.FK_User_Currency" FromRole="User" ToRole="Currency" />
+          <NavigationProperty Name="LoginDetails" Relationship="ParcelSolutionsModel.FK_LoginDetail_User" FromRole="User" ToRole="LoginDetail" />
+          <NavigationProperty Name="Package" Relationship="ParcelSolutionsModel.FK_User_Package" FromRole="User" ToRole="Package" />
+          <NavigationProperty Name="ParcelItems" Relationship="ParcelSolutionsModel.FK_ParcelItem_User" FromRole="User" ToRole="ParcelItem" />
+          <NavigationProperty Name="Role" Relationship="ParcelSolutionsModel.FK_User_Role" FromRole="User" ToRole="Role" />
+          <NavigationProperty Name="UserAccounts" Relationship="ParcelSolutionsModel.FK_UserAccount_User" FromRole="User" ToRole="UserAccount" />
+          <NavigationProperty Name="SellerItems" Relationship="ParcelSolutionsModel.FK_SellerItem_User" FromRole="User" ToRole="SellerItem" />
+        </EntityType>
+        <EntityType Name="UserAccount">
+          <Key>
+            <PropertyRef Name="User_Account_Code" />
+          </Key>
+          <Property Type="Int32" Name="User_Account_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="Int32" Name="Account_Code" />
+          <Property Type="String" Name="Application_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Config_Value1" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Config_Value2" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Config_Value3" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Config_Value4" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="DateTime" Name="Modified_Date" />
+          <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ebay_User_Name" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="ParcelSolutionsModel.FK_UserAccount_Account" FromRole="UserAccount" ToRole="Account" />
+          <NavigationProperty Name="ParcelItems" Relationship="ParcelSolutionsModel.FK_ParcelItem_UserAccount" FromRole="UserAccount" ToRole="ParcelItem" />
+          <NavigationProperty Name="User" Relationship="ParcelSolutionsModel.FK_UserAccount_User" FromRole="UserAccount" ToRole="User" />
+          <NavigationProperty Name="SellerItems" Relationship="ParcelSolutionsModel.FK_SellerItem_UserAccount" FromRole="UserAccount" ToRole="SellerItem" />
+        </EntityType>
+        <Association Name="FK_UserAccount_Account">
+          <End Type="ParcelSolutionsModel.Account" Role="Account" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.UserAccount" Role="UserAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="Account_Code" />
+            </Principal>
+            <Dependent Role="UserAccount">
+              <PropertyRef Name="Account_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Items_Country">
+          <End Type="ParcelSolutionsModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.Item" Role="Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="Item">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_Country">
+          <End Type="ParcelSolutionsModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.ParcelItem" Role="ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Country">
+          <End Type="ParcelSolutionsModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Currency">
+          <End Type="ParcelSolutionsModel.Currency" Role="Currency" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Currency">
+              <PropertyRef Name="Currency_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Currency_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpressSetupUser_Packages">
+          <End Type="ParcelSolutionsModel.Package" Role="Package" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.ExpressSetupUser" Role="ExpressSetupUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Package_Id" />
+            </Principal>
+            <Dependent Role="ExpressSetupUser">
+              <PropertyRef Name="Package_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__InvoiceDe__Invoi__3F9B6DFF">
+          <End Type="ParcelSolutionsModel.Invoice" Role="Invoice" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="Invoice_Code" />
+            </Principal>
+            <Dependent Role="InvoiceDetail">
+              <PropertyRef Name="Invoice_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginDetail_User">
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.LoginDetail" Role="LoginDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="LoginDetail">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccess_MenuItem">
+          <End Type="ParcelSolutionsModel.MenuItem" Role="MenuItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.RoleAccess" Role="RoleAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Principal>
+            <Dependent Role="RoleAccess">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccessFunction_MenuItem">
+          <End Type="ParcelSolutionsModel.MenuItem" Role="MenuItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.RoleAccessFunction" Role="RoleAccessFunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Principal>
+            <Dependent Role="RoleAccessFunction">
+              <PropertyRef Name="Menu_Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Package">
+          <End Type="ParcelSolutionsModel.Package" Role="Package" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="Package_Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Package_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_User">
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.ParcelItem" Role="ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParcelItem_UserAccount">
+          <End Type="ParcelSolutionsModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.ParcelItem" Role="ParcelItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAccount">
+              <PropertyRef Name="User_Account_Code" />
+            </Principal>
+            <Dependent Role="ParcelItem">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccess_Role">
+          <End Type="ParcelSolutionsModel.Role" Role="Role" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.RoleAccess" Role="RoleAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="RoleAccess">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleAccessFunction_Role">
+          <End Type="ParcelSolutionsModel.Role" Role="Role" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.RoleAccessFunction" Role="RoleAccessFunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="RoleAccessFunction">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Type="ParcelSolutionsModel.Role" Role="Role" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_Code" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Role_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAccount_User">
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.UserAccount" Role="UserAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="UserAccount">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetSalesForOldTitles_Result">
+          <Property Type="Int32" Name="TotalSales" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="SellerItem">
+          <Key>
+            <PropertyRef Name="Item_Code" />
+          </Key>
+          <Property Type="Int32" Name="Item_Code" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="User_Code" />
+          <Property Type="String" Name="Item_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Name" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_SKU" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Current_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="BIN_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Ceiling_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Floor_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Algo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Start_Date" />
+          <Property Type="DateTime" Name="End_Date" />
+          <Property Type="DateTime" Name="Created_Date" />
+          <Property Type="Boolean" Name="Is_Active" />
+          <Property Type="String" Name="Keywords" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Automated" />
+          <Property Type="Int32" Name="User_Account_Code" />
+          <Property Type="String" Name="Picture_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_View_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Promo_Item" />
+          <Property Type="Decimal" Name="Minimum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Feedback" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Minimum_Price" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="Maximum_Price" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="Minimum_Quantity" />
+          <Property Type="Int32" Name="Maximum_Quantity" />
+          <Property Type="String" Name="Inclued_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Exclude_Sellers" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Maximum_Handling_Time" />
+          <Property Type="Boolean" Name="Is_Fixed_Price" />
+          <Property Type="Boolean" Name="Is_Auctions" />
+          <Property Type="Boolean" Name="Is_Returns_Accepted" />
+          <Property Type="Boolean" Name="Is_Location_AU" />
+          <Property Type="Boolean" Name="Is_Hide_Duplicates" />
+          <Property Type="Boolean" Name="Is_Top_Rated_Only" />
+          <Property Type="String" Name="Exclude_Category_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Include_Condtion_Codes" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Category_ID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Item_Category_Name" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Item_Rank" />
+          <Property Type="Decimal" Name="Less_To_Lowest_Price" Precision="10" Scale="2" />
+          <Property Type="String" Name="Ignore_Words" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Is_Round_To_Nearest" />
+          <Property Type="String" Name="Currency" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="File_Item_Code" />
+          <Property Type="Int32" Name="Country_Code" />
+          <Property Type="String" Name="LocatedIn" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Rotate_Order" />
+          <Property Type="Int32" Name="Rotate_Days" />
+          <Property Type="Int32" Name="Rotate_Sales" />
+          <Property Type="Int32" Name="Current_Sales" />
+          <Property Type="Boolean" Name="Is_Title_Automated" />
+          <Property Type="Int32" Name="QuantityAvailable" />
+          <NavigationProperty Name="Country" Relationship="ParcelSolutionsModel.FK_SellerItem_Country" FromRole="SellerItem" ToRole="Country" />
+          <NavigationProperty Name="ItemTitles" Relationship="ParcelSolutionsModel.FK_ItemTitles_SellerItems" FromRole="SellerItem" ToRole="ItemTitle" />
+          <NavigationProperty Name="PricingHistories" Relationship="ParcelSolutionsModel.FK_PricingHistory_SellerItem" FromRole="SellerItem" ToRole="PricingHistory" />
+          <NavigationProperty Name="User" Relationship="ParcelSolutionsModel.FK_SellerItem_User" FromRole="SellerItem" ToRole="User" />
+          <NavigationProperty Name="UserAccount" Relationship="ParcelSolutionsModel.FK_SellerItem_UserAccount" FromRole="SellerItem" ToRole="UserAccount" />
+          <NavigationProperty Name="SellerItemFiles" Relationship="ParcelSolutionsModel.FK_SellerItemFile_SellerItem" FromRole="SellerItem" ToRole="SellerItemFile" />
+          <NavigationProperty Name="TitleHistories" Relationship="ParcelSolutionsModel.FK_TitleHistory_SellerItem" FromRole="SellerItem" ToRole="TitleHistory" />
+        </EntityType>
+        <Association Name="FK_SellerItem_Country">
+          <End Type="ParcelSolutionsModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Country_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="Country_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemTitles_SellerItems">
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.ItemTitle" Role="ItemTitle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="ItemTitle">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PricingHistory_SellerItem">
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.PricingHistory" Role="PricingHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="PricingHistory">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItem_User">
+          <End Type="ParcelSolutionsModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="User_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItem_UserAccount">
+          <End Type="ParcelSolutionsModel.UserAccount" Role="UserAccount" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserAccount">
+              <PropertyRef Name="User_Account_Code" />
+            </Principal>
+            <Dependent Role="SellerItem">
+              <PropertyRef Name="User_Account_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SellerItemFile_SellerItem">
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.SellerItemFile" Role="SellerItemFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="SellerItemFile">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TitleHistory_SellerItem">
+          <End Type="ParcelSolutionsModel.SellerItem" Role="SellerItem" Multiplicity="0..1" />
+          <End Type="ParcelSolutionsModel.TitleHistory" Role="TitleHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SellerItem">
+              <PropertyRef Name="Item_Code" />
+            </Principal>
+            <Dependent Role="TitleHistory">
+              <PropertyRef Name="Item_Code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ParcelSolutionsModelStoreContainer" CdmEntityContainer="DataModelEntities">
+          <FunctionImportMapping FunctionImportName="GetRoleAccess" FunctionName="ParcelSolutionsModel.Store.RoleAccess_Select">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParcelSolutionsModel.GetRoleAccess_Result">
+                <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+                <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+                <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+                <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="AccessFunctions">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.AccessFunction">
+              <MappingFragment StoreEntitySet="AccessFunction">
+                <ScalarProperty Name="Access_Function_Name" ColumnName="Access_Function_Name" />
+                <ScalarProperty Name="Access_Function_Code" ColumnName="Access_Function_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="Auth_Type" ColumnName="Auth_Type" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account_Name" />
+                <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChargeCodes">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.ChargeCode">
+              <MappingFragment StoreEntitySet="ChargeCode">
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Ebay_Code" ColumnName="Ebay_Code" />
+                <ScalarProperty Name="Charge_Code_Name" ColumnName="Charge_Code_Name" />
+                <ScalarProperty Name="Charge_Code" ColumnName="Charge_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Ebay_Site_ID" ColumnName="Ebay_Site_ID" />
+                <ScalarProperty Name="Is_Ebay_Site" ColumnName="Is_Ebay_Site" />
+                <ScalarProperty Name="Country_Abbr" ColumnName="Country_Abbr" />
+                <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Currency_Short_Name" ColumnName="Currency_Short_Name" />
+                <ScalarProperty Name="Currency_Name" ColumnName="Currency_Name" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExpressSetupUsers">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.ExpressSetupUser">
+              <MappingFragment StoreEntitySet="ExpressSetupUser">
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+                <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+                <ScalarProperty Name="Best_Time_Call" ColumnName="Best_Time_Call" />
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+                <ScalarProperty Name="Time_Using_EParcel" ColumnName="Time_Using_EParcel" />
+                <ScalarProperty Name="Login_Email_PS" ColumnName="Login_Email_PS" />
+                <ScalarProperty Name="Is_Registered_PS" ColumnName="Is_Registered_PS" />
+                <ScalarProperty Name="Daily_Orders" ColumnName="Daily_Orders" />
+                <ScalarProperty Name="Ebay_Store_URL" ColumnName="Ebay_Store_URL" />
+                <ScalarProperty Name="Business_Name" ColumnName="Business_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+                <ScalarProperty Name="Express_Setup_User_Code" ColumnName="Express_Setup_User_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Grand_Total" ColumnName="Grand_Total" />
+                <ScalarProperty Name="Tax_Price" ColumnName="Tax_Price" />
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="Company_Logo" ColumnName="Company_Logo" />
+                <ScalarProperty Name="Shipping_Method" ColumnName="Shipping_Method" />
+                <ScalarProperty Name="Seller_Discount" ColumnName="Seller_Discount" />
+                <ScalarProperty Name="Shipping_Cost" ColumnName="Shipping_Cost" />
+                <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+                <ScalarProperty Name="Invoice_Date" ColumnName="Invoice_Date" />
+                <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="To_Country" ColumnName="To_Country" />
+                <ScalarProperty Name="To_Address2" ColumnName="To_Address2" />
+                <ScalarProperty Name="To_Address" ColumnName="To_Address" />
+                <ScalarProperty Name="To_Name" ColumnName="To_Name" />
+                <ScalarProperty Name="From_Country" ColumnName="From_Country" />
+                <ScalarProperty Name="ABN_Number" ColumnName="ABN_Number" />
+                <ScalarProperty Name="From_Email" ColumnName="From_Email" />
+                <ScalarProperty Name="From_Phone" ColumnName="From_Phone" />
+                <ScalarProperty Name="From_Postcode" ColumnName="From_Postcode" />
+                <ScalarProperty Name="From_State" ColumnName="From_State" />
+                <ScalarProperty Name="From_Suburb" ColumnName="From_Suburb" />
+                <ScalarProperty Name="From_Address2" ColumnName="From_Address2" />
+                <ScalarProperty Name="From_Address" ColumnName="From_Address" />
+                <ScalarProperty Name="From_Name" ColumnName="From_Name" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Invoice_Code" ColumnName="Invoice_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvoiceDetails">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.InvoiceDetail">
+              <MappingFragment StoreEntitySet="InvoiceDetail">
+                <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+                <ScalarProperty Name="Invoice_Code" ColumnName="Invoice_Code" />
+                <ScalarProperty Name="Invoice_Detail_Code" ColumnName="Invoice_Detail_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+                <ScalarProperty Name="Detail_Description" ColumnName="Detail_Description" />
+                <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Item_Category_Name" ColumnName="Item_Category_Name" />
+                <ScalarProperty Name="Item_Category_ID" ColumnName="Item_Category_ID" />
+                <ScalarProperty Name="Item_View_URL" ColumnName="Item_View_URL" />
+                <ScalarProperty Name="Picture_URL" ColumnName="Picture_URL" />
+                <ScalarProperty Name="BIN_Price" ColumnName="BIN_Price" />
+                <ScalarProperty Name="Current_Price" ColumnName="Current_Price" />
+                <ScalarProperty Name="Minimum_Threshold" ColumnName="Minimum_Threshold" />
+                <ScalarProperty Name="Opening_Quantity" ColumnName="Opening_Quantity" />
+                <ScalarProperty Name="Balance_Quantity" ColumnName="Balance_Quantity" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemTitles">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.ItemTitle">
+              <MappingFragment StoreEntitySet="ItemTitles">
+                <ScalarProperty Name="Title_Index" ColumnName="Title_Index" />
+                <ScalarProperty Name="Is_Current" ColumnName="Is_Current" />
+                <ScalarProperty Name="Is_Locked" ColumnName="Is_Locked" />
+                <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="TotalSales" ColumnName="TotalSales" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemTitleId" ColumnName="ItemTitleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginDetails">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.LoginDetail">
+              <MappingFragment StoreEntitySet="LoginDetail">
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Logout_Date_Time" ColumnName="Logout_Date_Time" />
+                <ScalarProperty Name="Operating_System" ColumnName="Operating_System" />
+                <ScalarProperty Name="Browser" ColumnName="Browser" />
+                <ScalarProperty Name="Login_Date_Time" ColumnName="Login_Date_Time" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Login_Detail_Code" ColumnName="Login_Detail_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuItems">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.MenuItem">
+              <MappingFragment StoreEntitySet="MenuItem">
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+                <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+                <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+                <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Packages">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Package">
+              <MappingFragment StoreEntitySet="Packages">
+                <ScalarProperty Name="Is_ClicknSend_Active" ColumnName="Is_ClicknSend_Active" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Magento_Accounts" ColumnName="Magento_Accounts" />
+                <ScalarProperty Name="Shopify_Accounts" ColumnName="Shopify_Accounts" />
+                <ScalarProperty Name="Is_Eparcel_Active" ColumnName="Is_Eparcel_Active" />
+                <ScalarProperty Name="Ebay_Accounts" ColumnName="Ebay_Accounts" />
+                <ScalarProperty Name="Unlimited" ColumnName="Unlimited" />
+                <ScalarProperty Name="NoOfTransaction" ColumnName="NoOfTransaction" />
+                <ScalarProperty Name="SetupFee" ColumnName="SetupFee" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Paypal_Button_Id" ColumnName="Paypal_Button_Id" />
+                <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+                <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParcelItems">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.ParcelItem">
+              <MappingFragment StoreEntitySet="ParcelItem">
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="IsIncomplete" ColumnName="IsIncomplete" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Messages" ColumnName="Messages" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="PostCodeImageURL" ColumnName="PostCodeImageURL" />
+                <ScalarProperty Name="HasInsurance" ColumnName="HasInsurance" />
+                <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+                <ScalarProperty Name="SaleRecordId" ColumnName="SaleRecordId" />
+                <ScalarProperty Name="ShippingCost" ColumnName="ShippingCost" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street3" ColumnName="Street3" />
+                <ScalarProperty Name="Street2" ColumnName="Street2" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+                <ScalarProperty Name="BuyerID" ColumnName="BuyerID" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="CustomLabelText" ColumnName="CustomLabelText" />
+                <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+                <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Parcel_Status_Code" ColumnName="Parcel_Status_Code" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Parcel_Item_Code" ColumnName="Parcel_Item_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PostCodes">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.PostCode">
+              <MappingFragment StoreEntitySet="PostCode">
+                <ScalarProperty Name="Post_Code_Int" ColumnName="Post_Code_Int" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PricingHistories">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.PricingHistory">
+              <MappingFragment StoreEntitySet="PricingHistory">
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+                <ScalarProperty Name="Algo" ColumnName="Algo" />
+                <ScalarProperty Name="New_Price" ColumnName="New_Price" />
+                <ScalarProperty Name="Old_Price" ColumnName="Old_Price" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+                <ScalarProperty Name="Price_History_Code" ColumnName="Price_History_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductCategories">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.ProductCategory">
+              <MappingFragment StoreEntitySet="ProductCategories">
+                <ScalarProperty Name="ShowInSideBar" ColumnName="ShowInSideBar" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="CategoryLevel" ColumnName="CategoryLevel" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleAccesses">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.RoleAccess">
+              <MappingFragment StoreEntitySet="RoleAccess">
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+                <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+                <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+                <ScalarProperty Name="Role_Access_Code" ColumnName="Role_Access_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleAccessFunctions">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.RoleAccessFunction">
+              <MappingFragment StoreEntitySet="RoleAccessFunction">
+                <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+                <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+                <ScalarProperty Name="Access_Function_Code" ColumnName="Access_Function_Code" />
+                <ScalarProperty Name="Role_Access_Function_Code" ColumnName="Role_Access_Function_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SellerItemFiles">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.SellerItemFile">
+              <MappingFragment StoreEntitySet="SellerItemFile">
+                <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+                <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+                <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+                <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+                <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+                <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+                <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+                <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+                <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+                <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+                <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+                <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+                <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+                <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+                <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+                <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+                <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+                <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+                <ScalarProperty Name="Ignore_Words" ColumnName="Ignore_Words" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+                <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+                <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+                <ScalarProperty Name="Algo" ColumnName="Algo" />
+                <ScalarProperty Name="Is_Automated" ColumnName="Is_Automated" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+                <ScalarProperty Name="File_Item_Code" ColumnName="File_Item_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockLedgers">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.StockLedger">
+              <MappingFragment StoreEntitySet="StockLedger">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Stock_Ledger_Type" ColumnName="Stock_Ledger_Type" />
+                <ScalarProperty Name="Modifed_Date" ColumnName="Modifed_Date" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Narration" ColumnName="Narration" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Stock_Ledger_Code" ColumnName="Stock_Ledger_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscriptions">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.Subscription">
+              <MappingFragment StoreEntitySet="Subscription">
+                <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+                <ScalarProperty Name="Paypal_Buyer_ID" ColumnName="Paypal_Buyer_ID" />
+                <ScalarProperty Name="PayPal_Email_Address" ColumnName="PayPal_Email_Address" />
+                <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+                <ScalarProperty Name="Transaction_Id" ColumnName="Transaction_Id" />
+                <ScalarProperty Name="Subscription_Date" ColumnName="Subscription_Date" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TitleHistories">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.TitleHistory">
+              <MappingFragment StoreEntitySet="TitleHistory">
+                <ScalarProperty Name="Total_Sales" ColumnName="Total_Sales" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="New_Title" ColumnName="New_Title" />
+                <ScalarProperty Name="Old_Title" ColumnName="Old_Title" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+                <ScalarProperty Name="Title_History_Code" ColumnName="Title_History_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Notify_Title_Locked" ColumnName="Notify_Title_Locked" />
+                <ScalarProperty Name="Automate_Title_Display" ColumnName="Automate_Title_Display" />
+                <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+                <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+                <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+                <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+                <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+                <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+                <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+                <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+                <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+                <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+                <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+                <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+                <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+                <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+                <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+                <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+                <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+                <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+                <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+                <ScalarProperty Name="Algo" ColumnName="Algo" />
+                <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+                <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency_Code" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="Is_Subscribed" ColumnName="Is_Subscribed" />
+                <ScalarProperty Name="Is_Password_Reset_Request" ColumnName="Is_Password_Reset_Request" />
+                <ScalarProperty Name="Is_Free_Traffic" ColumnName="Is_Free_Traffic" />
+                <ScalarProperty Name="Is_Verified" ColumnName="Is_Verified" />
+                <ScalarProperty Name="Search_Only_Top_Items" ColumnName="Search_Only_Top_Items" />
+                <ScalarProperty Name="Automation_Include_Shipping" ColumnName="Automation_Include_Shipping" />
+                <ScalarProperty Name="Automation_Time_Delay" ColumnName="Automation_Time_Delay" />
+                <ScalarProperty Name="Floor_Limit_Alert" ColumnName="Floor_Limit_Alert" />
+                <ScalarProperty Name="Minimum_Threshold_Alert" ColumnName="Minimum_Threshold_Alert" />
+                <ScalarProperty Name="Is_Locked" ColumnName="Is_Locked" />
+                <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+                <ScalarProperty Name="Flat_Rate_Client" ColumnName="Flat_Rate_Client" />
+                <ScalarProperty Name="Charge_Code_AusPostRegInt" ColumnName="Charge_Code_AusPostRegInt" />
+                <ScalarProperty Name="Charge_Code_AirMailInt" ColumnName="Charge_Code_AirMailInt" />
+                <ScalarProperty Name="Charge_Code_ExpressInt" ColumnName="Charge_Code_ExpressInt" />
+                <ScalarProperty Name="Charge_Code_StandardInt" ColumnName="Charge_Code_StandardInt" />
+                <ScalarProperty Name="Charge_Code_Express" ColumnName="Charge_Code_Express" />
+                <ScalarProperty Name="Charge_Code_Standard" ColumnName="Charge_Code_Standard" />
+                <ScalarProperty Name="ABN_Number" ColumnName="ABN_Number" />
+                <ScalarProperty Name="Paypal_Subscription_ID" ColumnName="Paypal_Subscription_ID" />
+                <ScalarProperty Name="Paypal_Buyer_ID" ColumnName="Paypal_Buyer_ID" />
+                <ScalarProperty Name="Paypal_Email_Address" ColumnName="Paypal_Email_Address" />
+                <ScalarProperty Name="Is_Paypal_Expired" ColumnName="Is_Paypal_Expired" />
+                <ScalarProperty Name="Is_Paypal_Paid" ColumnName="Is_Paypal_Paid" />
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Customer_Field_Preference" ColumnName="Customer_Field_Preference" />
+                <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+                <ScalarProperty Name="Company_Logo" ColumnName="Company_Logo" />
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Confirmation_Code" ColumnName="Confirmation_Code" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAccounts">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.UserAccount">
+              <MappingFragment StoreEntitySet="UserAccount">
+                <ScalarProperty Name="Ebay_User_Name" ColumnName="Ebay_User_Name" />
+                <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Config_Value4" ColumnName="Config_Value4" />
+                <ScalarProperty Name="Config_Value3" ColumnName="Config_Value3" />
+                <ScalarProperty Name="Config_Value2" ColumnName="Config_Value2" />
+                <ScalarProperty Name="Config_Value1" ColumnName="Config_Value1" />
+                <ScalarProperty Name="Application_Name" ColumnName="Application_Name" />
+                <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetSalesForOldTitles" FunctionName="ParcelSolutionsModel.Store.GetSalesForOldTitles">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ParcelSolutionsModel.GetSalesForOldTitles_Result">
+                <ScalarProperty Name="TotalSales" ColumnName="TotalSales" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="SellerItems">
+            <EntityTypeMapping TypeName="ParcelSolutionsModel.SellerItem">
+              <MappingFragment StoreEntitySet="SellerItem">
+                <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+                <ScalarProperty Name="Is_Title_Automated" ColumnName="Is_Title_Automated" />
+                <ScalarProperty Name="Current_Sales" ColumnName="Current_Sales" />
+                <ScalarProperty Name="Rotate_Sales" ColumnName="Rotate_Sales" />
+                <ScalarProperty Name="Rotate_Days" ColumnName="Rotate_Days" />
+                <ScalarProperty Name="Rotate_Order" ColumnName="Rotate_Order" />
+                <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+                <ScalarProperty Name="File_Item_Code" ColumnName="File_Item_Code" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+                <ScalarProperty Name="Ignore_Words" ColumnName="Ignore_Words" />
+                <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+                <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" />
+                <ScalarProperty Name="Item_Category_Name" ColumnName="Item_Category_Name" />
+                <ScalarProperty Name="Item_Category_ID" ColumnName="Item_Category_ID" />
+                <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+                <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+                <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+                <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+                <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+                <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+                <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+                <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+                <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+                <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+                <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+                <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+                <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+                <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+                <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+                <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+                <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+                <ScalarProperty Name="Is_Promo_Item" ColumnName="Is_Promo_Item" />
+                <ScalarProperty Name="Item_View_URL" ColumnName="Item_View_URL" />
+                <ScalarProperty Name="Picture_URL" ColumnName="Picture_URL" />
+                <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+                <ScalarProperty Name="Is_Automated" ColumnName="Is_Automated" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Algo" ColumnName="Algo" />
+                <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+                <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+                <ScalarProperty Name="BIN_Price" ColumnName="BIN_Price" />
+                <ScalarProperty Name="Current_Price" ColumnName="Current_Price" />
+                <ScalarProperty Name="Item_SKU" ColumnName="Item_SKU" />
+                <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+                <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+                <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DataModel" ZoomLevel="85">
+        <EntityTypeShape EntityType="ParcelSolutionsModel.AccessFunction" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Account" Width="1.5" PointX="15" PointY="24.25" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.ChargeCode" Width="1.5" PointX="5.75" PointY="0.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.City" Width="1.5" PointX="5.75" PointY="4.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Country" Width="1.5" PointX="0.75" PointY="27.75" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Currency" Width="1.5" PointX="9.75" PointY="9" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.ExpressSetupUser" Width="1.5" PointX="12" PointY="3.125" Height="5.057109374999996" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Invoice" Width="1.5" PointX="0.75" PointY="1.125" Height="6.4032194010416674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.InvoiceDetail" Width="1.5" PointX="3" PointY="3.125" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Item" Width="1.5" PointX="3" PointY="26.25" Height="5.634013671874996" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.ItemTitle" Width="1.5" PointX="11.25" PointY="16.125" Height="3.326396484374996" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.LoginDetail" Width="1.5" PointX="14.25" PointY="27.375" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.MenuItem" Width="1.5" PointX="9.75" PointY="54.125" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Package" Width="1.5" PointX="9.75" PointY="3.625" Height="3.9033007812500102" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.ParcelItem" Width="1.5" PointX="6" PointY="24.75" Height="8.710836588541671" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.PostCode" Width="1.5" PointX="2.75" PointY="6.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.PricingHistory" Width="1.5" PointX="11.25" PointY="12.25" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.ProductCategory" Width="1.5" PointX="7.75" PointY="0.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Role" Width="1.5" PointX="9.75" PointY="50.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.RoleAccess" Width="1.5" PointX="12" PointY="50.25" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.RoleAccessFunction" Width="1.5" PointX="15" PointY="50.75" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.SellerItemFile" Width="1.5" PointX="11.25" PointY="38.75" Height="7.172425130208353" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.State" Width="1.5" PointX="4.75" PointY="7.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.StockLedger" Width="1.5" PointX="6.75" PointY="7.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.Subscription" Width="1.5" PointX="0.75" PointY="9.75" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.TitleHistory" Width="1.5" PointX="11.25" PointY="46.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.User" Width="1.5" PointX="12" PointY="20.625" Height="16.979798177083328" />
+        <EntityTypeShape EntityType="ParcelSolutionsModel.UserAccount" Width="1.5" PointX="17.25" PointY="27" Height="4.287903645833353" />
+        <AssociationConnector Association="ParcelSolutionsModel.FK_UserAccount_Account" >
+          <ConnectorPoint PointX="16.25" PointY="26.037985026041667" />
+          <ConnectorPoint PointX="16.25" PointY="27.15625" />
+          <ConnectorPoint PointX="17.25" PointY="27.15625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_Items_Country" >
+          <ConnectorPoint PointX="2.25" PointY="29.12474609375" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="29.12474609375" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="29.12474609375" />
+          <ConnectorPoint PointX="3" PointY="29.12474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_ParcelItem_Country" >
+          <ConnectorPoint PointX="1.7226553125" PointY="30.499492187500003" />
+          <ConnectorPoint PointX="1.7226553125" PointY="32.703675130208332" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="32.703675130208332" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="32.703675130208332" />
+          <ConnectorPoint PointX="6" PointY="32.703675130208332" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_User_Country" >
+          <ConnectorPoint PointX="1.20507515625" PointY="30.499492187500003" />
+          <ConnectorPoint PointX="1.20507515625" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="6.666666666666667" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="6.833333333333333" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="10.654947916666666" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="10.821614583333334" PointY="35.5640673828125" />
+          <ConnectorPoint PointX="12" PointY="35.5640673828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_User_Currency" >
+          <ConnectorPoint PointX="10.2890625" PointY="10.980286458333325" />
+          <ConnectorPoint PointX="10.2890625" PointY="27.331592783787926" />
+          <ConnectorPoint PointX="10.654947916666666" PointY="27.331592783787926" />
+          <ConnectorPoint PointX="10.821614583333334" PointY="27.331592783787926" />
+          <ConnectorPoint PointX="12" PointY="27.331592783787926" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_ExpressSetupUser_Packages" >
+          <ConnectorPoint PointX="11.25" PointY="5.5766503906250051" />
+          <ConnectorPoint PointX="12" PointY="5.5766503906250051" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK__InvoiceDe__Invoi__3F9B6DFF" >
+          <ConnectorPoint PointX="2.25" PointY="4.4035953776041623" />
+          <ConnectorPoint PointX="3" PointY="4.4035953776041623" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_LoginDetail_User" >
+          <ConnectorPoint PointX="13.5" PointY="29.134348958333334" />
+          <ConnectorPoint PointX="14.25" PointY="29.134348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_RoleAccess_MenuItem" >
+          <ConnectorPoint PointX="11.25" PointY="55.788198242187505" />
+          <ConnectorPoint PointX="12.75" PointY="55.788198242187505" />
+          <ConnectorPoint PointX="12.75" PointY="53.384095052083325" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_RoleAccessFunction_MenuItem" >
+          <ConnectorPoint PointX="11.25" PointY="54.925346621093759" />
+          <ConnectorPoint PointX="12.666666666666666" PointY="54.925346621093759" />
+          <ConnectorPoint PointX="12.833333333333334" PointY="54.925346621093759" />
+          <ConnectorPoint PointX="15.75" PointY="54.925346621093759" />
+          <ConnectorPoint PointX="15.75" PointY="52.922587890624982" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_User_Package" >
+          <ConnectorPoint PointX="11.25" PointY="5.5766503906250051" />
+          <ConnectorPoint PointX="11.75" PointY="5.5766503906250051" />
+          <ConnectorPoint PointX="11.75" PointY="12" />
+          <ConnectorPoint PointX="13" PointY="12" />
+          <ConnectorPoint PointX="13" PointY="20.25" />
+          <ConnectorPoint PointX="12.75" PointY="20.25" />
+          <ConnectorPoint PointX="12.75" PointY="20.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_ParcelItem_User" >
+          <ConnectorPoint PointX="12" PointY="30.458714686164797" />
+          <ConnectorPoint PointX="10.821614583333334" PointY="30.458714686164797" />
+          <ConnectorPoint PointX="10.654947916666666" PointY="30.458714686164797" />
+          <ConnectorPoint PointX="7.5" PointY="30.458714686164797" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_ParcelItem_UserAccount" >
+          <ConnectorPoint PointX="17.25" PointY="29.122327532552077" />
+          <ConnectorPoint PointX="16" PointY="29.122327532552077" />
+          <ConnectorPoint PointX="16" PointY="37.854798177083339" />
+          <ConnectorPoint PointX="10.821614583333334" PointY="37.854798177083339" />
+          <ConnectorPoint PointX="10.654947916666666" PointY="37.854798177083339" />
+          <ConnectorPoint PointX="6.75" PointY="37.854798177083339" />
+          <ConnectorPoint PointX="6.75" PointY="33.460836588541667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_RoleAccess_Role" >
+          <ConnectorPoint PointX="11.25" PointY="51.845896809895834" />
+          <ConnectorPoint PointX="12" PointY="51.845896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_RoleAccessFunction_Role" >
+          <ConnectorPoint PointX="10.5" PointY="53.316793619791667" />
+          <ConnectorPoint PointX="10.5" PointY="53.634095052083325" />
+          <ConnectorPoint PointX="12.666666666666666" PointY="53.634095052083325" />
+          <ConnectorPoint PointX="12.833333333333334" PointY="53.634095052083325" />
+          <ConnectorPoint PointX="14.625" PointY="53.634095052083325" />
+          <ConnectorPoint PointX="14.625" PointY="51.836293945312491" />
+          <ConnectorPoint PointX="15" PointY="51.836293945312491" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_User_Role" >
+          <ConnectorPoint PointX="10.73828125" PointY="50.375" />
+          <ConnectorPoint PointX="10.73828125" PointY="23.947043891893912" />
+          <ConnectorPoint PointX="12" PointY="23.947043891893912" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_UserAccount_User" >
+          <ConnectorPoint PointX="13.5" PointY="31.122050781250003" />
+          <ConnectorPoint PointX="15.916666666666666" PointY="31.122050781250003" />
+          <ConnectorPoint PointX="16.083333333333332" PointY="31.122050781250003" />
+          <ConnectorPoint PointX="17.25" PointY="31.122050781250003" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ParcelSolutionsModel.SellerItem" Width="1.5" PointX="19.5" PointY="22.875" Height="12.556865234374996" />
+        <AssociationConnector Association="ParcelSolutionsModel.FK_SellerItem_Country" >
+          <ConnectorPoint PointX="2.25" PointY="28.406121046875" />
+          <ConnectorPoint PointX="2.75" PointY="28.406121046875" />
+          <ConnectorPoint PointX="2.75" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="10.654947916666666" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="10.821614583333334" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="19.760414166666667" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="19.927080833333331" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="20.25" PointY="38.104798177083339" />
+          <ConnectorPoint PointX="20.25" PointY="35.431865234374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_ItemTitles_SellerItems" >
+          <ConnectorPoint PointX="20.25" PointY="22.875" />
+          <ConnectorPoint PointX="20.25" PointY="17.7881982421875" />
+          <ConnectorPoint PointX="19.927080833333331" PointY="17.7881982421875" />
+          <ConnectorPoint PointX="19.760414166666667" PointY="17.7881982421875" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="17.7881982421875" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="17.7881982421875" />
+          <ConnectorPoint PointX="12.75" PointY="17.7881982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_PricingHistory_SellerItem" >
+          <ConnectorPoint PointX="19.8437475" PointY="22.875" />
+          <ConnectorPoint PointX="19.8437475" PointY="13.62474609375" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="13.62474609375" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="13.62474609375" />
+          <ConnectorPoint PointX="12.75" PointY="13.62474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_SellerItem_User" >
+          <ConnectorPoint PointX="13.5" PointY="33.391134440104167" />
+          <ConnectorPoint PointX="15.916666666666666" PointY="33.391134440104167" />
+          <ConnectorPoint PointX="16.083333333333332" PointY="33.391134440104167" />
+          <ConnectorPoint PointX="19.5" PointY="33.391134440104167" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_SellerItem_UserAccount" >
+          <ConnectorPoint PointX="18.75" PointY="29.143951822916669" />
+          <ConnectorPoint PointX="19.5" PointY="29.143951822916669" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_SellerItemFile_SellerItem" >
+          <ConnectorPoint PointX="19.8437475" PointY="35.431865234374996" />
+          <ConnectorPoint PointX="19.8437475" PointY="42.336212565104162" />
+          <ConnectorPoint PointX="12.75" PointY="42.336212565104162" />
+        </AssociationConnector>
+        <AssociationConnector Association="ParcelSolutionsModel.FK_TitleHistory_SellerItem" >
+          <ConnectorPoint PointX="20.6562525" PointY="35.431865234374996" />
+          <ConnectorPoint PointX="20.6562525" PointY="47.807444661458334" />
+          <ConnectorPoint PointX="12.75" PointY="47.807444661458334" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

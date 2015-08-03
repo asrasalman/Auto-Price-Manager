@@ -1,0 +1,94 @@
+﻿Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe
+Installing service ParcelSolutionsEmailService...
+Service ParcelSolutionsEmailService has been successfully installed.
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Committing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\PSEmailService.exe
+Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Installing service ParcelSolutionsEmailService...
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Rolling back assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Restoring event log to previous state for source ParcelSolutionsEmailService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Installing service ParcelSolutionsEmailService...
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Rolling back assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Restoring event log to previous state for source ParcelSolutionsEmailService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   i = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+   logtoconsole = 
+Installing service ParcelSolutionsEmailService...
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Rolling back assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   i = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+   logtoconsole = 
+Restoring event log to previous state for source ParcelSolutionsEmailService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Installing service ParcelSolutionsEmailService...
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Rolling back assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Restoring event log to previous state for source ParcelSolutionsEmailService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe
+Installing service ParcelSolutionsEmailService...
+Service ParcelSolutionsEmailService has been successfully installed.
+Creating EventLog source ParcelSolutionsEmailService in log Application...
+Committing assembly 'D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.InstallLog
+   assemblypath = D:\Sites\EbayShipping\PSEmailService\bin\Debug\psemailservice.exe

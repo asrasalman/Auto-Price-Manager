@@ -1,0 +1,218 @@
+﻿Critical | System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GeneralSvc.RemoveAccountToken(String type, Int32 userAccountCode) in d:\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 50  |  3/17/2014 11:46:29 PM
+Critical | System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GeneralSvc.RemoveAccountToken(String type, Int32 userAccountCode) in d:\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 50  |  3/17/2014 11:46:30 PM
+Critical | System.NullReferenceException: Object reference not set to an instance of an object.
+   at paypal_IPN.Page_Load(Object sender, EventArgs e) in d:\Projects\PriceManager\PriceManager\PriceMangerWebsite\paypal\IPN.aspx.cs:line 71  |  3/18/2014 1:30:57 PM
+Critical | System.Data.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   --- End of inner exception stack trace ---
+   at System.Data.EntityClient.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GeneralSvc.RemoveAccountToken(String type, Int32 userAccountCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 50  |  3/31/2014 10:55:27 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:21:50 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:06 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:11 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:16 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:23 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:27 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:33 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:41 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:45 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:52 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:22:58 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:23:02 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:23:07 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:23:14 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:23:19 PM
+Error | System.Net.WebException: The request failed with HTTP status 417: Expectation failed.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at com.ebay.developer.Shopping.GetMultipleItems(GetMultipleItemsRequestType GetMultipleItemsRequest) in c:\Users\Javaid\AppData\Local\Temp\Temporary ASP.NET Files\root\dc02046d\4b36b603\App_WebReferences.xyzzdhad.3.cs:line 109447
+   at EbayServiceBL.GetMultipleItemsDetails(SearchResult result) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\EbayServiceBL.cs:line 600
+   at GeneralSvc.GetProductRank(String filterJSON, Int32 pageSize, String TokenJSON, Nullable`1 userCode) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\GeneralService.cs:line 253
+   at ParcelService.UpdateProductPrice(Int32 timeDelay) in d:\d\Projects\PriceManager\PriceManager\PriceMangerWebsite\App_Code\ParcelService.cs:line 182  |  5/7/2014 6:23:24 PM
+Critical | System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Item'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at GeneralSvc.RemoveAccountToken(String type, Int32 userAccountCode) in d:\d\d\Projects\PriceManager_19_6_14\PriceMangerWebsite\App_Code\GeneralService.cs:line 75
+ClientConnectionId:907ef53b-37ed-471a-acea-b6a1b0a0d249  |  6/25/2014 11:45:48 AM
+Critical | System.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_PricingHistory_SellerItem". The conflict occurred in database "PriceManager", table "dbo.PricingHistory", column 'Item_Code'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Objects.ObjectContext.ExecuteStoreCommand(String commandText, Object[] parameters)
+   at GeneralSvc.RemoveAccountToken(String type, Int32 userAccountCode) in d:\d\d\Projects\PriceManager_19_6_14\PriceMangerWebsite\App_Code\GeneralService.cs:line 77
+ClientConnectionId:6ca6430a-bbdf-4fa6-ba01-edfb75af1629  |  6/25/2014 3:15:57 PM

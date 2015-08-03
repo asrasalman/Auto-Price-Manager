@@ -1,0 +1,33 @@
+﻿Info | Service Started  |  7/24/2013 12:38:20 AM
+Info | Service On-Start Called  |  7/24/2013 12:38:20 AM
+Info | Downloading Transactions.  |  7/24/2013 12:38:20 AM
+Error | Error in Downloader Tick Method. Detail: The request channel timed out while waiting for a reply after 00:00:59.9709983. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.  |  7/24/2013 12:39:35 AM
+Info | Service Started  |  7/24/2013 12:39:42 AM
+Info | Service On-Start Called  |  7/24/2013 12:39:42 AM
+Info | Downloading Transactions.  |  7/24/2013 12:39:42 AM
+Error | Error in Downloader Tick Method. Detail: The request channel timed out while waiting for a reply after 00:00:59.9539973. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout.  |  7/24/2013 12:41:01 AM
+Info | Service Started  |  7/24/2013 12:45:12 AM
+Info | Service On-Start Called  |  7/24/2013 12:45:12 AM
+Info | Downloading Transactions.  |  7/24/2013 12:45:12 AM
+Info | Downloading Transactions.  |  7/24/2013 1:55:01 AM
+Info | Service Started  |  7/26/2013 12:09:48 AM
+Info | Service On-Start Called  |  7/26/2013 12:09:48 AM
+Info | Downloading Transactions.  |  7/26/2013 12:09:48 AM
+Info | Service Started  |  7/26/2013 12:11:52 AM
+Info | Service On-Start Called  |  7/26/2013 12:11:52 AM
+Info | Downloading Transactions.  |  7/26/2013 12:11:52 AM
+Info | Downloading Transactions.  |  7/26/2013 12:41:52 AM
+Info | Downloading Transactions.  |  7/26/2013 1:11:52 AM
+Info | Downloading Transactions.  |  7/26/2013 1:41:52 AM
+Info | Downloading Transactions.  |  7/26/2013 3:36:59 AM
+Info | Downloading Transactions.  |  7/26/2013 4:06:58 AM
+Info | Downloading Transactions.  |  7/26/2013 2:13:09 PM
+Info | Downloading Transactions.  |  7/26/2013 2:43:09 PM
+Info | Downloading Transactions.  |  7/26/2013 3:13:09 PM
+Info | Downloading Transactions.  |  7/26/2013 3:43:09 PM
+Info | Downloading Transactions.  |  7/26/2013 4:13:09 PM
+Info | Downloading Transactions.  |  7/26/2013 4:43:09 PM
+Info | Downloading Transactions.  |  7/26/2013 5:13:09 PM
+Info | Downloading Transactions.  |  7/26/2013 5:43:09 PM
+Info | Downloading Transactions.  |  7/26/2013 10:41:41 PM
+Info | Downloading Transactions.  |  7/26/2013 11:11:41 PM

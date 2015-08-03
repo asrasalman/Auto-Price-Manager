@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class site_Default : Base
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (UserKey != 0)
+            {
+                Response.Redirect("/pages/GettingStarted.aspx");
+            }
+        }
+    }
+}

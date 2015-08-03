@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="master_Main" %>
+
+<%@ Register Src="~/control/Header.ascx" TagName="Header" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Auto Price Manager</title>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/css/jquery-ui-1.8.22.custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/modal.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/rokbox-style.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/superfish.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/grid-12.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/style1.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/skeleton12.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/default.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/touch.gallery.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/isotope.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/template.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:400" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:400italic"
+        type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:700italic"
+        type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:700" type="text/css" />
+    <link rel="stylesheet" href="/css/theme/flexslider.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="cssstyle-style1 respmenu-type-sfmenu col12">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="36000">
+        <Services>
+            <asp:ServiceReference Path="/webservices/GeneralService.svc" />
+             <asp:ServiceReference Path="/webservices/TestService.svc" />
+        </Services>
+    </asp:ScriptManager>
+    <div id="body-wrapper">
+        <div id="rt-iewarn">
+            <div class="rt-container">
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <uc1:Header ID="header1" runat="server" />
+        <div class="content-bg" style="padding: 30px 0 0px !important;">
+            <div id="rt-utility">
+                <div class="rt-container">
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="rt-main" class="mb12">
+                <div class="rt-container" style="min-height:460px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class='infoContainer'>
+                    This is a test information for you.
+                </div>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="50">
+                    <ProgressTemplate>
+                        <div class="loadingContainer">
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+
+               <div class="clear"></div>
+              <%--  <div id="footer" style="  width: 1266px;margin-left: -155px;">--%>
+                <div id="footer" style="  width: 100%;">
+                    <div class="footer-container">
+
+                       <div id="rt-bottom">
+  
+                        </div>
+                        <div id="rt-footer">
+                            <div class="rt-container">
+                                <div class="rt-grid-6 rt-alpha">
+                                    <div class="rt-block">
+                                        <div class="custom">
+                                            <img src="/images/logo.png" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="rt-grid-6 rt-omega">
+                                    <div class="clear">
+                                    </div>
+                                    <div class="rt-block">
+                                        <p class="copyright">
+                                            <span class="siteName">www.autopricemanager.com </span>© 2014 <a href="/Site/Terms.aspx">
+                                                Privacy Policy</a></p>
+                                    </div>
+                                </div>
+                                <!-- {%FOOTER_LINK} -->
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rt-copyright">
+                            <div class="rt-container">
+                                <div class="rt-grid-12 rt-alpha rt-omega">
+                                    <div class="clear">
+                                    </div>
+                                    <div class="rt-block totop" style="display: block;">
+                                        <a href="#" id="gantry-totop" style="outline: none;">Scroll to Top</a>
+                                    </div>
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    </form>
+    <script src="/Scripts/lib/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/lib/jquery-ui-1.8.22.custom.min.js" type="text/javascript"></script>
+    <script src="/scripts/theme/superfish.js" type="text/javascript"></script>
+    <script src="/scripts/theme/jquery.mobilemenu.js" type="text/javascript"></script>
+    <script src="/scripts/theme/jquerynoconflict.js" type="text/javascript"></script>
+    <script src="/scripts/custom/Helpers.js" type="text/javascript"></script>
+    <%--<script src="/scripts/theme/jquerynoconflict.js" type="text/javascript"></script>
+<script src="/scripts/theme/mootools-core.js" type="text/javascript"></script>
+<script src="/scripts/theme/core.js" type="text/javascript"></script>
+<script src="/scripts/theme/modal.js" type="text/javascript"></script>
+<script src="/scripts/theme/mootools-more.js" type="text/javascript"></script>
+<script src="/scripts/theme/k2.noconflict.js" type="text/javascript"></script>
+<script src="/scripts/theme/k2.js" type="text/javascript"></script>
+<script src="/scripts/theme/rokbox.js" type="text/javascript"></script>
+<script src="/scripts/theme/superfish.js" type="text/javascript"></script>
+
+<script src="/scripts/theme/jquery.hoverIntent.js" type="text/javascript"></script>
+<script src="/scripts/theme/sftouchscreen.js" type="text/javascript"></script>
+<script src="/scripts/theme/gantry-totop.js" type="text/javascript"></script>
+<script src="/scripts/theme/browser-engines.js" type="text/javascript"></script>
+<script src="/scripts/theme/tooltips.js" type="text/javascript"></script>
+<script src="/scripts/theme/jquery.preloader.js" type="text/javascript"></script>
+<script src="/scripts/theme/touch.gallery.js" type="text/javascript"></script>
+<script src="/scripts/theme/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="/scripts/theme/scripts.js" type="text/javascript"></script>
+<script src="/scripts/theme/jquery.flexslider-min.js" type="text/javascript"></script>
+    --%>
+    <script type="text/javascript">
+        // initialise plugins
+        jQuery(function () {
+            jQuery('ul.sf-menu').superfish({
+                hoverClass: 'sfHover',
+                pathClass: 'overideThisToUse',
+                pathLevels: 1,
+                delay: 500,
+                animation: { opacity: 'show', height: 'show' },
+                speed: 'normal',
+                autoArrows: false,
+                dropShadows: true,
+                disableHI: false,
+                easing: "easeOutQuad",
+                onInit: function () { },
+                onBeforeShow: function () { },
+                onShow: function () { },
+                onHide: function () { }
+            });
+        });
+        jQuery(function () {
+            jQuery('.sf-menu').mobileMenu({});
+        })
+        jQuery(function () {
+            var ismobile = navigator.userAgent.match(/(iPhone)|(iPod)|(android)|(webOS)/i)
+            if (ismobile) {
+                jQuery('.sf-menu').sftouchscreen({});
+            }
+        })
+    </script>
+</body>
+</html>

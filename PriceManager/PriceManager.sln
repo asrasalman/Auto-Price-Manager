@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PriceMangerWebsite", "PriceMangerWebsite\", "{3328C294-2B89-43F9-9CC3-D787B1288386}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{033BD60D-D947-41AF-A3D0-39CDBD2B6049}|EBayDAL.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/PriceMangerWebsite"
+		Debug.AspNetCompiler.PhysicalPath = "PriceMangerWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PriceMangerWebsite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PriceMangerWebsite"
+		Release.AspNetCompiler.PhysicalPath = "PriceMangerWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PriceMangerWebsite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4236"
+		VWDVirtualPath = "/"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceManagerDAL", "PriceManagerDAL\PriceManagerDAL.csproj", "{033BD60D-D947-41AF-A3D0-39CDBD2B6049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceManagerService", "PriceMangerService\PriceManagerService.csproj", "{402C1C5B-2728-4610-97F6-95F33F17E6CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3328C294-2B89-43F9-9CC3-D787B1288386} = {3328C294-2B89-43F9-9CC3-D787B1288386}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|x64.ActiveCfg = Debug|Any CPU
+		{3328C294-2B89-43F9-9CC3-D787B1288386}.Release|x86.ActiveCfg = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|x64.ActiveCfg = Release|Any CPU
+		{033BD60D-D947-41AF-A3D0-39CDBD2B6049}.Release|x86.ActiveCfg = Release|Any CPU
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|Mixed Platforms.Build.0 = Debug|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|x64.ActiveCfg = Debug|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|x64.Build.0 = Debug|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|x86.ActiveCfg = Debug|x86
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Debug|x86.Build.0 = Debug|x86
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|Any CPU.ActiveCfg = Release|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|Mixed Platforms.ActiveCfg = Release|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|Mixed Platforms.Build.0 = Release|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|x64.ActiveCfg = Release|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|x64.Build.0 = Release|x64
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|x86.ActiveCfg = Release|x86
+		{402C1C5B-2728-4610-97F6-95F33F17E6CE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\CustomerDAL.dll.config
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\CustomerDAL.dll
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\CustomerDAL.pdb
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\CustomerDAL.dll
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\CustomerDAL.pdb

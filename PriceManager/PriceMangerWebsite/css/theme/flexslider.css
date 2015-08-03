@@ -1,0 +1,95 @@
+/*
+ * jQuery FlexSlider v1.4
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flex-nav-container{
+	background: url(../images/slider_bg.png) center bottom no-repeat;
+	background-size: 100%;
+	padding-bottom: 17px;	
+}
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {background: #fff; position: relative; }
+.flexslider .slides{padding:0; margin:0; list-style: none;}
+.flexslider .slides li {position: relative;}
+.flexslider .slides div.catItemImageBlock {
+  margin: 0;
+}
+.flexslider .slides div.catItemImageBlock span.catItemImage a {
+    border: 1px solid #272323;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+
+.flexslider-container {
+	position: relative;
+}
+
+/* Caption style */
+.flex-caption {
+	width: 233px; 
+	padding: 0 0 15px; 
+	position: absolute; 
+	left: 1px; 
+	top: 41%; 
+	background: url(../images/flex-caption.png) right bottom no-repeat;
+	text-align: right;
+}
+.flex-caption .flexCaptionInner{
+	background: white;
+	padding: 0 30px 0 10px;
+}
+.flex-caption .flexCaptionInner h3 {
+	font: 11px/30px 'Asap', sans-serif;
+	color: #727070;
+	padding: 8px 0 1px;
+	margin: 0;
+}
+.flex-caption .flexCaptionInner h3 span {
+	display: block;
+	font: 29px/30px 'Asap', sans-serif;
+	color: #524b4b;
+	letter-spacing: -1px;
+	margin-bottom: -10px;
+}
+
+/* Direction Nav */
+.flex-direction-nav{padding:0; margin:0; list-style: none;}
+.flex-direction-nav li a {width: 52px; height: 52px; margin: -13px 0 0; display: block; background: url(../images/bg_direction_nav.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;} /* set negative margin-top equal to half the height on the directional-nav for perfect vertical centering */
+.flex-direction-nav li a.flex-next {background-position: -52px 0; right: -16px; outline:none;}
+.flex-direction-nav li a.flex-prev {background-position: 0 0; left: -16px; outline:none;}
+
+/* Control Nav */
+.flex-control-nav{padding:0; margin:0; list-style: none;}
+.flex-control-nav { 
+	position: absolute; 
+	bottom: -12px; 
+	left: 50%;
+	margin-left: -30px;
+}
+.flex-control-nav li {
+	margin: 0 5px; 
+	float: left;
+}
+.flex-control-nav li a {
+	width: 10px; 
+	height: 10px; 
+	display: block; 
+	background: url(../images/bg_control_nav.png) no-repeat -20px 0; 
+	cursor: pointer; 
+	text-indent: -9999px;
+}
+.flex-control-nav li a:hover {background: url(../images/bg_control_nav.png) no-repeat 0 0;}
+.flex-control-nav li a.flex-active {background: url(../images/bg_control_nav.png) no-repeat right 0; cursor: default;}

@@ -1,0 +1,64 @@
+﻿body
+{
+    font-size: 12px;
+    font-family: Verdana;
+    color: Black;
+}
+.result
+{
+}
+.button1
+{
+    font-size: 16px;
+    padding: 5px 7px;
+    border: 1px solid #455B8B;
+    color: white;
+    background-color: #6179AC;
+    text-shadow: 0px -1px 0px #212F4E;
+    cursor: pointer;
+}
+
+.downloadFile, .uploadFile
+{
+    padding: 10px;
+    border: 1px dotted #BEBEBE;
+    display: inline-block;
+    background-color: whiteSmoke;
+    margin-bottom: 20px;
+    min-width: 393px;
+    margin: 10px 10px 20px 10px;
+}
+
+.uploadFileHeading
+{
+    text-decoration: underline;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.fileName
+{
+    display:none;
+}
+
+#tblParcelItems
+{
+    border: 1px solid gray;
+border-width: 2px;
+}
+
+#tblParcelItems td, #tblParcelItems th
+{
+    border: 1px solid gray;
+border-width: 0px 1px 1px 0px;    
+}
+
+.backred
+{
+    background-color:#F5BFBF !important;
+}
+
+.backblue
+{
+    background-color:#B8CEE9 !important
+}

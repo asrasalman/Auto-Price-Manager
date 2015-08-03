@@ -1,0 +1,821 @@
+/*=== COLOR VARIABLES ===*/
+/*=== DRAWER POSITION ===*/
+/*=== TOP POSITION ===*/
+/*=== HEADER POSITION ===*/
+/*=== SHOWCASE POSITION ===*/
+/*=== FEATURE POSITION ===*/
+/*=== UTILITY POSITION ===*/
+/*=== MAINTOP POSITION ===*/
+/*=== CONTENT ===*/
+/*== Portfolio Page ==*/
+#port div.itemExtraFields {
+  border-color: #e6e6e6;
+}
+/*== Contacts Page ==*/
+#contact-form-cont div.contact-form {
+  border-right: 1px solid #e6e6e6;
+}
+/*== User Profile ==*/
+div.profile dl {
+  border-bottom: 1px solid #e6e6e6;
+}
+/*== Search Page ==*/
+div.component-content > div.search #searchForm div.form-limit-and-counter {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+/*== User Registration ==*/
+div.k2AccountPage {
+  border-top: 1px solid #e6e6e6;
+}
+div.k2AccountPage > dl {
+  border-bottom: 1px solid #e6e6e6;
+}
+/* Pagination */
+div.k2Pagination li a.pagenav,
+div.pagination li a.pagenav,
+div.itemCommentsPagination li a.pagenav {
+  background: ;
+  color: ;
+}
+div.k2Pagination li a.pagenav:hover,
+div.pagination li a.pagenav:hover,
+div.itemCommentsPagination li a.pagenav:hover {
+  color: ;
+}
+div.k2Pagination li span.pagenav,
+div.pagination li span.pagenav,
+div.itemCommentsPagination li span.pagenav {
+  color: ;
+}
+/*=== MAINBOTTOM POSITION ===*/
+/*=== BOTTOM POSITION ===*/
+/*=== FOOTER POSITION ===*/
+
+.sf-menu>li>a:hover, .sf-menu>li>a:active, .sf-menu>li.sfHover>a, .sf-menu>li.sfHover>span, .sf-menu>li:hover>span, .sf-menu>li.current>a, .sf-menu>li.current>span, .sf-menu>li.active>a, .sf-menu>li.active>span {
+color: #ff0302;
+}
+.sf-menu >li>a, .sf-menu>li>span {
+color: #ffffff;
+}
+body {
+font-family: Arial,Helvetica,sans-serif;
+font-size: 14px;
+line-height: 22px;
+color: #2c2c2c;
+}
+body #rt-logo {
+/*width: 197px;
+height: 21px;*/
+width: 298px;
+height: 33px;
+}
+.sf-menu ul > li > a, .sf-menu ul > li > span {
+color: #ffffff;
+}
+.button
+{
+    height: 32px !important;
+padding-right: 10px !important;
+padding-left: 10px !important;
+}
+#pricing-table {
+    margin: 100px auto;
+    text-align: center;
+    width: 892px; /* total computed width = 222 x 3 + 226 */
+}
+
+#pricing-table .plan {
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+    text-shadow: 0 1px rgba(255,255,255,.8);        
+    background: #fff;      
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: 180px; /* plan width = 180 + 20 + 20 + 1 + 1 = 222px */      
+    float: left;
+    position: relative;
+}
+
+#pricing-table #most-popular {
+    z-index: 2;
+    top: -13px;
+    border-width: 3px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
+}
+
+#pricing-table .plan:nth-child(1) {
+    border-radius: 5px 0 0 5px;        
+}
+
+#pricing-table .plan:nth-child(4) {
+    border-radius: 0 5px 5px 0;        
+}
+
+/* --------------- */   
+
+#pricing-table h3 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 20px;
+    margin: -20px -20px 50px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#fff, #eee);
+}
+
+#pricing-table #most-popular h3 {
+    background-color: #ddd;
+    background-image: linear-gradient(#eee, #ddd);
+    margin-top: -30px;
+    padding-top: 30px;
+    border-radius: 5px 5px 0 0;         
+}
+
+#pricing-table .plan:nth-child(1) h3 {
+    border-radius: 5px 0 0 0;       
+}
+
+#pricing-table .plan:nth-child(4) h3 {
+    border-radius: 0 5px 0 0;       
+}   
+
+#pricing-table h3 span {
+    display: block;
+    font: bold 25px/100px Georgia, Serif;
+    color: #777;
+    background: #fff;
+    border: 5px solid #fff;
+    height: 100px;
+    width: 100px;
+    margin: 10px auto -65px;
+    border-radius: 100px;
+    box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+/* --------------- */
+
+#pricing-table ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#pricing-table li {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* --------------- */
+    
+#pricing-table .signup {
+position: relative;
+padding: 8px 20px;
+margin: 20px 0 0 0;
+color: #fff;
+font: bold 14px Arial, Helvetica;
+text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
+background-color: #ff0302;
+background-image: linear-gradient(#ff0302, #F93232);
+border-radius: 3px;
+text-shadow: 0 1px 0 rgba(0,0,0,.3);
+box-shadow: 0 1px 0 rgba(252, 117, 117, 0.5), 0 2px 0 rgba(240, 69, 69, 0.7)
+}
+
+#pricing-table .signup:hover {
+    background-color: #F93232;
+    background-image: linear-gradient(#F93232, #ff0302); 
+}
+
+#pricing-table .signup:active, #pricing-table .signup:focus {
+    background: #2c2c2c;       
+    top: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
+}
+#pricing-table .pricing-wrapper
+{
+    margin-left :0%;
+    margin-right :0%;
+}
+
+/* --------------- */
+
+.clear:before, .clear:after {
+  content:"";
+  display:table
+}
+
+.clear:after {
+  clear:both
+}
+
+.clear {
+  zoom:1
+} 
+
+div.searchContainer22
+{
+background: #F2EDED;
+border: 1px solid #ccc;
+padding: 10px;
+margin-top:10px;
+}
+#divAdvancedSearchBox {
+    background-color: rgb(226, 225, 225);
+width: 684px;
+padding: 5px 5px;
+height: 26px;
+margin-top: 5px;
+}
+
+    #divAdvancedSearchBox .item {
+        float: left;
+margin-right: 13px;
+    }
+
+
+.priceSmall {
+    width: 100px;
+    margin: 2px;
+}
+
+.algorithmMaster {
+display:none;
+}
+
+.algorithmClone 
+{
+    width: 120px;
+    margin: 2px;
+}
+
+#ddlAlgorithm, #txtLessToLowest, #ddlSavedFile, #ddlAlgorithmDefault, #txtLessToLowestDefault, #ddlCountry, #ddlCountryDefault{
+width: 200px;
+}
+
+.pricingItemSelected {
+background-color: #B2D889 !important;
+font-weight: 600;
+color: rgb(129, 95, 67);
+}
+
+.promoItem {
+background-color: rgb(240, 199, 138) !important;
+font-weight: 600;
+color: rgb(129, 95, 67);
+}
+
+#tblPricingItems img.thumbnail
+{
+    width : 80px !important;
+    height : 70px !important;
+    border : 1px solid #ccc;
+    margin : 5px;
+    
+}
+.divFilterModalBody {
+max-height: 550px;
+overflow-y: auto;
+}
+.resultText {
+position: relative;
+top: 0;
+left: 10px;
+display: inline-block;
+text-align: left;
+line-height: 16px;
+}
+.searchSellerID, .searchSellerScore {
+color: rgb(146, 145, 145);
+}
+.resultText {
+text-align: left;
+line-height: 16px;
+}
+.searchImg {
+width: 50px !important;
+height: 50px !important;
+}
+.divCurrentItemDetails {
+background: #F5F3F3;
+border: 1px solid #C5C4C4;
+width: 97%;
+padding: 5px;
+margin-bottom: 10px;
+}
+.searchSellerScore {
+color: rgb(146, 145, 145);
+}
+.searchTimeRemaining {
+color: rgb(146, 145, 145);
+padding-left: 10px;
+}
+.resultRight {
+float: right;
+display: inline-block;
+text-align: right;
+line-height: 21px;
+padding: 5px 7px 0px 0px;
+margin-top: 7px;
+}
+.resultRight {
+text-align: right;
+line-height: 21px;
+}
+.promoItem {
+background-color: rgb(240, 199, 138) !important;
+font-weight: 600;
+color: rgb(129, 95, 67);
+}
+.searchTitle
+{
+font-size: smaller;
+/* font-style: italic; */
+font-weight: bold;
+color: rgb(87, 85, 86);
+}
+.searchPrice {
+font-size: 14px;
+}
+.searchShippingCost {
+}
+.list
+{
+    width: 100%;
+    border: 1px solid gray;
+    margin-top: 10px;
+    border-width: 1px 0px 0px 1px;
+    font-size: 9pt;
+}
+
+.list thead tr
+{
+    background-color: #2c2c2c;
+    color: white;
+    height: 26px;
+}
+
+.list tbody tr
+{
+    height: 25px;
+}
+
+.list tbody tr td
+{
+    border-bottom: 1px solid gray;
+    padding-left: 2px !important;
+    border-right: 1px solid gray;
+}
+
+.list tbody tr:nth-child(even)
+{
+    background-color: #F2EDED;
+}
+
+a.btnEdit {
+width: 54px;
+display: inline-block;
+background: #4986C1;
+float: left;
+padding: 6px;
+text-decoration: none;
+margin: 2px;
+color: white;
+font-size: smaller;
+vertical-align: top;
+font-weight: normal !important;
+}
+span.spnPromo {
+height: 19px;
+width: 54px;
+display: inline-block;
+background: #1DA5B1;
+float: left;
+padding: 6px;
+text-decoration: none;
+margin: 2px;
+color: white;
+font-size: smaller;
+vertical-align: top;
+font-weight: normal !important;
+}
+.divFiltersModal p label,  .divDefaultsModal p label{
+display: inline-block;
+width: 155px;
+text-align: right;
+font-size: small !important;
+vertical-align : middle;
+}
+.divFiltersModal p input[type=text], .divDefaultsModal p input[type=text] {
+/*width: 75px;*/
+width: 101px;
+}
+.divFiltersModal p input.txtKeywords, .divDefaultsModal p input.txtKeywords, .divFiltersModal p input.txtIgnoreWords, .divDefaultsModal p input.txtIgnoreWords {
+width: 208px;
+}
+.divFiltersModal h4, .divDefaultsModal h4 {
+font-size: 18px;
+font-weight: normal;
+color: #ff0302;
+letter-spacing: -0.02em;
+height: 28px;
+border-bottom: 2px solid #ff0302;
+margin-right: 26px;
+}
+.columns2 {
+width: 50%;
+float: left;
+}
+.divFiltersModal p, .divDefaultsModal p {
+margin-bottom: 5px;
+
+}
+.divSearchResults {
+min-height: 450px;
+}
+.resultItem {
+border-bottom: 1px solid rgb(228, 228, 228);
+list-style : none;
+}
+div.loading
+{
+    background: url('/images/loader.gif') center 209px;
+    background-repeat: no-repeat;
+}
+.divFilterModalFooter
+{
+    margin-top: 10px;
+}
+.infoContainer
+{
+    border: 1px solid #E6CD4C;
+    padding: 12px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    z-index: 123456;
+    text-shadow: 1px 1px 0px white;
+    background: #FFEA98 url('/images/alert.png') 3px center no-repeat;
+    padding-left: 43px;
+    display: none;
+}
+
+.infoContainerGreen
+{
+    border: 1px solid #7FB65C !important;
+    background: #CFF1B9 url('/images/tickBig.png') 3px center no-repeat;
+}
+
+.infoContainerRed
+{
+    border: 1px solid #E9C3C3 !important;
+    background: #FFE7E7 url('/images/errorBig.png') 3px center no-repeat;
+}
+.loadingContainer
+{
+    background-position: 5px center;
+    border: 1px solid #E6DDDD;
+    background-color: white;
+    padding-left: 45px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    left: 45%;
+    top: 2px;
+    background: url('/images/loader.gif') center 7px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0px 0px 14px 0px #807E7E;
+    -moz-box-shadow: 0px 0px 14px 0px #807E7E;
+    -webkit-box-shadow: 0px 0px 14px 0px #807E7E;
+    display: inline-block;
+    z-index: 123456;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+}
+
+.loadingSmall
+{
+    background: url('/images/ajax-loader.gif') 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+
+#ulResults
+{
+    width: 755px;
+    float: left;
+    margin-top: 10px;
+}
+
+.resultItem
+{
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+
+
+.resultItem:nth-child(even)
+{
+}
+
+.shopifyConnected, .ebayConnected, .magentoConnected, .bigcommerceConnected {
+background: url('/images/tick-medium2.png') 7px 5px no-repeat;
+height: auto;
+padding-left: 53px;
+padding-top: 7px;
+font-size: 16px;
+color: rgb(50, 107, 12);
+background-color: rgb(207, 221, 207);
+padding: 12px 15px 5px 40px;
+text-shadow: 0px 1px 1px rgb(255, 255, 255);
+margin: 10px 0px;
+width: 243px;
+float: left;
+border: 1px solid;
+
+max-height: 43px;
+}
+.refreshConnection, .refreshShopifyConnection, .refreshMagentoConnection, .refreshBigcommerceConnection {
+margin-left: 15px;
+position: relative;
+top: 18px;
+text-decoration: underline;
+}
+.cancelToken {
+margin-left: 15px;
+position: relative;
+top: 18px;
+text-decoration: underline;
+color: rgb(209, 0, 0);
+}
+.shopItem {
+height: 53px;
+}
+.ebayAddMore {
+display: block;
+color: #325CCD;
+text-decoration: underline;
+cursor: pointer;
+font-size: 14px;
+padding-top: 6px;
+margin-top: 10px;
+}
+.ebayConnect {
+margin: 20px 0px 20px 0px;
+background: #F2EDED;
+border: 1px solid #ccc;
+padding: 15px 15px;
+/*border: 1px dotted rgb(199, 214, 194);*/
+
+}
+.userListEmail {
+width: 373px;
+border: 1px solid rgb(204, 204, 204);
+border-radius: 3px;
+padding: 5px;
+overflow: auto;
+height: 175px;
+background-color: whitesmoke;
+line-height: 20px;
+display: inline-block;
+vertical-align: top;
+margin: 20px 25px 20px 0px;
+}
+.userListEmail .listHeading {
+color: white;
+background-color: #2c2c2c;
+padding: 3px;
+}
+.userListEmail label {
+display: inline !important;
+margin-left: 6px;
+font-size: 10pt;
+vertical-align: middle;
+}
+.addRight {
+font-size: 13px;
+display: inline-block;
+margin: 0px 5px 5px 0px;
+}
+.addSmall {
+background: url(/images/add.png) 0 0 no-repeat;
+height: 16px;
+cursor: pointer;
+display: inline-block;
+padding-left: 18px;
+margin-right: 5px;
+color: green;
+}
+.edit {
+background-position: left center;
+background-image: url('/images/pencil.png');
+background-repeat: no-repeat;
+display: inline-block;
+width: 16px;
+height: 16px;
+cursor: pointer;
+}
+.addSmall {
+background: url(/images/add.png) 0px 3px no-repeat;
+cursor: pointer;
+display: inline-block;
+padding-left: 18px;
+margin-right: 5px;
+color: green;
+height: 20px;
+margin-top: 10px;
+}
+.lockedUser {
+width: 24px;
+height: 24px;
+}
+.manageUser table tr
+{
+    height: 42px;
+}
+#pnlSignUp input.inputbox, #di
+      {
+          width:250px !important;
+      }
+      
+      #pnlSignUp label, #divPackage label, #divPriceSettings label
+      {
+          width:125px; display:inline-block; margin-top:5px;
+      }
+      #btnSignUp
+      {
+        float: left;
+        margin-left: 130px;
+      }
+      div.captcha > div
+      {
+          background-color: white;
+          margin-left: 130px;
+          border: 1px solid #d5d5d5; 
+          width: 246px;
+          margin-bottom: 24px;
+      }
+       #pnlResetPass input.inputbox
+      {
+          width:250px !important;
+      }
+      
+      #pnlResetPass Label
+      {
+          width:125px; display:inline-block; margin-top:5px;
+      }
+      #btnResetPassword
+      {
+        float: right;
+        margin-right: 96px;
+      }
+      #pnlContact input.inputbox, #pnlContact select
+        {
+            width: 250px !important;
+        }
+        
+        #pnlContact textarea
+        {
+            width: 500px !important;
+            height:200px;
+        }
+        
+        #pnlContact Label
+        {
+            width: 125px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        #btnSendEmail
+        {
+            float: left;
+            margin-left: 130px;
+        }
+        .redLink
+{
+    border: 1px solid #AA2020;
+    padding: 8px 13px 8px 12px;
+    background-color: #D13A3A;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    text-shadow: 0px 0px 2px #4E0F0F;
+    box-shadow: inset 0px 0px 4px 0px #F86F6F;
+    margin-left: 22px;
+    font-family: Verdana;
+    font-size: 11px;
+}
+.profileMessage
+{
+    color: white !important;
+    line-height: 23px;
+    float: right;
+    border: 1px solid green;
+    background-color: #269930;
+    padding: 5px 20px;
+    margin-top: -17px;
+}
+
+.profileMessageError
+{
+    color: white !important;
+    line-height: 23px;
+    float: right;
+    padding: 5px 20px;
+    margin-top: -17px;
+    background-color: #AF402B !important;
+}
+
+.spnPackage{
+display: inline-block;
+margin-top: 0px;
+background: #F2EDED;
+padding: 5px;
+width: 100px;
+text-align: center;
+border: 1px solid #ccc;
+font-weight: bold;
+}
+.errorbox
+{
+    display: block;
+    background-color: #F0D3CB;
+    border: 1px solid #FF9494;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+errorbox ul
+{
+    margin-left: 20px;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th
+{
+}
+
+table.tablesorter thead tr .header
+{
+    background-image: url(/images/bg.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+table.tablesorter thead tr .headerSortUp
+{
+    background-image: url(/images/asc.png);
+}
+
+table.tablesorter thead tr .headerSortDown
+{
+    background-image: url(/images/desc.png);
+}
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp
+{
+    background-color: rgb(95, 94, 93);
+}
+span.condition
+{
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+text-shadow: 0 1px rgba(255,255,255,.8);
+color: #333;
+padding: 20px;
+display: inline-block;
+
+}
+.divCurrentItemDetails .searchTitle
+{
+    display: inline-block;
+    width: 750px;
+}
+
+.divCurrentItemDetails #hrefRefresh
+{
+    float:right;margin-top:-20px;
+}
+li.myProduct span.searchPrice, li.myProduct span.searchShippingCost
+{
+    color:Red;
+}
+#divPricingMainSearch label
+{
+    width:150px;
+    display:inline-block;
+}
+/*-------*/
+

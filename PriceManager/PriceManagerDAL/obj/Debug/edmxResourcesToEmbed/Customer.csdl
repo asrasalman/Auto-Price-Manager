@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CustomerDBModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CustomerDBEntities">
+    <FunctionImport Name="GetRoleAccesses" ReturnType="Collection(CustomerDBModel.GetRoleAccesses_Result)">
+      <Parameter Name="Role_Code" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Cities" EntityType="CustomerDBModel.City" />
+    <EntitySet Name="Countries" EntityType="CustomerDBModel.Country" />
+    <EntitySet Name="Customers" EntityType="CustomerDBModel.Customer" />
+    <EntitySet Name="CUSTOMER2" EntityType="CustomerDBModel.CUSTOMER2" />
+    <EntitySet Name="CustomerAddresses" EntityType="CustomerDBModel.CustomerAddress" />
+    <EntitySet Name="CustomerGroups" EntityType="CustomerDBModel.CustomerGroup" />
+    <EntitySet Name="MenuItems" EntityType="CustomerDBModel.MenuItem" />
+    <EntitySet Name="PriceLevels" EntityType="CustomerDBModel.PriceLevel" />
+    <EntitySet Name="Roles" EntityType="CustomerDBModel.Role" />
+    <EntitySet Name="RoleAccesses" EntityType="CustomerDBModel.RoleAccess" />
+    <EntitySet Name="SalesReps" EntityType="CustomerDBModel.SalesRep" />
+    <EntitySet Name="SalesTaxes" EntityType="CustomerDBModel.SalesTax" />
+    <EntitySet Name="ShippingTypes" EntityType="CustomerDBModel.ShippingType" />
+    <EntitySet Name="States" EntityType="CustomerDBModel.State" />
+    <EntitySet Name="TaxAgencies" EntityType="CustomerDBModel.TaxAgency" />
+    <EntitySet Name="TaxClasses" EntityType="CustomerDBModel.TaxClass" />
+    <EntitySet Name="Terms" EntityType="CustomerDBModel.Term" />
+    <EntitySet Name="Users" EntityType="CustomerDBModel.User" />
+    <AssociationSet Name="FK__City__Country_Co__5DCAEF64" Association="CustomerDBModel.FK__City__Country_Co__5DCAEF64">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="City" EntitySet="Cities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__City___6383C8BA" Association="CustomerDBModel.FK__CustomerA__City___6383C8BA">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesRep_City" Association="CustomerDBModel.FK_SalesRep_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="SalesRep" EntitySet="SalesReps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__Count__656C112C" Association="CustomerDBModel.FK__CustomerA__Count__656C112C">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__State__Country_C__59063A47" Association="CustomerDBModel.FK__State__Country_C__59063A47">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="State" EntitySet="States" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Custom__48CFD27E" Association="CustomerDBModel.FK__Customer__Custom__48CFD27E">
+      <End Role="CustomerGroup" EntitySet="CustomerGroups" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Price___49C3F6B7" Association="CustomerDBModel.FK__Customer__Price___49C3F6B7">
+      <End Role="PriceLevel" EntitySet="PriceLevels" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Sales___4CA06362" Association="CustomerDBModel.FK__Customer__Sales___4CA06362">
+      <End Role="SalesRep" EntitySet="SalesReps" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Sales___4D94879B" Association="CustomerDBModel.FK__Customer__Sales___4D94879B">
+      <End Role="SalesTax" EntitySet="SalesTaxes" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Shippi__4AB81AF0" Association="CustomerDBModel.FK__Customer__Shippi__4AB81AF0">
+      <End Role="ShippingType" EntitySet="ShippingTypes" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Term_C__4BAC3F29" Association="CustomerDBModel.FK__Customer__Term_C__4BAC3F29">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__User_C__5070F446" Association="CustomerDBModel.FK__Customer__User_C__5070F446">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__Custo__628FA481" Association="CustomerDBModel.FK__CustomerA__Custo__628FA481">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerA__State__6477ECF3" Association="CustomerDBModel.FK__CustomerA__State__6477ECF3">
+      <End Role="State" EntitySet="States" />
+      <End Role="CustomerAddress" EntitySet="CustomerAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomerGroup_TaxClass" Association="CustomerDBModel.FK_CustomerGroup_TaxClass">
+      <End Role="TaxClass" EntitySet="TaxClasses" />
+      <End Role="CustomerGroup" EntitySet="CustomerGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoleAcces__Menu___3B75D760" Association="CustomerDBModel.FK__RoleAcces__Menu___3B75D760">
+      <End Role="MenuItem" EntitySet="MenuItems" />
+      <End Role="RoleAccess" EntitySet="RoleAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RoleAcces__Role___3A81B327" Association="CustomerDBModel.FK__RoleAcces__Role___3A81B327">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="RoleAccess" EntitySet="RoleAccesses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__Role_Code__4222D4EF" Association="CustomerDBModel.FK__User__Role_Code__4222D4EF">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesRep_State" Association="CustomerDBModel.FK_SalesRep_State">
+      <End Role="State" EntitySet="States" />
+      <End Role="SalesRep" EntitySet="SalesReps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesTax_TaxAgency" Association="CustomerDBModel.FK_SalesTax_TaxAgency">
+      <End Role="TaxAgency" EntitySet="TaxAgencies" />
+      <End Role="SalesTax" EntitySet="SalesTaxes" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="GetRoleAccesses_Result">
+    <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" />
+    <Property Type="String" Name="Menu_Item_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Menu_URL" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Parent_Menu_Item_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Created_Date" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Is_Active" Nullable="true" />
+    <Property Type="Int32" Name="User_Code" Nullable="true" />
+    <Property Type="DateTime" Name="Modified_Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="User_IP" Nullable="true" MaxLength="25" />
+    <Property Type="Boolean" Name="Has_Access" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="City_Name" />
+    </Key>
+    <Property Type="String" Name="City_Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Country_Code" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="CustomerDBModel.FK__City__Country_Co__5DCAEF64" FromRole="City" ToRole="Country" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="CustomerDBModel.FK__CustomerA__City___6383C8BA" FromRole="City" ToRole="CustomerAddress" />
+    <NavigationProperty Name="SalesReps" Relationship="CustomerDBModel.FK_SalesRep_City" FromRole="City" ToRole="SalesRep" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Country_Code" />
+    </Key>
+    <Property Type="Int32" Name="Country_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Country_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Country_Abbr" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cities" Relationship="CustomerDBModel.FK__City__Country_Co__5DCAEF64" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="CustomerDBModel.FK__CustomerA__Count__656C112C" FromRole="Country" ToRole="CustomerAddress" />
+    <NavigationProperty Name="States" Relationship="CustomerDBModel.FK__State__Country_C__59063A47" FromRole="Country" ToRole="State" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Customer_Code" />
+    </Key>
+    <Property Type="Int32" Name="Customer_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Company_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Customer_Group_Code" />
+    <Property Type="String" Name="Salute" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="First_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Middle_Initial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Last_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Alt_Contact" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Birthday" />
+    <Property Type="DateTime" Name="Wedding_Anniversary" />
+    <Property Type="String" Name="Telephone_1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telephone_2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cell" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Website" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Notes" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Price_Level_Code" />
+    <Property Type="String" Name="Resale_Number" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Shipping_Type_Code" />
+    <Property Type="Int32" Name="Term_Code" />
+    <Property Type="Decimal" Name="Credit_Limit" Precision="8" Scale="2" />
+    <Property Type="Int32" Name="Sales_Rep_Code" />
+    <Property Type="String" Name="Sales_Comm" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Taxable" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Sales_Tax_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="CustomerGroup" Relationship="CustomerDBModel.FK__Customer__Custom__48CFD27E" FromRole="Customer" ToRole="CustomerGroup" />
+    <NavigationProperty Name="PriceLevel" Relationship="CustomerDBModel.FK__Customer__Price___49C3F6B7" FromRole="Customer" ToRole="PriceLevel" />
+    <NavigationProperty Name="SalesRep" Relationship="CustomerDBModel.FK__Customer__Sales___4CA06362" FromRole="Customer" ToRole="SalesRep" />
+    <NavigationProperty Name="SalesTax" Relationship="CustomerDBModel.FK__Customer__Sales___4D94879B" FromRole="Customer" ToRole="SalesTax" />
+    <NavigationProperty Name="ShippingType" Relationship="CustomerDBModel.FK__Customer__Shippi__4AB81AF0" FromRole="Customer" ToRole="ShippingType" />
+    <NavigationProperty Name="Term" Relationship="CustomerDBModel.FK__Customer__Term_C__4BAC3F29" FromRole="Customer" ToRole="Term" />
+    <NavigationProperty Name="User" Relationship="CustomerDBModel.FK__Customer__User_C__5070F446" FromRole="Customer" ToRole="User" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="CustomerDBModel.FK__CustomerA__Custo__628FA481" FromRole="Customer" ToRole="CustomerAddress" />
+    <Property Type="String" Name="Customer_ID" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CUSTOMER2">
+    <Key>
+      <PropertyRef Name="CUSTID" />
+      <PropertyRef Name="PRICE_LEVEL" />
+      <PropertyRef Name="DATE_CREATED" />
+      <PropertyRef Name="LAST_UPDATED" />
+    </Key>
+    <Property Type="String" Name="CUSTID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QBID" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="COMPANY" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FNAME" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MIDINIT" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LNAME" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PHONE1" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PHONE2" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CELL" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FAX" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMAIL" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WEB" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ALT_CONTACT" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PRICE_LEVEL" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RESALE_NUM" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SALES_REP_ID" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SALES_COMMISSION" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="SHIPID" />
+    <Property Type="Decimal" Name="BALANCE" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="CREDIT_LIMIT" Precision="10" Scale="2" />
+    <Property Type="String" Name="TERMID" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="ACTIVE" />
+    <Property Type="DateTime" Name="DATE_CREATED" Nullable="false" />
+    <Property Type="DateTime" Name="LAST_UPDATED" Nullable="false" />
+    <Property Type="String" Name="CREATED_BY" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UPDATED_BY" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LOCATION" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EDITSEQ" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TRANSFERED" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="OPENINGBALANCE" Precision="10" Scale="2" />
+    <Property Type="String" Name="NOTES" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TAXABLE" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TAX_CD" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="FORMAT_PH" />
+    <Property Type="String" Name="FULL_COMPANY" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SALUTE" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="CUST_STATUS" />
+    <Property Type="DateTime" Name="CUST_BIRTH_DATE" />
+    <Property Type="DateTime" Name="CUST_ANNIV_DATE" />
+    <Property Type="Int32" Name="CUST_WEB_ID" />
+    <Property Type="DateTime" Name="LAST_MODIFIED" />
+    <Property Type="DateTime" Name="DATE_ADDED" />
+    <Property Type="DateTime" Name="TRANSFER_DT" />
+    <Property Type="String" Name="TRANSFER_FLAG" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CustomerAddress">
+    <Key>
+      <PropertyRef Name="Customer_Address_Code" />
+    </Key>
+    <Property Type="Int32" Name="Customer_Address_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Address_Type" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="Customer_Code" />
+    <Property Type="String" Name="Address_Line" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="State_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Zip_Code" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Country_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="City" Relationship="CustomerDBModel.FK__CustomerA__City___6383C8BA" FromRole="CustomerAddress" ToRole="City" />
+    <NavigationProperty Name="Country" Relationship="CustomerDBModel.FK__CustomerA__Count__656C112C" FromRole="CustomerAddress" ToRole="Country" />
+    <NavigationProperty Name="Customer" Relationship="CustomerDBModel.FK__CustomerA__Custo__628FA481" FromRole="CustomerAddress" ToRole="Customer" />
+    <NavigationProperty Name="State" Relationship="CustomerDBModel.FK__CustomerA__State__6477ECF3" FromRole="CustomerAddress" ToRole="State" />
+    <Property Type="Boolean" Name="Is_Default" />
+  </EntityType>
+  <EntityType Name="CustomerGroup">
+    <Key>
+      <PropertyRef Name="Customer_Group_Code" />
+    </Key>
+    <Property Type="Int32" Name="Customer_Group_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Customer_Group_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Tax_Class_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Custom__48CFD27E" FromRole="CustomerGroup" ToRole="Customer" />
+    <NavigationProperty Name="TaxClass" Relationship="CustomerDBModel.FK_CustomerGroup_TaxClass" FromRole="CustomerGroup" ToRole="TaxClass" />
+  </EntityType>
+  <EntityType Name="MenuItem">
+    <Key>
+      <PropertyRef Name="Menu_Item_Code" />
+    </Key>
+    <Property Type="Int32" Name="Menu_Item_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Menu_Item_Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Menu_URL" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Parent_Menu_Item_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RoleAccesses" Relationship="CustomerDBModel.FK__RoleAcces__Menu___3B75D760" FromRole="MenuItem" ToRole="RoleAccess" />
+  </EntityType>
+  <EntityType Name="PriceLevel">
+    <Key>
+      <PropertyRef Name="Price_Level_Code" />
+    </Key>
+    <Property Type="Int32" Name="Price_Level_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Price_Level_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Price___49C3F6B7" FromRole="PriceLevel" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Role_Code" />
+    </Key>
+    <Property Type="Int32" Name="Role_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Role_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RoleAccesses" Relationship="CustomerDBModel.FK__RoleAcces__Role___3A81B327" FromRole="Role" ToRole="RoleAccess" />
+    <NavigationProperty Name="Users" Relationship="CustomerDBModel.FK__User__Role_Code__4222D4EF" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="RoleAccess">
+    <Key>
+      <PropertyRef Name="Role_Access_Code" />
+    </Key>
+    <Property Type="Int32" Name="Role_Access_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="Role_Code" />
+    <Property Type="Int32" Name="Menu_Item_Code" />
+    <Property Type="Boolean" Name="Has_Access" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MenuItem" Relationship="CustomerDBModel.FK__RoleAcces__Menu___3B75D760" FromRole="RoleAccess" ToRole="MenuItem" />
+    <NavigationProperty Name="Role" Relationship="CustomerDBModel.FK__RoleAcces__Role___3A81B327" FromRole="RoleAccess" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="SalesRep">
+    <Key>
+      <PropertyRef Name="Sales_Rep_Code" />
+    </Key>
+    <Property Type="Int32" Name="Sales_Rep_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="First_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Last_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Address_1" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address_2" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="State_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Zip_Code" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone_1" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Phone_2" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cell" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="City" Relationship="CustomerDBModel.FK_SalesRep_City" FromRole="SalesRep" ToRole="City" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Sales___4CA06362" FromRole="SalesRep" ToRole="Customer" />
+    <NavigationProperty Name="State" Relationship="CustomerDBModel.FK_SalesRep_State" FromRole="SalesRep" ToRole="State" />
+  </EntityType>
+  <EntityType Name="SalesTax">
+    <Key>
+      <PropertyRef Name="Sales_Tax_Code" />
+    </Key>
+    <Property Type="Int32" Name="Sales_Tax_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Sales_Tax_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Tax_Agency_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Decimal" Name="Rate" Precision="8" Scale="2" />
+    <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Is_Default" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Sales___4D94879B" FromRole="SalesTax" ToRole="Customer" />
+    <NavigationProperty Name="TaxAgency" Relationship="CustomerDBModel.FK_SalesTax_TaxAgency" FromRole="SalesTax" ToRole="TaxAgency" />
+  </EntityType>
+  <EntityType Name="ShippingType">
+    <Key>
+      <PropertyRef Name="Shipping_Type_Code" />
+    </Key>
+    <Property Type="Int32" Name="Shipping_Type_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Shipping_Type_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Shippi__4AB81AF0" FromRole="ShippingType" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="State_Name" />
+    </Key>
+    <Property Type="String" Name="State_Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Country_Code" />
+    <NavigationProperty Name="Country" Relationship="CustomerDBModel.FK__State__Country_C__59063A47" FromRole="State" ToRole="Country" />
+    <NavigationProperty Name="CustomerAddresses" Relationship="CustomerDBModel.FK__CustomerA__State__6477ECF3" FromRole="State" ToRole="CustomerAddress" />
+    <NavigationProperty Name="SalesReps" Relationship="CustomerDBModel.FK_SalesRep_State" FromRole="State" ToRole="SalesRep" />
+  </EntityType>
+  <EntityType Name="TaxAgency">
+    <Key>
+      <PropertyRef Name="Tax_Agency_Code" />
+    </Key>
+    <Property Type="Int32" Name="Tax_Agency_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Tax_Agency_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SalesTaxes" Relationship="CustomerDBModel.FK_SalesTax_TaxAgency" FromRole="TaxAgency" ToRole="SalesTax" />
+  </EntityType>
+  <EntityType Name="TaxClass">
+    <Key>
+      <PropertyRef Name="Tax_Class_Code" />
+    </Key>
+    <Property Type="Int32" Name="Tax_Class_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Tax_Class_Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CustomerGroups" Relationship="CustomerDBModel.FK_CustomerGroup_TaxClass" FromRole="TaxClass" ToRole="CustomerGroup" />
+  </EntityType>
+  <EntityType Name="Term">
+    <Key>
+      <PropertyRef Name="Term_Code" />
+    </Key>
+    <Property Type="Int32" Name="Term_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Term_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Term_Total_Days" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="Int32" Name="User_Code" />
+    <Property Type="String" Name="User_IP" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__Term_C__4BAC3F29" FromRole="Term" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_Code" />
+    </Key>
+    <Property Type="Int32" Name="User_Code" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Full_Name" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email_Address" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Role_Code" />
+    <Property Type="DateTime" Name="Created_Date" />
+    <Property Type="Boolean" Name="Is_Active" />
+    <Property Type="Int32" Name="Modified_By" />
+    <Property Type="DateTime" Name="Modified_Date" />
+    <Property Type="String" Name="User_IP" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customers" Relationship="CustomerDBModel.FK__Customer__User_C__5070F446" FromRole="User" ToRole="Customer" />
+    <NavigationProperty Name="Role" Relationship="CustomerDBModel.FK__User__Role_Code__4222D4EF" FromRole="User" ToRole="Role" />
+    <Property Type="String" Name="Customer_Field_Preference" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__City__Country_Co__5DCAEF64">
+    <End Type="CustomerDBModel.Country" Role="Country" Multiplicity="1" />
+    <End Type="CustomerDBModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Country_Code" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="Country_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__City___6383C8BA">
+    <End Type="CustomerDBModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.CustomerAddress" Role="CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="City_Name" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="City_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesRep_City">
+    <End Type="CustomerDBModel.City" Role="City" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.SalesRep" Role="SalesRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="City_Name" />
+      </Principal>
+      <Dependent Role="SalesRep">
+        <PropertyRef Name="City_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__Count__656C112C">
+    <End Type="CustomerDBModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.CustomerAddress" Role="CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Country_Code" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="Country_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__State__Country_C__59063A47">
+    <End Type="CustomerDBModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.State" Role="State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Country_Code" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="Country_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Custom__48CFD27E">
+    <End Type="CustomerDBModel.CustomerGroup" Role="CustomerGroup" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerGroup">
+        <PropertyRef Name="Customer_Group_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Customer_Group_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Price___49C3F6B7">
+    <End Type="CustomerDBModel.PriceLevel" Role="PriceLevel" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="Price_Level_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Price_Level_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Sales___4CA06362">
+    <End Type="CustomerDBModel.SalesRep" Role="SalesRep" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesRep">
+        <PropertyRef Name="Sales_Rep_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Sales_Rep_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Sales___4D94879B">
+    <End Type="CustomerDBModel.SalesTax" Role="SalesTax" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesTax">
+        <PropertyRef Name="Sales_Tax_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Sales_Tax_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Shippi__4AB81AF0">
+    <End Type="CustomerDBModel.ShippingType" Role="ShippingType" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShippingType">
+        <PropertyRef Name="Shipping_Type_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Shipping_Type_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Term_C__4BAC3F29">
+    <End Type="CustomerDBModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="Term_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Term_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__User_C__5070F446">
+    <End Type="CustomerDBModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_Code" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="User_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__Custo__628FA481">
+    <End Type="CustomerDBModel.Customer" Role="Customer" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.CustomerAddress" Role="CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Customer_Code" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="Customer_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerA__State__6477ECF3">
+    <End Type="CustomerDBModel.State" Role="State" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.CustomerAddress" Role="CustomerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="State_Name" />
+      </Principal>
+      <Dependent Role="CustomerAddress">
+        <PropertyRef Name="State_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomerGroup_TaxClass">
+    <End Type="CustomerDBModel.TaxClass" Role="TaxClass" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.CustomerGroup" Role="CustomerGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxClass">
+        <PropertyRef Name="Tax_Class_Code" />
+      </Principal>
+      <Dependent Role="CustomerGroup">
+        <PropertyRef Name="Tax_Class_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoleAcces__Menu___3B75D760">
+    <End Type="CustomerDBModel.MenuItem" Role="MenuItem" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.RoleAccess" Role="RoleAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuItem">
+        <PropertyRef Name="Menu_Item_Code" />
+      </Principal>
+      <Dependent Role="RoleAccess">
+        <PropertyRef Name="Menu_Item_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RoleAcces__Role___3A81B327">
+    <End Type="CustomerDBModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.RoleAccess" Role="RoleAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Role_Code" />
+      </Principal>
+      <Dependent Role="RoleAccess">
+        <PropertyRef Name="Role_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__Role_Code__4222D4EF">
+    <End Type="CustomerDBModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Role_Code" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Role_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesRep_State">
+    <End Type="CustomerDBModel.State" Role="State" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.SalesRep" Role="SalesRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="State_Name" />
+      </Principal>
+      <Dependent Role="SalesRep">
+        <PropertyRef Name="State_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesTax_TaxAgency">
+    <End Type="CustomerDBModel.TaxAgency" Role="TaxAgency" Multiplicity="0..1" />
+    <End Type="CustomerDBModel.SalesTax" Role="SalesTax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaxAgency">
+        <PropertyRef Name="Tax_Agency_Code" />
+      </Principal>
+      <Dependent Role="SalesTax">
+        <PropertyRef Name="Tax_Agency_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

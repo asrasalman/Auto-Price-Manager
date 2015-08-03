@@ -1,0 +1,18 @@
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\BooklinkDAL.dll.config
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\BooklinkDAL.dll
+D:\Sites\Customer\CustomerDAL\CustomerDAL\bin\Debug\BooklinkDAL.pdb
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\BooklinkDAL.dll
+D:\Sites\Customer\CustomerDAL\CustomerDAL\obj\Debug\BooklinkDAL.pdb
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.dll.config
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.dll
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.pdb
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\obj\Debug\BooklinkDAL.dll
+D:\Sites\Customer\BooklinkDAL\BooklinkDAL\obj\Debug\BooklinkDAL.pdb
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.dll.config
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.dll
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\BooklinkDAL.pdb
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\BooklinkDAL.dll
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\BooklinkDAL.pdb

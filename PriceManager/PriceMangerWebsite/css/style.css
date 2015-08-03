@@ -1,0 +1,1685 @@
+﻿body
+{
+    margin: 0;
+}
+
+body, input, select
+{
+    font-family: "Lucida Sans Unicode" , "Lucida Grande" , sans-serif;
+    font-size: 8pt;
+    color: Black;
+}
+
+select
+{
+    height: 21px;
+    margin-top: 2px;
+    margin-left: -1px;
+}
+
+a
+{
+    color: #325CCD;
+    cursor: pointer;
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container
+{
+    margin: 7px;
+}
+
+th
+{
+    text-align: left;
+}
+
+.textRight
+{
+    text-align: right;
+}
+
+.pageHeading
+{
+    font-size: 26px;
+    font-weight: normal;
+    color: #5f5f5f;
+    letter-spacing: -0.02em;
+}
+
+.customerList
+{
+    border-color: #D6D5D5;
+    box-shadow: 0px 0px 7px 0px #C7C7C7;
+    text-align: left;
+    min-width: 100%;
+    opacity: 0.3;
+}
+
+.customerListLoading
+{
+    background: url(/images/loader.gif) 0 0 no-repeat;
+    padding-left: 38px;
+    padding-top: 6px;
+    font-size: 17px;
+    height: 32px;
+}
+
+
+.customerList tr
+{
+    height: 25px;
+}
+
+.customerList th, .customerList td
+{
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    padding: 3px;
+    border-color: #D6D5D5;
+}
+
+.customerList thead
+{
+    background-color: #D6C8AF;
+    color: #2C2C2C;
+}
+
+.manageCustomer
+{
+    display: none;
+}
+
+.customerList .notes
+{
+    max-height: 38px;
+    overflow: auto;
+}
+
+
+.mainContent ::-webkit-scrollbar
+{
+    width: 7px;
+    height: 9px;
+    background: #E2E2E1;
+}
+
+.mainContent ::-webkit-scrollbar-thumb
+{
+    background: #929292;
+}
+
+.mainContent ::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(153, 129, 129, 0.3);
+}
+
+.addSmall
+{
+    background: url(/images/add.png) 0 0 no-repeat;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 18px;
+    margin-right: 5px;
+    color: green;
+}
+
+.saveSmall
+{
+    background: url(/images/tick.png) 0 0 no-repeat;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 18px;
+    margin-left: 5px;
+    color: green;
+    margin-bottom: -3px;
+}
+
+.cancelSmall
+{
+    background: url(/images/cancel.png) 0 0 no-repeat;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 18px;
+    margin-left: 5px;
+    color: green;
+    margin-bottom: -3px;
+}
+
+.addRight
+{
+    font-size: 13px;
+    display: inline-block;
+    margin: 0px 5px 5px 0px;
+}
+
+.inlineTemplate
+{
+    display: none;
+    background-color: #EEE;
+    border: 1px solid #969696;
+    padding: 7px;
+    position: absolute;
+    margin-top: 28px;
+    margin-left: -99px;
+    box-shadow: 0px 0px 10px -1px #4D4C4C;
+}
+
+.inlineTemplate input[type="text"]
+{
+    height: 14px;
+}
+
+
+.clean-gray
+{
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: linear-gradient(top, #eeeeee, #cccccc);
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font: bold 11px "Lucida Grande" , "Lucida Sans Unicode" , "Lucida Sans" , Geneva, Verdana, sans-serif;
+    line-height: 1;
+    padding: 8px 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #eee;
+    width: 150px;
+}
+.clean-gray:hover
+{
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: linear-gradient(top, #dddddd, #bbbbbb);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd;
+}
+.clean-gray:active
+{
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+
+.topHeader
+{
+    padding: 5px;
+    vertical-align: middle;
+    height: 47px;
+    margin-bottom: 25px;
+    background-color: white;
+    z-index: 99999;
+    position: relative;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    box-shadow: 0px 0px 17px 0px rgb(209, 209, 209);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.topHeader a
+{
+    color: #325CCD;
+    text-decoration: underline;
+}
+
+.userInfoSection
+{
+    float: right;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+
+
+.button1
+{
+    font-size: 11px;
+    color: white;
+    padding: 4px 20px;
+    background: -moz-linear-gradient( 		top, 		#c2b797 0%, 		#7d7356);
+    background: -webkit-gradient( 		linear, left top, left bottom,  		from(#c2b797), 		to(#7d7356));
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #696044;
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 0px rgba(255,255,255,0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 0px rgba(255,255,255,0.4);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5), inset 0px 0px 0px rgba(255,255,255,0.4);
+    text-shadow: 0px -1px 0px rgba(000,000,000,0.7), 0px 1px 0px rgba(255,255,255,0.3);
+    cursor: pointer;
+}
+
+.addressRemove
+{
+    float: right;
+    color: #446DBB;
+    font-size: 10px;
+    text-align: right;
+    cursor: pointer;
+    display: none;
+}
+
+.addLocation, .copyLocation
+{
+    background-image: url('/images/add.png');
+    background-repeat: no-repeat;
+    background-position: left 10px;
+    height: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.copyLocation
+{
+    display: inline-block;
+}
+
+
+.checked
+{
+    background-position: left center;
+    background-image: url('/images/checked.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.defaultOn
+{
+    background-position: left center;
+    background-image: url('/images/checked.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-decoration: underline;
+    padding-left: 18px;
+    margin-left: 30px;
+    cursor: pointer;
+    margin-right: 58px;
+    margin-bottom: 4px;
+}
+
+.defaultOff
+{
+    background-position: left center;
+    background-image: url('/images/unchecked.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    text-decoration: underline;
+    padding-left: 18px;
+    margin-left: 30px;
+    cursor: pointer;
+    margin-right: 58px;
+    margin-bottom: 4px;
+}
+
+.unchecked
+{
+    background-position: left center;
+    background-image: url('/images/unchecked.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.addCustomer
+{
+    margin: 10px;
+}
+
+.newItems, .newTerm, .newPriceLevel, .newShippingType, .newSalesRep, .newSalesTax
+{
+    display: none;
+    background-color: #EEE;
+    border: 1px solid #969696;
+    padding: 7px;
+    position: absolute;
+    box-shadow: 0px 0px 10px -1px #4D4C4C;
+}
+
+.newTerm
+{
+    margin-left: 82px;
+}
+
+.addCity, .addState
+{
+    display: none;
+}
+
+.ddlCountry
+{
+    max-width: 130px;
+}
+
+.resultContainer
+{
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #D3CDCD;
+}
+
+.deleteSelectedCustomers
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 20px;
+    background-position: left center;
+    background-image: url('/images/delete2.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 19px;
+    color: #E05050;
+}
+
+.showAddCustomer
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.requiredHighlight
+{
+    background-position: right center;
+    border: 1px solid maroon !important;
+    box-shadow: 0px 0px 10px 0px #D38D8D;
+    background-image: url('/images/required.gif');
+    background-repeat: no-repeat;
+}
+
+#tblAddresses
+{
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    margin: 15px 5px 5px 0px;
+    display: none;
+}
+
+.addressHead th, .addressItem td
+{
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 5px;
+}
+
+.addressHead
+{
+    background-color: #315894;
+    color: white;
+}
+
+#tblCustomers tr:hover
+{
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.rowHightlight
+{
+    background-color: #777273 !important;
+    color: white;
+}
+
+.cityStateRow select
+{
+    max-width: 130px;
+}
+
+/*--------------- login -----------------*/
+
+.login
+{
+    margin-right: 10px;
+}
+
+#login1
+{
+    font-size: 18px;
+    color: #161616;
+    margin: 0px 10px 10px 10px;
+}
+
+.loginContainer
+{
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    box-shadow: 0px 0px 24px -2px #5C5C5C;
+    border-radius: 6px;
+}
+
+.userDetails
+{
+    float: right;
+    margin-right: 20px;
+    text-align: right;
+}
+
+
+.content
+{
+    border: 1px solid #E6E4E4;
+    border-width: 0 1px 1px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-image: initial;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    zoom: 1;
+    border-image: initial;
+    font-size: 11px;
+    background-color: white;
+}
+
+.contentPadding
+{
+    padding: 6px 10px 8px 10px;
+}
+
+.bigTextBox
+{
+    width: 300px;
+    height: 30px;
+    font-size: 17px;
+    padding: 0px 5px 0px 5px;
+    margin-left: 19px;
+}
+
+.clean-gray-big
+{
+    background-color: #EEE;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+    background-image: -webkit-linear-gradient(top, #EEE, #CCC);
+    background-image: -moz-linear-gradient(top, #EEE, #CCC);
+    background-image: -ms-linear-gradient(top, #EEE, #CCC);
+    background-image: -o-linear-gradient(top, #EEE, #CCC);
+    background-image: linear-gradient(top, #EEE, #CCC);
+    border: 1px solid #CCC;
+    border-bottom: 1px solid #BBB;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #333;
+    font: bold 15px "Lucida Grande" , "Lucida Sans Unicode" , "Lucida Sans" , Geneva, Verdana, sans-serif;
+    line-height: 1;
+    padding: 8px 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #EEE;
+    width: 150px;
+    height: 40px;
+}
+
+.clean-gray-big:hover
+{
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: linear-gradient(top, #dddddd, #bbbbbb);
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd;
+}
+.clean-gray-big:active
+{
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+
+
+.loginHeaderText
+{
+    font-size: 22px;
+    height: 28px;
+    padding: 5px 10px 7px 16px;
+}
+
+.headerContainer
+{
+    height: 35px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid #E6E4E4;
+    padding-bottom: 6px;
+    background-color: #E9E6DD;
+    box-shadow: 0px 0px 10px 1px gray;
+    padding-top: 7px;
+}
+
+.logo
+{
+    float: left;
+    margin: -4px 0px 0px 6px;
+    background: url('/images/logo.png') no-repeat top;
+    width: 264px;
+    height: 80px;
+    text-indent: -999999px;
+}
+
+.mainContent
+{
+    padding: 10px;
+    margin-top: 65px;
+}
+
+
+.menu
+{
+    display: inline-table;
+    margin-left: 31px;
+}
+
+.menu a
+{
+    height: 30px;
+    background-color: #948D74;
+    border-radius: 5px;
+    padding: 6px 10px 6px 10px;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover
+{
+    background-color: #AEA997;
+}
+
+.menu a:active
+{
+    background-color: #466184;
+}
+
+.loadingContainer
+{
+    background-position: 5px center;
+    border: 1px solid #E6DDDD;
+    background-color: white;
+    padding-left: 45px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    left: 45%;
+    top: 2px;
+    background: url('/images/loader.gif') center 7px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0px 0px 14px 0px #807E7E;
+    -moz-box-shadow: 0px 0px 14px 0px #807E7E;
+    -webkit-box-shadow: 0px 0px 14px 0px #807E7E;
+    display: inline-block;
+    z-index: 123456;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+}
+
+.loadingSmall
+{
+    background: url('/images/ajax-loader.gif') 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+
+
+
+.list
+{
+    width: 100%;
+    border: 1px solid gray;
+    margin-top: 10px;
+    border-width: 1px 0px 0px 1px;
+    font-size: 9pt;
+}
+
+.list thead tr
+{
+    background-color: #696044;
+    color: white;
+    height: 26px;
+}
+
+.list tbody tr
+{
+    height: 25px;
+}
+
+.list tbody tr td
+{
+    border-bottom: 1px solid gray;
+    padding-left: 2px !important;
+    border-right: 1px solid gray;
+}
+
+.list tbody tr:nth-child(even)
+{
+    background-color: #EEE;
+}
+
+/*-------*/
+
+
+/*-------------- ADMIN START ------------*/
+
+.manageUser, .manageRole, .managePopupGeneral
+{
+    display: none;
+}
+
+.searchContainer22
+{
+    border: 1px solid #D5D3D3;
+    background-color: whiteSmoke;
+    box-shadow: 0px 0px 5px 0px #E7E1E1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+}
+
+.searchContainer22 div
+{
+    display: inline-table;
+    margin-left: 20px;
+}
+
+.edit
+{
+    background-position: left center;
+    background-image: url('/images/pencil.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.adjust
+{
+    background-position: left center;
+    background-image: url('/images/color_adjustment_green.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.delete
+{
+    background-position: left center;
+    background-image: url('/images/delete2.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.undelete
+{
+    background-position: left center;
+    background-image: url('/images/undelete.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.dropdownBig
+{
+    font-size: 16px;
+    padding: 5px;
+    height: 36px;
+}
+
+.backGreen
+{
+    background-color: #E2F3D3;
+}
+
+
+/*--------------- ADMIN END ------------*/
+
+
+.locationContainer
+{
+    background-color: #F3E7E1;
+    border-radius: 4px;
+    border: 1px solid #BEB9B0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.validation
+{
+    color: Red;
+    display: none;
+    font-weight: bold !important;
+}
+
+.watermark
+{
+    color: #ACACAC;
+}
+
+#divFooter
+{
+    background-color: #BDD6BC;
+}
+
+.customerPreference
+{
+    display: none;
+}
+
+.showCustomerPreferenceList
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 33px;
+    background-position: left center;
+    background-image: url('/images/pencil.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 18px;
+}
+
+.showLabelsReport
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 33px;
+    background-position: left center;
+    background-image: url('/images/label.gif');
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 18px;
+}
+
+.showCustomerReport
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 33px;
+    background-position: left center;
+    background-image: url('/images/list.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 18px;
+}
+
+star
+{
+    color: Red;
+}
+
+.customerPreference ul
+{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.customerPreference ul li
+{
+    padding-bottom: 4px;
+}
+
+.customerFieldPreferenceList
+{
+    height: 380px;
+    overflow: auto;
+}
+
+.button2
+{
+    background-color: #759ae9;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #759ae9), color-stop(50%, #376fe0), color-stop(50%, #1a5ad9), color-stop(100%, #2463de));
+    background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    background-image: linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+    border-top: 1px solid #1f58cc;
+    border-right: 1px solid #1b4db3;
+    border-bottom: 1px solid #174299;
+    border-left: 1px solid #1b4db3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    -moz-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+    color: #fff;
+    font: bold 12px "helvetica neue" , helvetica, arial, sans-serif;
+    padding: 7px 0;
+    text-shadow: 0 -1px 1px #1a5ad9;
+    width: 150px;
+}
+.button2:hover
+{
+    background-color: #5d89e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d89e8), color-stop(50%, #2261e0), color-stop(50%, #044bd9), color-stop(100%, #0d53de));
+    background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+    cursor: pointer;
+}
+.button2:active
+{
+    border-top: 1px solid #1b4db3;
+    border-right: 1px solid #174299;
+    border-bottom: 1px solid #133780;
+    border-left: 1px solid #174299;
+    -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+}
+
+#tblAccess
+{
+    display: none;
+}
+
+.liSelected
+{
+    background-color: #E2E2E2 !important;
+}
+
+.textBlue a
+{
+    color: Blue !important;
+}
+
+/* INVOICING */
+
+.iv_CustomerDetailContainer
+{
+    display: inline-block;
+    background-color: #F3F2F2;
+    padding: 0px 10px 11px 0px;
+}
+
+.iv_ItemSelectionContainer
+{
+    padding: 0px 10px 11px 0px;
+    margin-top: 10px;
+}
+
+.iv_CustomerDetailContainer .billingContainer, .shippingContainer
+{
+    background-color: white;
+    padding: 5px;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0px 0px 10px 0px #D1D1D1;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.addressViewItem
+{
+    padding: 5px 0px 5px 5px;
+    line-height: 18px;
+}
+
+.controlContainer
+{
+    display: inline-block;
+}
+
+#showAddCustomer, #showEditCustomer
+{
+    color: Navy;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#showEditCustomer
+{
+    display: none;
+}
+
+.ddlTax
+{
+    width: 51px;
+}
+
+#tblTotals
+{
+    width: 254px;
+    float: right;
+    display: inline-table;
+}
+
+#tblTotals tr
+{
+    height: 30px;
+}
+
+#tblTotals span
+{
+    height: 17px;
+    width: 98px;
+    background-color: #EBEBEB;
+    display: inline-block;
+    border: 1px solid #BBB;
+    margin-left: 2px;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 2px;
+}
+
+#tblTotals input[type="text"]
+{
+    height: 17px;
+    text-align: right;
+    padding-right: 5px;
+    width: 100px;
+}
+
+.txtItemQuantity
+{
+    width: 70px;
+    text-align: right;
+}
+
+.txtItemDiscount, .txtItemRate, .txtItemTotal
+{
+    width: 53px;
+    text-align: right;
+}
+
+#divOtherDetails
+{
+    display: inline-block;
+}
+
+#tblOtherDetails td
+{
+    border: 1px solid #A3A0A0;
+    border-radius: 3px;
+    background-color: whiteSmoke;
+    padding: 10px;
+    vertical-align: top;
+}
+
+#tblOtherDetails #txtNotes
+{
+    width: 150px;
+}
+
+#tblOtherDetails select
+{
+    width: 150px;
+}
+
+.noItemRow
+{
+    background-color: #FFF4B8;
+    text-align: center;
+    height: 35px !important;
+    font-size: 14px;
+}
+
+#tblInvoiceDetail
+{
+    display: inline-table;
+    float: right;
+    width: 410px;
+}
+
+.txtItemDescription
+{
+    width: 99%;
+}
+
+#ulItems
+{
+    border: 1px solid gray;
+    list-style-type: none;
+}
+
+#ulItems div
+{
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+.myDragClass
+{
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+    background-color: #FFFFCA;
+    border-bottom: black 2px dashed;
+    border-left: black 2px dashed;
+    border-top: black 2px dashed;
+    border-right: black 2px dashed;
+}
+
+.showDragHandle
+{
+    cursor: move;
+}
+
+/* INVOICING */
+
+.searchContainer2 div
+{
+    display: inline-block;
+}
+
+.downloadFile, .uploadFile, .partMasterContainer
+{
+    border: 1px solid #D1D1D1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.downloadFile p, .uploadFile p
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.uploadFile
+{
+    margin-top: 30px;
+}
+
+a.button
+{
+    background: url('/images/themes/blue-green/button_right.png') no-repeat top right;
+    padding: 8px 4px 10px 0px !important;
+}
+a.button input
+{
+    background: url('/images/themes/blue-green/button_left.png') no-repeat top left;
+    text-shadow: rgb(0, 0, 0) 0px 0px 2px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    padding: 9px 9px 10px 11px;
+}
+
+.uploadManifestContainer
+{
+    border: 1px solid #E6E6E6;
+    margin-top: 20px;
+    background-color: #F3F3F3;
+    padding: 10px 0px 10px 10px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+.ebaySetting
+{
+    line-height: 54px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.ebaySettingContainer
+{
+    display: inline-block;
+    width: 600px;
+    border: 1px solid #D1D1D1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.generalContainer
+{
+    display: inline-block;
+    width: 1000px;
+    border: 1px solid #D1D1D1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.emailContainer
+{
+    display: inline-block;
+    width: 1000px;
+    border: 1px solid #D1D1D1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.partMasterContainer p, .generalContainer p
+{
+    margin: 10px 0px 20px 0px;
+}
+
+.button3
+{
+    background-color: #4986C1;
+    text-shadow: black 0px 0px 2px;
+    border: 0;
+    color: white;
+    padding: 7px 9px 7px 11px;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 0 #9DB6CE;
+    border: 1px solid #1E61A3;
+    margin-right: 10px;
+}
+
+.divNoSettingFound p
+{
+    margin: 10px 0px 10px 0px;
+}
+
+.divNoSettingFound h1
+{
+    background: url('/images/cog.png') no-repeat center left;
+    padding-left: 39px;
+    margin-bottom: 21px;
+    margin-top: 8px;
+}
+
+
+.profileMessage
+{
+    color: white !important;
+    line-height: 23px;
+    float: right;
+    border: 1px solid green;
+    background-color: #269930;
+    padding: 5px 20px;
+    margin-top: -17px;
+}
+
+.profileMessageError
+{
+    color: white !important;
+    line-height: 23px;
+    float: right;
+    padding: 5px 20px;
+    margin-top: -17px;
+    background-color: #AF402B !important;
+}
+
+.emptyRow
+{
+    display: none;
+    text-align: center;
+    background-color: #FFFFB0;
+    height: 33px !important;
+}
+
+
+.insuranceText
+{
+    width: 25px;
+    height: 22px;
+    border-radius: 3px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.userListEmail
+{
+    width: 373px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    padding: 5px;
+    overflow: auto;
+    height: 175px;
+    background-color: whitesmoke;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 25px 20px 0px;
+}
+
+.userListEmail label
+{
+    display: inline !important;
+    margin-left: 6px;
+    font-size: 10pt;
+}
+
+.userListEmail .listHeading
+{
+    color: White;
+    background-color: rgb(134, 116, 60);
+    padding: 3px;
+}
+
+.txtSubject
+{
+    height: 23px;
+    width: 741px;
+    margin: 10px 0px 10px 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.emailMessage
+{
+    padding: 4px;
+    display: block;
+    border: 1px solid rgb(107, 107, 107);
+    background-color: rgb(207, 207, 207);
+    width: 317px;
+    margin: 8px 0px 0px 0px;
+}
+
+.chkInsurance
+{
+    position: relative;
+    top: 2px;
+    left: -8px;
+}
+
+.groupRow
+{
+    background-color: rgb(228, 203, 150);
+    color: rgb(136, 88, 17);
+    padding: 4px 6px;
+    font-size: 17px;
+    text-shadow: 0px 0px 1px white;
+}
+
+.imgEbay
+{
+    float: right;
+    top: -3px;
+    position: relative;
+}
+
+.refreshConnection, .refreshShopifyConnection, .refreshMagentoConnection, .refreshBigcommerceConnection
+{
+    margin-left: 15px;
+    position: relative;
+    top: 18px;
+    text-decoration: underline;
+}
+
+.shopItem
+{
+    height: 53px;
+}
+
+.disabledLink
+{
+    color: white;
+    background-color: gray;
+    display: inline-block;
+}
+
+.magentoError, .bigcommerceError
+{
+    color: red;
+}
+
+.nowidth
+{
+    width: 0px;
+    display: none;
+}
+
+.cancelToken
+{
+    margin-left: 15px;
+    position: relative;
+    top: 18px;
+    text-decoration: underline;
+    color: rgb(209, 0, 0);
+}
+
+#ulResults
+{
+    width: 770px;
+    float: left;
+    margin-top: 10px;
+}
+
+.resultItem
+{
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.resultItem:nth-child(even)
+{
+}
+
+.searchImg
+{
+    width: 50px;
+    height: 50px;
+}
+
+.searchTitle
+{
+    font-size: smaller;
+font-weight: bold;
+color: rgb(87, 85, 86);
+}
+
+.searchPrice
+{
+    font-size: 14px;
+}
+
+.searchTimeRemaining
+{
+    color: rgb(146, 145, 145);
+    padding-left: 10px;
+}
+
+.resultRight
+{
+    float: right;
+    display: inline-block;
+    text-align: right;
+    line-height: 21px;
+    padding: 5px 7px 0px 0px;
+}
+
+.resultText
+{
+    position: relative;
+    top: -12px;
+    left: 10px;
+    display: inline-block;
+    text-align: left;
+    line-height: 16px;
+}
+
+#txtSearch
+{
+    width: 426px;
+    height: 18px;
+    font-size: 15px;
+    padding: 4px;
+    top: 2px;
+    position: relative;
+}
+
+.searchSellerID, .searchSellerScore
+{
+    color: rgb(146, 145, 145);
+}
+
+#ddlSearchEbay
+{
+    height: 30px;
+    font-size: 15px;
+    padding: 4px;
+    top: 2px;
+    position: relative;
+}
+
+.topRatedSeller
+{
+}
+
+.myProduct
+{
+    background-color: rgb(220, 244, 250) !important;
+}
+
+.myProduct .searchSellerID, .myProduct .searchSellerScore
+{
+    color: rgb(20, 109, 179) !important;
+}
+
+#divSearchSummary
+{
+    display: none;
+    border: 1px solid gray;
+    margin: 10px 0px 10px 15px;
+    padding: 10px 20px 15px 20px;
+    background-color: rgb(0, 91, 114);
+    color: white;
+    font-size: 13px;
+    line-height: 30px;
+    max-width: 415px;
+}
+
+#divSearchSummary .bold
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.rightContainer
+{
+    float: left;
+}
+
+
+.searchShippingCost
+{
+}
+
+.searchNote
+{
+    float: left;
+    margin-left: 15px;
+    max-width: 345px;
+    background-color: rgb(231, 231, 231);
+    padding: 10px;
+}
+
+.searchNote.orange
+{
+    margin-top: 10px;
+    background-color: rgb(255, 221, 158);
+}
+
+.summaryText
+{
+    display: none;
+}
+
+.myProduct .searchPrice span
+{
+    color: rgb(20, 92, 199);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#changePrice
+{
+    display: none;
+}
+
+
+.infoContainer
+{
+    border: 1px solid #E6CD4C;
+    padding: 12px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    z-index: 123456;
+    text-shadow: 1px 1px 0px white;
+    background: #FFEA98 url('/images/alert.png') 3px center no-repeat;
+    padding-left: 43px;
+    display: none;
+}
+
+.infoContainerGreen
+{
+    border: 1px solid #7FB65C !important;
+    background: #CFF1B9 url('/images/tickBig.png') 3px center no-repeat;
+}
+
+.infoContainerRed
+{
+    border: 1px solid #E9C3C3 !important;
+    background: #FFE7E7 url('/images/errorBig.png') 3px center no-repeat;
+}
+
+.deleteSmall
+{
+    background: url(/images/delete2.png) 0 0 no-repeat;
+height: 16px;
+cursor: pointer;
+display: inline-block;
+padding-left: 18px;
+margin-right: 5px;
+color: red;
+}
+
+#divAdvancedSearchBox {
+    background-color: rgb(226, 225, 225);
+width: 684px;
+padding: 5px 5px;
+height: 26px;
+margin-top: 5px;
+}
+
+    #divAdvancedSearchBox .item {
+        float: left;
+margin-right: 13px;
+    }
+
+
+.priceSmall {
+    width: 100px;
+    margin: 2px;
+}
+
+.algorithmMaster {
+display:none;
+}
+
+.algorithmClone 
+{
+    width: 120px;
+    margin: 2px;
+}
+
+#ddlAlgorithm {
+width: 200px;
+}
+
+.pricingItemSelected {
+background-color: #B2D889 !important;
+font-weight: 600;
+color: rgb(129, 95, 67);
+}
+
+.promoItem {
+background-color: #F5A9A9 !important;
+font-weight: 600;
+color: rgb(129, 95, 67);
+}
+
+#tblPricingItems img.thumbnail
+{
+    width : 90px;
+    height : 70px;
+    border : 1px solid #ccc;
+    margin : 5px;
+    
+}
+.divFilterModalBody {
+max-height: 450px;
+overflow-y: auto;
+}
+.divDefaultModalBody {
+max-height: 450px;
+overflow-y: auto;
+}
+.resultText {
+text-align: left;
+line-height: 16px;
+}
+.searchImg {
+width: 50px;
+height: 50px;
+}
+.divCurrentItemDetails {
+background: #F5F3F3;
+border: 1px solid #C5C4C4;
+width: 97%;
+padding: 5px;
+margin-bottom: 10px;
+}
+
+.divLoadTitle p
+{
+    /* border-bottom: #CEE 1px !important; */
+border-bottom: 1px solid #ccc !important;
+padding: 5px;
+}
+
+span.totalSales
+{
+    color:Red;
+}

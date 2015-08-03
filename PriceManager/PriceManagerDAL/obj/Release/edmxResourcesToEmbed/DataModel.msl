@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParcelSolutionsModelStoreContainer" CdmEntityContainer="DataModelEntities">
+    <FunctionImportMapping FunctionImportName="GetRoleAccess" FunctionName="ParcelSolutionsModel.Store.RoleAccess_Select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParcelSolutionsModel.GetRoleAccess_Result">
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AccessFunctions">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.AccessFunction">
+        <MappingFragment StoreEntitySet="AccessFunction">
+          <ScalarProperty Name="Access_Function_Name" ColumnName="Access_Function_Name" />
+          <ScalarProperty Name="Access_Function_Code" ColumnName="Access_Function_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Auth_Type" ColumnName="Auth_Type" />
+          <ScalarProperty Name="Account_Name" ColumnName="Account_Name" />
+          <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChargeCodes">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.ChargeCode">
+        <MappingFragment StoreEntitySet="ChargeCode">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Ebay_Code" ColumnName="Ebay_Code" />
+          <ScalarProperty Name="Charge_Code_Name" ColumnName="Charge_Code_Name" />
+          <ScalarProperty Name="Charge_Code" ColumnName="Charge_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Ebay_Site_ID" ColumnName="Ebay_Site_ID" />
+          <ScalarProperty Name="Is_Ebay_Site" ColumnName="Is_Ebay_Site" />
+          <ScalarProperty Name="Country_Abbr" ColumnName="Country_Abbr" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Currency_Short_Name" ColumnName="Currency_Short_Name" />
+          <ScalarProperty Name="Currency_Name" ColumnName="Currency_Name" />
+          <ScalarProperty Name="Currency_Code" ColumnName="Currency_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpressSetupUsers">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.ExpressSetupUser">
+        <MappingFragment StoreEntitySet="ExpressSetupUser">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+          <ScalarProperty Name="Best_Time_Call" ColumnName="Best_Time_Call" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Time_Using_EParcel" ColumnName="Time_Using_EParcel" />
+          <ScalarProperty Name="Login_Email_PS" ColumnName="Login_Email_PS" />
+          <ScalarProperty Name="Is_Registered_PS" ColumnName="Is_Registered_PS" />
+          <ScalarProperty Name="Daily_Orders" ColumnName="Daily_Orders" />
+          <ScalarProperty Name="Ebay_Store_URL" ColumnName="Ebay_Store_URL" />
+          <ScalarProperty Name="Business_Name" ColumnName="Business_Name" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+          <ScalarProperty Name="Express_Setup_User_Code" ColumnName="Express_Setup_User_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="Grand_Total" ColumnName="Grand_Total" />
+          <ScalarProperty Name="Tax_Price" ColumnName="Tax_Price" />
+          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+          <ScalarProperty Name="Company_Logo" ColumnName="Company_Logo" />
+          <ScalarProperty Name="Shipping_Method" ColumnName="Shipping_Method" />
+          <ScalarProperty Name="Seller_Discount" ColumnName="Seller_Discount" />
+          <ScalarProperty Name="Shipping_Cost" ColumnName="Shipping_Cost" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="Invoice_Date" ColumnName="Invoice_Date" />
+          <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="To_Country" ColumnName="To_Country" />
+          <ScalarProperty Name="To_Address2" ColumnName="To_Address2" />
+          <ScalarProperty Name="To_Address" ColumnName="To_Address" />
+          <ScalarProperty Name="To_Name" ColumnName="To_Name" />
+          <ScalarProperty Name="From_Country" ColumnName="From_Country" />
+          <ScalarProperty Name="ABN_Number" ColumnName="ABN_Number" />
+          <ScalarProperty Name="From_Email" ColumnName="From_Email" />
+          <ScalarProperty Name="From_Phone" ColumnName="From_Phone" />
+          <ScalarProperty Name="From_Postcode" ColumnName="From_Postcode" />
+          <ScalarProperty Name="From_State" ColumnName="From_State" />
+          <ScalarProperty Name="From_Suburb" ColumnName="From_Suburb" />
+          <ScalarProperty Name="From_Address2" ColumnName="From_Address2" />
+          <ScalarProperty Name="From_Address" ColumnName="From_Address" />
+          <ScalarProperty Name="From_Name" ColumnName="From_Name" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Invoice_Code" ColumnName="Invoice_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceDetails">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.InvoiceDetail">
+        <MappingFragment StoreEntitySet="InvoiceDetail">
+          <ScalarProperty Name="BuyerId" ColumnName="BuyerId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="Invoice_Code" ColumnName="Invoice_Code" />
+          <ScalarProperty Name="Invoice_Detail_Code" ColumnName="Invoice_Detail_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="Detail_Description" ColumnName="Detail_Description" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="Item_Category_Name" ColumnName="Item_Category_Name" />
+          <ScalarProperty Name="Item_Category_ID" ColumnName="Item_Category_ID" />
+          <ScalarProperty Name="Item_View_URL" ColumnName="Item_View_URL" />
+          <ScalarProperty Name="Picture_URL" ColumnName="Picture_URL" />
+          <ScalarProperty Name="BIN_Price" ColumnName="BIN_Price" />
+          <ScalarProperty Name="Current_Price" ColumnName="Current_Price" />
+          <ScalarProperty Name="Minimum_Threshold" ColumnName="Minimum_Threshold" />
+          <ScalarProperty Name="Opening_Quantity" ColumnName="Opening_Quantity" />
+          <ScalarProperty Name="Balance_Quantity" ColumnName="Balance_Quantity" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemTitles">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.ItemTitle">
+        <MappingFragment StoreEntitySet="ItemTitles">
+          <ScalarProperty Name="Title_Index" ColumnName="Title_Index" />
+          <ScalarProperty Name="Is_Current" ColumnName="Is_Current" />
+          <ScalarProperty Name="Is_Locked" ColumnName="Is_Locked" />
+          <ScalarProperty Name="Updated_By" ColumnName="Updated_By" />
+          <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+          <ScalarProperty Name="TotalSales" ColumnName="TotalSales" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemTitleId" ColumnName="ItemTitleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginDetails">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.LoginDetail">
+        <MappingFragment StoreEntitySet="LoginDetail">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Logout_Date_Time" ColumnName="Logout_Date_Time" />
+          <ScalarProperty Name="Operating_System" ColumnName="Operating_System" />
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+          <ScalarProperty Name="Login_Date_Time" ColumnName="Login_Date_Time" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Login_Detail_Code" ColumnName="Login_Detail_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.MenuItem">
+        <MappingFragment StoreEntitySet="MenuItem">
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Parent_Menu_Item_Code" ColumnName="Parent_Menu_Item_Code" />
+          <ScalarProperty Name="Menu_URL" ColumnName="Menu_URL" />
+          <ScalarProperty Name="Menu_Item_Name" ColumnName="Menu_Item_Name" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Package">
+        <MappingFragment StoreEntitySet="Packages">
+          <ScalarProperty Name="Is_ClicknSend_Active" ColumnName="Is_ClicknSend_Active" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Magento_Accounts" ColumnName="Magento_Accounts" />
+          <ScalarProperty Name="Shopify_Accounts" ColumnName="Shopify_Accounts" />
+          <ScalarProperty Name="Is_Eparcel_Active" ColumnName="Is_Eparcel_Active" />
+          <ScalarProperty Name="Ebay_Accounts" ColumnName="Ebay_Accounts" />
+          <ScalarProperty Name="Unlimited" ColumnName="Unlimited" />
+          <ScalarProperty Name="NoOfTransaction" ColumnName="NoOfTransaction" />
+          <ScalarProperty Name="SetupFee" ColumnName="SetupFee" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Paypal_Button_Id" ColumnName="Paypal_Button_Id" />
+          <ScalarProperty Name="Package_Name" ColumnName="Package_Name" />
+          <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParcelItems">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.ParcelItem">
+        <MappingFragment StoreEntitySet="ParcelItem">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="IsIncomplete" ColumnName="IsIncomplete" />
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Messages" ColumnName="Messages" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="PostCodeImageURL" ColumnName="PostCodeImageURL" />
+          <ScalarProperty Name="HasInsurance" ColumnName="HasInsurance" />
+          <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+          <ScalarProperty Name="SaleRecordId" ColumnName="SaleRecordId" />
+          <ScalarProperty Name="ShippingCost" ColumnName="ShippingCost" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street3" ColumnName="Street3" />
+          <ScalarProperty Name="Street2" ColumnName="Street2" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="BuyerID" ColumnName="BuyerID" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="CustomLabelText" ColumnName="CustomLabelText" />
+          <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+          <ScalarProperty Name="RecordNumber" ColumnName="RecordNumber" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Parcel_Status_Code" ColumnName="Parcel_Status_Code" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Parcel_Item_Code" ColumnName="Parcel_Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostCodes">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.PostCode">
+        <MappingFragment StoreEntitySet="PostCode">
+          <ScalarProperty Name="Post_Code_Int" ColumnName="Post_Code_Int" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PricingHistories">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.PricingHistory">
+        <MappingFragment StoreEntitySet="PricingHistory">
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="Algo" ColumnName="Algo" />
+          <ScalarProperty Name="New_Price" ColumnName="New_Price" />
+          <ScalarProperty Name="Old_Price" ColumnName="Old_Price" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="Price_History_Code" ColumnName="Price_History_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategories">
+          <ScalarProperty Name="ShowInSideBar" ColumnName="ShowInSideBar" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="CategoryLevel" ColumnName="CategoryLevel" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleAccesses">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.RoleAccess">
+        <MappingFragment StoreEntitySet="RoleAccess">
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Has_Access" ColumnName="Has_Access" />
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Role_Access_Code" ColumnName="Role_Access_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleAccessFunctions">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.RoleAccessFunction">
+        <MappingFragment StoreEntitySet="RoleAccessFunction">
+          <ScalarProperty Name="Menu_Item_Code" ColumnName="Menu_Item_Code" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Access_Function_Code" ColumnName="Access_Function_Code" />
+          <ScalarProperty Name="Role_Access_Function_Code" ColumnName="Role_Access_Function_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SellerItemFiles">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.SellerItemFile">
+        <MappingFragment StoreEntitySet="SellerItemFile">
+          <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+          <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+          <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+          <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+          <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+          <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+          <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+          <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+          <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+          <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+          <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+          <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+          <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+          <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+          <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+          <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+          <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+          <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+          <ScalarProperty Name="Ignore_Words" ColumnName="Ignore_Words" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+          <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+          <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+          <ScalarProperty Name="Algo" ColumnName="Algo" />
+          <ScalarProperty Name="Is_Automated" ColumnName="Is_Automated" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="File_Item_Code" ColumnName="File_Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="State_Name" ColumnName="State_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockLedgers">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.StockLedger">
+        <MappingFragment StoreEntitySet="StockLedger">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Stock_Ledger_Type" ColumnName="Stock_Ledger_Type" />
+          <ScalarProperty Name="Modifed_Date" ColumnName="Modifed_Date" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CustomLabel" ColumnName="CustomLabel" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Stock_Ledger_Code" ColumnName="Stock_Ledger_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.Subscription">
+        <MappingFragment StoreEntitySet="Subscription">
+          <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+          <ScalarProperty Name="Paypal_Buyer_ID" ColumnName="Paypal_Buyer_ID" />
+          <ScalarProperty Name="PayPal_Email_Address" ColumnName="PayPal_Email_Address" />
+          <ScalarProperty Name="Expiry_Date" ColumnName="Expiry_Date" />
+          <ScalarProperty Name="Transaction_Id" ColumnName="Transaction_Id" />
+          <ScalarProperty Name="Subscription_Date" ColumnName="Subscription_Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TitleHistories">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.TitleHistory">
+        <MappingFragment StoreEntitySet="TitleHistory">
+          <ScalarProperty Name="Total_Sales" ColumnName="Total_Sales" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="New_Title" ColumnName="New_Title" />
+          <ScalarProperty Name="Old_Title" ColumnName="Old_Title" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+          <ScalarProperty Name="Title_History_Code" ColumnName="Title_History_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Notify_Title_Locked" ColumnName="Notify_Title_Locked" />
+          <ScalarProperty Name="Automate_Title_Display" ColumnName="Automate_Title_Display" />
+          <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+          <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+          <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+          <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+          <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+          <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+          <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+          <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+          <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+          <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+          <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+          <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+          <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+          <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+          <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+          <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+          <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+          <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+          <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+          <ScalarProperty Name="Algo" ColumnName="Algo" />
+          <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+          <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+          <ScalarProperty Name="Currency_Code" ColumnName="Currency_Code" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Is_Subscribed" ColumnName="Is_Subscribed" />
+          <ScalarProperty Name="Is_Password_Reset_Request" ColumnName="Is_Password_Reset_Request" />
+          <ScalarProperty Name="Is_Free_Traffic" ColumnName="Is_Free_Traffic" />
+          <ScalarProperty Name="Is_Verified" ColumnName="Is_Verified" />
+          <ScalarProperty Name="Search_Only_Top_Items" ColumnName="Search_Only_Top_Items" />
+          <ScalarProperty Name="Automation_Include_Shipping" ColumnName="Automation_Include_Shipping" />
+          <ScalarProperty Name="Automation_Time_Delay" ColumnName="Automation_Time_Delay" />
+          <ScalarProperty Name="Floor_Limit_Alert" ColumnName="Floor_Limit_Alert" />
+          <ScalarProperty Name="Minimum_Threshold_Alert" ColumnName="Minimum_Threshold_Alert" />
+          <ScalarProperty Name="Is_Locked" ColumnName="Is_Locked" />
+          <ScalarProperty Name="Package_Id" ColumnName="Package_Id" />
+          <ScalarProperty Name="Flat_Rate_Client" ColumnName="Flat_Rate_Client" />
+          <ScalarProperty Name="Charge_Code_AusPostRegInt" ColumnName="Charge_Code_AusPostRegInt" />
+          <ScalarProperty Name="Charge_Code_AirMailInt" ColumnName="Charge_Code_AirMailInt" />
+          <ScalarProperty Name="Charge_Code_ExpressInt" ColumnName="Charge_Code_ExpressInt" />
+          <ScalarProperty Name="Charge_Code_StandardInt" ColumnName="Charge_Code_StandardInt" />
+          <ScalarProperty Name="Charge_Code_Express" ColumnName="Charge_Code_Express" />
+          <ScalarProperty Name="Charge_Code_Standard" ColumnName="Charge_Code_Standard" />
+          <ScalarProperty Name="ABN_Number" ColumnName="ABN_Number" />
+          <ScalarProperty Name="Paypal_Subscription_ID" ColumnName="Paypal_Subscription_ID" />
+          <ScalarProperty Name="Paypal_Buyer_ID" ColumnName="Paypal_Buyer_ID" />
+          <ScalarProperty Name="Paypal_Email_Address" ColumnName="Paypal_Email_Address" />
+          <ScalarProperty Name="Is_Paypal_Expired" ColumnName="Is_Paypal_Expired" />
+          <ScalarProperty Name="Is_Paypal_Paid" ColumnName="Is_Paypal_Paid" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Customer_Field_Preference" ColumnName="Customer_Field_Preference" />
+          <ScalarProperty Name="Role_Code" ColumnName="Role_Code" />
+          <ScalarProperty Name="Company_Logo" ColumnName="Company_Logo" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Confirmation_Code" ColumnName="Confirmation_Code" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.UserAccount">
+        <MappingFragment StoreEntitySet="UserAccount">
+          <ScalarProperty Name="Ebay_User_Name" ColumnName="Ebay_User_Name" />
+          <ScalarProperty Name="User_IP" ColumnName="User_IP" />
+          <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Config_Value4" ColumnName="Config_Value4" />
+          <ScalarProperty Name="Config_Value3" ColumnName="Config_Value3" />
+          <ScalarProperty Name="Config_Value2" ColumnName="Config_Value2" />
+          <ScalarProperty Name="Config_Value1" ColumnName="Config_Value1" />
+          <ScalarProperty Name="Application_Name" ColumnName="Application_Name" />
+          <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetSalesForOldTitles" FunctionName="ParcelSolutionsModel.Store.GetSalesForOldTitles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ParcelSolutionsModel.GetSalesForOldTitles_Result">
+          <ScalarProperty Name="TotalSales" ColumnName="TotalSales" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SellerItems">
+      <EntityTypeMapping TypeName="ParcelSolutionsModel.SellerItem">
+        <MappingFragment StoreEntitySet="SellerItem">
+          <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+          <ScalarProperty Name="Is_Title_Automated" ColumnName="Is_Title_Automated" />
+          <ScalarProperty Name="Current_Sales" ColumnName="Current_Sales" />
+          <ScalarProperty Name="Rotate_Sales" ColumnName="Rotate_Sales" />
+          <ScalarProperty Name="Rotate_Days" ColumnName="Rotate_Days" />
+          <ScalarProperty Name="Rotate_Order" ColumnName="Rotate_Order" />
+          <ScalarProperty Name="LocatedIn" ColumnName="LocatedIn" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="File_Item_Code" ColumnName="File_Item_Code" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Is_Round_To_Nearest" ColumnName="Is_Round_To_Nearest" />
+          <ScalarProperty Name="Ignore_Words" ColumnName="Ignore_Words" />
+          <ScalarProperty Name="Less_To_Lowest_Price" ColumnName="Less_To_Lowest_Price" />
+          <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" />
+          <ScalarProperty Name="Item_Category_Name" ColumnName="Item_Category_Name" />
+          <ScalarProperty Name="Item_Category_ID" ColumnName="Item_Category_ID" />
+          <ScalarProperty Name="Include_Condtion_Codes" ColumnName="Include_Condtion_Codes" />
+          <ScalarProperty Name="Exclude_Category_Codes" ColumnName="Exclude_Category_Codes" />
+          <ScalarProperty Name="Is_Top_Rated_Only" ColumnName="Is_Top_Rated_Only" />
+          <ScalarProperty Name="Is_Hide_Duplicates" ColumnName="Is_Hide_Duplicates" />
+          <ScalarProperty Name="Is_Location_AU" ColumnName="Is_Location_AU" />
+          <ScalarProperty Name="Is_Returns_Accepted" ColumnName="Is_Returns_Accepted" />
+          <ScalarProperty Name="Is_Auctions" ColumnName="Is_Auctions" />
+          <ScalarProperty Name="Is_Fixed_Price" ColumnName="Is_Fixed_Price" />
+          <ScalarProperty Name="Maximum_Handling_Time" ColumnName="Maximum_Handling_Time" />
+          <ScalarProperty Name="Exclude_Sellers" ColumnName="Exclude_Sellers" />
+          <ScalarProperty Name="Inclued_Sellers" ColumnName="Inclued_Sellers" />
+          <ScalarProperty Name="Maximum_Quantity" ColumnName="Maximum_Quantity" />
+          <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum_Quantity" />
+          <ScalarProperty Name="Maximum_Price" ColumnName="Maximum_Price" />
+          <ScalarProperty Name="Minimum_Price" ColumnName="Minimum_Price" />
+          <ScalarProperty Name="Maximum_Feedback" ColumnName="Maximum_Feedback" />
+          <ScalarProperty Name="Minimum_Feedback" ColumnName="Minimum_Feedback" />
+          <ScalarProperty Name="Is_Promo_Item" ColumnName="Is_Promo_Item" />
+          <ScalarProperty Name="Item_View_URL" ColumnName="Item_View_URL" />
+          <ScalarProperty Name="Picture_URL" ColumnName="Picture_URL" />
+          <ScalarProperty Name="User_Account_Code" ColumnName="User_Account_Code" />
+          <ScalarProperty Name="Is_Automated" ColumnName="Is_Automated" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="Algo" ColumnName="Algo" />
+          <ScalarProperty Name="Floor_Price" ColumnName="Floor_Price" />
+          <ScalarProperty Name="Ceiling_Price" ColumnName="Ceiling_Price" />
+          <ScalarProperty Name="BIN_Price" ColumnName="BIN_Price" />
+          <ScalarProperty Name="Current_Price" ColumnName="Current_Price" />
+          <ScalarProperty Name="Item_SKU" ColumnName="Item_SKU" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="User_Code" ColumnName="User_Code" />
+          <ScalarProperty Name="Item_Code" ColumnName="Item_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

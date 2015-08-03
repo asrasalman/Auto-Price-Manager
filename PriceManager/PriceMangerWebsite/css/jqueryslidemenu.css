@@ -1,0 +1,116 @@
+.jqueryslidemenu
+{
+    font: 13px "Lucida Sans Unicode" , "Lucida Grande" , Sans-Serif;
+    width: 100%;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 5px;
+    color: white;
+    margin-left: 23px;
+margin-top: 9px;
+}
+
+.jqueryslidemenu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li
+{
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a
+{
+    display: block;
+    color: white;
+    padding: 8px 10px;
+    color: #2d2b2b;
+    text-decoration: none;
+}
+
+* html .jqueryslidemenu ul li a
+{
+    /*IE6 hack to get sub menu links to behave correctly*/
+    display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited
+{
+    color: rgb(109, 109, 109);
+}
+
+.jqueryslidemenu ul li a:hover
+{
+background: rgb(202, 59, 59);
+color: white !important;
+border-radius: 3px;
+}
+
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul
+{
+    border: 1px solid white;
+    position: absolute;
+    left: 0;
+    display: block;
+    visibility: hidden;
+    background-color: white;
+box-shadow: 0px 0px 10px 0px #A38888;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li
+{
+    display: list-item;
+    float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul
+{
+    top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a
+{
+    font: normal 12px Tahoma;
+    width: 200px; /*width of sub menus*/
+    padding: 8px 7px 8px 7px;
+    margin: 0;
+    border-top-width: 0;
+    border-bottom: 1px dotted #F0EEEE;
+    color: black !important;
+    
+}
+
+.jqueryslidemenuz ul li ul li a:hover
+{
+    /*sub menus hover style*/
+    background: #eff9ff;
+    color: black;
+    
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass
+{
+    position: absolute;
+    top: 12px;
+    right: 7px;
+}
+
+.rightarrowclass
+{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+}

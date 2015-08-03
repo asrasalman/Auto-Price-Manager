@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendEmailNotifications">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendEmailNotificationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailNotificationsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefreshTransactions">
+        <s:complexType />
+      </s:element>
+      <s:element name="RefreshTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RefreshTransactionsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="timeDelay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateProductPriceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductRank">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateProductRankResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateProductRankResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailNotificationsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmailNotifications" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailNotificationsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefreshTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:RefreshTransactions" />
+  </wsdl:message>
+  <wsdl:message name="RefreshTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:RefreshTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProductPrice" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProductPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductRankSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProductRank" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductRankSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProductRankResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ParcelServiceSoap">
+    <wsdl:operation name="SendEmailNotifications">
+      <wsdl:input message="tns:SendEmailNotificationsSoapIn" />
+      <wsdl:output message="tns:SendEmailNotificationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshTransactions">
+      <wsdl:input message="tns:RefreshTransactionsSoapIn" />
+      <wsdl:output message="tns:RefreshTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductPrice">
+      <wsdl:input message="tns:UpdateProductPriceSoapIn" />
+      <wsdl:output message="tns:UpdateProductPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductRank">
+      <wsdl:input message="tns:UpdateProductRankSoapIn" />
+      <wsdl:output message="tns:UpdateProductRankSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ParcelServiceSoap" type="tns:ParcelServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmailNotifications">
+      <soap:operation soapAction="http://tempuri.org/SendEmailNotifications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshTransactions">
+      <soap:operation soapAction="http://tempuri.org/RefreshTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductPrice">
+      <soap:operation soapAction="http://tempuri.org/UpdateProductPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductRank">
+      <soap:operation soapAction="http://tempuri.org/UpdateProductRank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ParcelServiceSoap12" type="tns:ParcelServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmailNotifications">
+      <soap12:operation soapAction="http://tempuri.org/SendEmailNotifications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshTransactions">
+      <soap12:operation soapAction="http://tempuri.org/RefreshTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductPrice">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProductPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductRank">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProductRank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ParcelService">
+    <wsdl:port name="ParcelServiceSoap" binding="tns:ParcelServiceSoap">
+      <soap:address location="http://localhost:4236/webservices/parcelservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ParcelServiceSoap12" binding="tns:ParcelServiceSoap12">
+      <soap12:address location="http://localhost:4236/webservices/parcelservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,65 @@
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\EBayDAL.dll.config
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\bin\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\sampleprojecttoworkin\WebTemplate\BooklinkDAL\BooklinkDAL\obj\Debug\EBayDAL.pdb
+D:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Sites\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Sites\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\30Sep2012\reebaypages\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\Working\EbayShipping\EBayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Wasi Data\ADEEL\13October2012\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\WASI\EbayShipping\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\EbayShipping\EBayDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+E:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+E:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+E:\Sites\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+E:\Sites\EbayShipping\EBayDAL\obj\Debug\EbayDAL.csprojResolveAssemblyReference.cache
+E:\Sites\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+E:\Sites\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Projects\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\EBayDAL\obj\Debug\EbayDAL.csprojResolveAssemblyReference.cache
+D:\External Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\External Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\External Projects\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\External Projects\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\External Projects\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\External Projects\EbayShipping\EBayDAL\obj\Debug\EbayDAL.csprojResolveAssemblyReference.cache
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll.config
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.dll
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\bin\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\obj\Debug\EBayDAL.dll
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\obj\Debug\EBayDAL.pdb
+D:\Projects\EbayShipping\EbayShipping\EBayDAL\obj\Debug\EbayDAL.csprojResolveAssemblyReference.cache

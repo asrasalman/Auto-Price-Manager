@@ -1,0 +1,6 @@
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\bin\Release\PriceManagerDAL.dll.config
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\bin\Release\PriceManagerDAL.dll
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\bin\Release\PriceManagerDAL.pdb
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\obj\Release\PriceManagerDAL.csprojResolveAssemblyReference.cache
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\obj\Release\PriceManagerDAL.dll
+D:\Projects\APM\Changes\PriceManager\PriceManagerDAL\obj\Release\PriceManagerDAL.pdb

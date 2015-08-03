@@ -1,0 +1,12 @@
+D:\Sites\EbayShipping\PSEmailService\bin\Release\PSEmailService.exe.config
+D:\Sites\EbayShipping\PSEmailService\bin\Release\PSEmailService.exe
+D:\Sites\EbayShipping\PSEmailService\bin\Release\PSEmailService.pdb
+D:\Sites\EbayShipping\PSEmailService\bin\Release\EBayDAL.dll
+D:\Sites\EbayShipping\PSEmailService\bin\Release\EBayDAL.pdb
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\PSEmailService.ProjectInstaller.resources
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\PSEmailService.ParcelSolutionsEmailService.resources
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\PSEmailService.exe
+D:\Sites\EbayShipping\PSEmailService\obj\x86\Release\PSEmailService.pdb

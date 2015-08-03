@@ -1,0 +1,626 @@
+body{
+}
+
+#rt-logo{
+	background: url(/images/logo.png) left top no-repeat; display: block;
+	margin: 26px 0 20px 2px;
+}
+#rt-logo span{
+	color:#ff0302;
+}
+#rt-logo span:last{
+	color:#888888;
+}
+
+#rt-content-bottom .rt-alpha,
+#rt-content-bottom .rt-rt-omega,
+#rt-content-top .rt-alpha,
+#rt-content-top .rt-rt-omega{
+	margin-right: 0;
+	margin-left:0;
+}
+
+
+/* === CATEGORY VIEW ===*/
+
+div.itemListView{}
+
+	/*Category block*/
+	div.itemListCategoriesBlock{}
+		div.itemListCategory{}
+			div.itemListCategory img{float:left; margin: 0 1em 1em 0;}
+			div.itemListCategory h2{}
+			div.itemListCategory p{}
+		div.itemListSubCategories{}
+			div.subCategoryContainer{float:left;}
+				div.subCategory{}
+					div.subCategory a.subCategoryImage{float:left; margin: 0 1em 1em 0;}
+
+	/*Items list*/
+	div.itemList{}
+		div.K2ItemsRow{clear: both}
+			div.itemContainer{float:left;}
+			div.itemContainer.itemContainerLast{}
+				div.catItemView{}
+					div.catItemHeader{}
+						h3.catItemTitle{
+							filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=hIEfix.png,sizingMethod=crop);
+						}
+						span.catItemAuthor{}
+						span.catItemDateCreated{}
+
+					div.catItemRatingBlock{}
+
+					div.catItemBody{}
+
+						div.userItemImageBlock,
+						div.itemImageBlock,
+						div.catItemImageBlock{
+							margin: 6px 0 16px;
+						}
+							span.userItemImage,
+							span.itemImage,
+							span.catItemImage{
+								display: block;
+							}
+
+								span.userItemImage a,
+								span.itemImage a,
+								span.catItemImage a{
+									display: inline-block;
+									max-width: 100%;
+									border: 1px solid #bdbcbc;
+									box-sizing:border-box;
+									-moz-box-sizing:border-box;
+									-webkit-box-sizing:border-box;
+								}
+									span.catItemImage a img{}
+						div.catItemIntroText{}
+							div.catItemReadMore{}
+						div.catItemExtraFields{}
+							div.catItemExtraFields h4{}
+							div.catItemExtraFields ul{margin: 0}
+								div.catItemExtraFields ul li{}
+									span.catItemExtraFieldsLabel{}
+									span.catItemExtraFieldsValue{}
+
+					div.catItemLinks{}
+						div.catItemCategory{}
+					div.catItemCommentsLink{}
+						div.catItemCommentsLink a{}
+
+					span.catItemDateModified{}
+
+
+/* === USER VIEW === */
+
+div.userView{}
+	div.componentheading{}
+		div.componentheading h2{}
+
+	/*User block*/
+	div.userBlock{}
+		div.userBlock img{float: left; margin: 0 1em 1em 0;}
+		div.userDescription{}
+		span.userItemDateCreated{}
+
+	/*Items list*/
+	div.userItemList{}
+		div.userItemView{}
+			div.userItemHeader{}
+				h3.userItemTitle{}
+				span.userItemDateCreated{}
+			div.userItemBody{}
+				div.userItemImageBlock{}
+					span.userItemImage{}
+						span.userItemImage a{}
+							span.userItemImage a img{}
+				div.userItemIntroText{}
+			div.userItemLinks{}
+				div.userItemCategory{}
+			div.userItemCommentsLink{}
+			div.userItemReadMore{}
+				a.k2ReadMore{}
+
+
+/* === GENERIC VIEW === */
+
+div.genericView{}
+	div.genericItemList{}
+		div.genericItemView{}
+			div.genericItemHeader{}
+				h2.genericItemTitle{}
+				span.genericItemDateCreated{}
+			div.genericItemBody{}
+				div.genericItemImageBlock{}
+					span.genericItemImage{}
+						span.genericItemImage a{}
+							span.genericItemImage a img{}
+				div.genericItemIntroText{}
+			div.genericItemCategory{}
+			div.genericItemReadMore{}
+				a.k2ReadMore{}
+
+
+/* === TAGS VIEW === */
+
+div.tagItemView{}
+	div.tagItemList{}
+		div.tagItemView{}
+			div.tagItemHeader{}
+				h2.tagItemTitle{}
+				span.tagItemDateCreated{}
+			div.tagItemBody{}
+				div.tagItemImageBlock{}
+				div.tagItemIntroText{}
+			div.tagItemCategory{}
+			div.tagItemReadMore{}
+				a.k2ReadMore{}
+
+
+/* === SEARCH VIEW === */
+
+div.component-content > div.search{}
+	form#searchForm{}
+		fieldset.word{}
+		div.searchintro{}
+		fieldset.phrases,
+		fieldset.only{margin: 0 0 1em 0;}
+		div.form-limit-and-counter{overflow: hidden;}
+			p.counter{float:right; margin:0;}
+			div.form-limit{float:left;}
+
+	dl.search-results{}
+		dt.result-title{}
+		dd.result-created, dd.result-category{display: inline-block; margin:0;}
+		dd.result-created, dd.result-text{margin: 0 0 0 2em;}
+		dd.result-text{margin: 0 0 1em 0}
+
+
+
+/* === ITEM VIEW ===*/
+
+div.itemView{}
+	div.itemHeader{}
+		h2.itemTitle{}
+		div.itemRatingBlock{}
+		span.itemDateCreated{}
+		span.itemAuthor{}
+	div.itemToolbar{}
+		div.itemToolbar ul{list-style: none; padding:0}
+			div.itemToolbar ul li{display: inline-block; margin: 0 0.5em 0 0;}
+				a#fontDecrease {margin:0; text-decoration: none;}
+				a#fontDecrease img {width:13px;height:13px;background:url(../images/icons/font_decrease.gif) no-repeat;}
+				a#fontIncrease {margin:0;}
+				a#fontIncrease img {width:13px;height:13px;background:url(../images/icons/font_increase.gif) no-repeat;}
+				a#fontDecrease span, a#fontIncrease span {display:none;}
+
+				a.itemPrintLink{background: url(../images/system/print_button.png) left top no-repeat; display: inline-block; width: 16px; height:16px; text-indent: -999em;}
+				a.itemEmailLink{background: url(../images/system/emailButton.png) left top no-repeat; display: inline-block; width: 16px; height:16px; text-indent: -999em;}
+				a.itemVideoLink{}
+				a.itemCommentsLink{}
+
+	div.itemBody{}
+		div.itemImageBlock{}
+			span.itemImage{}
+				span.itemImage a{}
+					span.itemImage a img{}
+		div.itemIntroText{}
+		div.itemFullText{}
+		div.itemContentFooter{}
+			span.itemHits{}
+			span.itemDateModified{}
+	div.social-button{margin:0; overflow: hidden;}
+		div.social-button span.label{float:left; margin: 0 0.5em 0 0; line-height: 32px;}
+	div.itemSocialSharing{}
+		div.itemTwitterButton,
+		div.itemFacebookButton,
+		div.itemGooglePlusOneButton{float:left; margin: 0 0 0 0.5em;}}
+	div.itemLinks{}
+		div.itemCategory{}
+		div.itemTagsBlock{}
+			ul.itemTags{}
+				ul.itemTags {display: inline; margin: 0; padding: 0;}
+				ul.itemTags li{display: inline-block; margin: 0 0 0 0.5em;}
+		div.itemAttachmentsBlock{}
+			ul.itemAttachments{}
+				ul.itemAttachments li{}
+					ul.itemAttachments li a{}
+	div.itemAuthorBlock{}
+		img.itemAuthorAvatar{float:left; margin: 0 1em 1em 0;}
+		div.itemAuthorDetails{}
+			h3.itemAuthorName{}
+			span.itemAuthorEmail{}
+	div.itemAuthorLatest{}
+		div.itemAuthorLatest ul{}
+			div.itemAuthorLatest ul li{}
+	div.itemVideoBlock{}
+		span.itemVideo{}
+			div.avPlayerWrapper.avVideo{}
+		span.itemVideoCaption{}
+	div.itemComments{}
+		div.itemCommentsForm h3,
+		h3.itemCommentsCounter{			
+			font: 31px/37px 'Asap', sans-serif;
+			color: #ff0302;
+			padding: 22px 0 20px;
+			margin: 0 0 0px;
+		}
+		ul.itemCommentsList{list-style: none; padding:0;}
+			ul.itemCommentsList li{margin: 0 0 1em 0;}
+			ul.itemCommentsList li img{}
+				div.commentBody{overflow: hidden;}
+					div.commentBody p{margin: 0 0 1em 0}
+					span.commentAuthorName{}
+					span.commentDate{}
+					div.commentToolbar{}
+						div.commentToolbar > a, span.commentLink{display: inline-block; margin: 0 0.5em 0 0 ;}
+						a.commentApproveLink{}
+						a.commentRemoveLink{}
+		div.itemCommentsForm{}
+			p.itemCommentsFormNotes{}
+			div.itemCommentsForm form span#formLog {margin:0 0 0 20px;padding:0 0 0 20px;font-weight:bold;}
+			div.itemCommentsForm form .formLogLoading {background:url(../images/system/loading.gif) no-repeat left center;}
+
+	.at300bs:hover{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(opacity=80) !important;}
+
+	div.itemBackToTop{display: none;}
+
+/* === CONTACTS VIEW ===*/
+
+div.component-content div.contact{}
+	div#contact-form-cont{}
+		div.contact-form{}
+			form#contact-form{}
+				input#jform_contact_name{}
+				input#jform_contact_email{}
+				input#jform_contact_emailmsg{}
+				textarea#jform_contact_message{}
+				input#jform_contact_email_copy{}
+				dt.emailCopy{float:left; margin: 0 1em 0 0;}
+				dd.emailCopy{ margin: 0 0 1em 0; height: 22px;}
+	div#contact-address{}
+		#map-wrapper{}
+			#map{height: 360px;}
+		div.contact-contactinfo{}
+		div.contact-miscinfo{}	
+			div.contact-miscinfo h3, div.jicons-icons{display: none;}
+			div.contact-misc{}
+				div.contact-misc p{}
+
+
+
+/* === ACCOUNT (REGISTRATION) PAGE === */
+
+div.k2AccountPage{
+	margin-top:1em;
+}
+	div.k2AccountPage > dl{
+		margin-bottom: 2em;
+		padding-bottom: 1em; 
+	}
+
+	dd.editor :before, dd.editor :after{display: none;}
+	span#description_parent, textarea#description{margin:0 0 1em 0; display: block;}
+	div.toggle-editor{text-align: right;}
+
+	dt.gender{float: left; margin: 0 3em 0 0;}
+	dd.gender label{margin: 0 1em 0 0; }
+
+	div.k2AccountPageUpdate{text-align: right;}
+
+
+/* === USER LOGIN PAGE === */
+
+div.component-content > div.login div.login-fields{margin: 0 0 1em 0;}
+div.component-content > div.login div.login-fields label{
+	display: inline-block;
+	width: 10em;
+}
+
+/* === USER PROFILE === */
+
+div.profile dl dt{display: block; width: 15em; float: left; margin:0 0 1em 0;}
+div.profile dl dd{margin:0 0 1em 0}
+
+
+
+
+
+/* === MODULE STYLES ===*/
+
+#rt-sidebar-a div.rt-block{padding-bottom: 40px;}
+#rt-sidebar-a .indent div.rt-block{padding-bottom: 0px;}
+
+div.rt-block{position: relative;}
+	div.module-title{}
+	div.module-title h2{}
+
+	/*Module list*/
+	div.k2LatestCommentsBlock > ul,
+	div.k2TopCommentersBlock > ul,
+	div.k2CategoriesListBlock > ul,
+	div.k2ArchivesBlock > ul,
+	form#form-login > ul,
+	div.k2ItemsBlock > ul,
+	div.k2UsersBlock > ul,
+	div.k2AuthorsListBlock > ul{list-style: none; padding:0;}
+
+	/*K2 Content*/
+	div.k2ItemsBlock{}
+		div.k2ItemsBlock > ul{margin-top: 0; margin-bottom: 0}
+			div.k2ItemsBlock > ul >li{margin-bottom: 1em;}
+			div.k2ItemsBlock > ul >li.lastItem{margin: 0;}
+				a.moduleItemTitle{}
+				div.moduleItemIntrotext{}
+					a.moduleItemImage{}
+						a.moduleItemImage img{}
+				span.moduleItemDateCreated{}
+
+
+	/*Latest Comments*/
+	div.k2LatestCommentsBlock{}
+		div.k2LatestCommentsBlock ul{}
+			div.k2LatestCommentsBlock li{margin: 0 0 1em 0;}
+				a.k2Avatar{float:left; margin: 0 1em 1em 0;}
+				div.recentCommentBody{overflow: hidden;}
+					span.lcUsername{}
+					span.lcCommentDate{}
+					span.lcItemTitle{display: block;}
+					span.lcComment{}
+					span.lcItemCategory{}
+					a.moduleItemCategory{}
+					a.moduleItemComments{}
+					span.moduleItemHits{display: block;}
+					a.moduleItemReadMore{}
+
+	/*Top Commenters*/
+	div.k2TopCommentersBlock{}
+		div.k2TopCommentersBlock ul{}
+			div.k2TopCommentersBlock ul li{margin: 0 0 1em 0;}
+				a.tcLink{}
+				a.tcLatestComment{}
+				span.tcLatestCommentDate{display: block;}
+
+	/*Categories*/
+	div.k2CategoriesListBlock{}
+		div.k2CategoriesListBlock ul{}
+			div.k2CategoriesListBlock ul li{}
+
+	/*Archives*/
+	div.k2ArchivesBlock{}
+		div.k2ArchivesBlock ul{}
+			div.k2ArchivesBlock ul li{}
+
+	/*User Login*/
+	div.k2LoginBlock{}
+		form#form-login{}
+			p#form-login-username{}
+				input#modlgn_username{}
+			p#form-login-password{}
+				input#modlgn_passwd{}
+			p#form-login-remember{}
+				form#form-login p label{display: block;}
+				form#form-login p label.checkbox{display: inline-block; margin: 0 1em 0 0;}
+			form#form-login ul{}
+				form#form-login ul li{}
+
+		/*K2 User block*/
+		div.k2UserBlock{}
+			div.k2UserBlockDetails{}
+				div.k2UserBlockDetails a.k2Avatar{margin:0 1em 0 0;}
+				span.ubName{display: block;}
+				ul.k2UserBlockActions{list-style: none;}
+
+	/*Search*/
+	div.mod_search{}
+		input#mod-search-searchword{}
+
+	/*Users module*/
+	div.k2UsersBlock{}
+		div.k2UsersBlock ul{}
+			div.k2UsersBlock ul li{margin: 0 0 1em 0;}	
+				a.ubUserName{}
+				div.ubUserDescription{}
+				div.ubUserAdditionalInfo{}
+				ul.ubUserItems{}
+					ul.ubUserItems li{}
+
+	/*Authord list*/
+	div.k2AuthorsListBlock{}
+		div.k2AuthorsListBlock ul{}
+			div.k2AuthorsListBlock ul li{}
+				a.abAuthorName{}
+				a.abAuthorLatestItem{}
+
+	/*Tags*/
+	div.k2TagCloudBlock{}
+		div.k2TagCloudBlock a{}
+
+	/*Breadcrumbs*/
+	div.k2BreadcrumbsBlock{}
+		span.bcTitle{}
+		span.bcSeparator{}
+		div.k2BreadcrumbsBlock a, span.bcTitle, span.bcSeparator{display: inline-block; margin: 0 0.5em 0 0;}
+
+	/*Social Media Links*/
+	div.smile{}
+		div.smile ul{list-style: none;}
+			div.smile ul li{display: inline-block;}
+				div.smile ul li a{display: block;}
+
+
+
+/*=== GENERAL STYLES ===*/
+
+
+	/* Accessibility */
+	#rt-accessibility .rt-desc {float: left;padding-right: 5px;}
+		#rt-accessibility #rt-buttons {float: left;}
+			#rt-accessibility .button {display: block;width:14px;height:14px;float: left;background: url(../images/system/typography.png);margin: 2px;}
+			#rt-accessibility .large .button {background-position: 0 -17px;}
+			#rt-accessibility .small .button {background-position: -15px -17px;}
+
+	body.font-size-is-xlarge {font-size: 15px;line-height: 1.7em;}
+	body.font-size-is-large {font-size: 14px;line-height: 1.7em;}
+	body.font-size-is-default {font-size: 12px;line-height: 1.7em;}
+	body.font-size-is-small {font-size: 11px;line-height: 1.7em;}
+	body.font-size-is-xsmall {font-size: 10px;line-height: 1.7em;}
+
+	/*Font Resize*/
+	.smallerFontSize {font-size:100%;line-height:inherit;}
+	.largerFontSize {font-size:150%;line-height:140%;}
+
+	/*Edit link*/
+	span.itemEditLink, span.catItemEditLink, span.userItemEditLink{display: inline-block; float: right; text-align: right; font-size: 0.8em;}
+
+	/*Feed icon*/
+	div.k2FeedIcon{}
+		div.k2FeedIcon a, div.k2FeedIcon a:hover {display:block; float:right; margin:0; padding:0; width:16px; height:16px; background:url(../images/icons/icon-rss.png) no-repeat 50% 50%;}
+		div.k2FeedIcon a span, div.k2FeedIcon a:hover span {display:none;}
+
+	/* --- Calendar --- */
+	div.k2CalendarBlock {height:190px;margin-bottom:8px;} /* use this height value so that the calendar height won't change on Month change via ajax */
+		div.k2CalendarLoader {background:#fff url(../images/system/loading.gif) no-repeat 50% 50%;}
+			.calendar {background:#fff;border-collapse:collapse;}
+			.calendar tr td {text-align:center;vertical-align:middle;padding:2px;border:1px solid #f4f4f4;background:#fff;}
+			.calendar tr td.calendarNavMonthPrev {background:#f3f3f3;text-align:left;}
+			.calendar tr td.calendarNavMonthPrev a {font-size:20px;text-decoration:none;}
+			.calendar tr td.calendarNavMonthPrev a:hover {font-size:20px;text-decoration:none;}
+			.calendar tr td.calendarCurrentMonth {background:#f3f3f3;}
+			.calendar tr td.calendarNavMonthNext {background:#f3f3f3;text-align:right;}
+			.calendar tr td.calendarNavMonthNext a {font-size:20px;text-decoration:none;}
+			.calendar tr td.calendarNavMonthNext a:hover {font-size:20px;text-decoration:none;}
+			.calendar tr td.calendarDayName {background:#e9e9e9;font-size:11px;width:14.2%;}
+			.calendar tr td.calendarDateEmpty {background:#fbfbfb;}
+			.calendar tr td.calendarDate {}
+			.calendar tr td.calendarDateLinked {padding:0;}
+			.calendar tr td.calendarDateLinked a {display:block;padding:2px;text-decoration:none;background:#eee;}
+			.calendar tr td.calendarDateLinked a:hover {display:block;background:#135cae;color:#fff;padding:2px;text-decoration:none;}
+			.calendar tr td.calendarToday {background:#135cae;color:#fff;}
+			.calendar tr td.calendarTodayLinked {background:#135cae;color:#fff;padding:0;}
+			.calendar tr td.calendarTodayLinked a {display:block;padding:2px;color:#fff;text-decoration:none;}
+			.calendar tr td.calendarTodayLinked a:hover {display:block;background:#BFD9FF;padding:2px;text-decoration:none;}
+			.calendar :before, .calendar :after{content:"";}
+			img.calendar{display: none;}
+			
+
+	/* --- Rating --- */
+	div.catItemRatingBlock > span, div.itemRatingBlock span{display: inline-block; margin: 0 0 0 0.5em; line-height: 21px}
+	.itemRatingForm {display:block;vertical-align:middle;line-height:21px;float:left;}
+	div.itemRatingForm .formLogLoading {background:url(../images/system/loading.gif) no-repeat left center;height:21px;padding:0 0 0 20px;}
+		#rt-main .itemRatingList {position:relative;float:left;width:105px;height:21px;overflow:hidden;list-style:none;margin:0;padding:0;background-position:left top;}
+			.itemRatingList, .itemRatingList a:hover, .itemRatingList .itemCurrentRating {background:transparent url(../images/system/transparent_star.png) left -1000px repeat-x;}
+				.itemRatingList li {display:inline;background:none;padding:0;}
+					.itemRatingList a, .itemRatingList .itemCurrentRating {position:absolute;top:0;left:0;text-indent:-1000px;height:25px;line-height:25px;outline:none;overflow:hidden;border:none;cursor:pointer;}
+					.itemRatingList a:hover {background-position:left -50px;}
+					.itemRatingList a.one-star {width:20%;z-index:6;}
+					.itemRatingList a.two-stars {width:40%;z-index:5;}
+					.itemRatingList a.three-stars {width:60%;z-index:4;}
+					.itemRatingList a.four-stars {width:80%;z-index:3;}
+					.itemRatingList a.five-stars {width:100%;z-index:2;}
+				.itemRatingList .itemCurrentRating {z-index:1;background-position:left -25px;margin:0;padding:0;}
+	.itemRatingLog {font-size:11px;margin:0;padding:0 0 0 4px;float:left;}
+	span.siteRoot {display:none;}
+
+	/* --- Forms --- */
+	form#comment-form{}
+		form dl{}
+			form dl dt{}
+				form dl dt label{}
+			form dl dd{margin: 0 0 1em 0;}
+				textarea#commentText{}
+				input#userName{}
+				input#commentEmail{}
+				input#commentURL{}
+		input#submitCommentButton{
+			margin-top: 20px;
+		}
+
+	input.invalid, textarea.invalid{
+		border:1px solid #ff0000 !important;
+		box-shadow: none !important;}
+
+	input[type="checkbox"], input[type="radio"]{position: relative; top:1px;}
+	label {
+    display: inline-block;
+    line-height: 22px;
+    vertical-align: top;
+}
+	legend{color:inherit;}
+
+	/* --- Mailto window --- */
+	
+	div#mailto-window{}
+		a.mailto-close{}	
+
+		form#mailtoForm{}
+			div.formelm{}
+				input#mailto_field{}
+				input#sender_field{}
+				input#from_field{}
+				input#subject_field{}
+
+	/* --- Preloader ---*/
+	a.preloader{background: url(../images/system/preloading.gif) center 50% no-repeat; display: inline-block;}
+
+	/* --- Pagination --- */
+	div.k2Pagination, div.pagination, div.itemCommentsPagination{}
+		div.k2Pagination ul, div.pagination ul, div.itemCommentsPagination ul{list-style: none; text-align: left; margin: 1em 0 0 0;}
+			div.k2Pagination ul li, div.pagination ul li, div.itemCommentsPagination ul li{display: inline-block;}
+
+				li.pagination-start{}
+				li.pagination-prev{}
+				li.pagination-next{}
+				li.pagination-end{}
+
+					span.pagenav{}
+					a.pagenav{}
+						a.pagenav:hover{}
+
+			p.pagination-results{text-align: left;}
+
+	/* --- Frontend Editing --- */
+
+	#k2Frontend input.inputbox{height: inherit; line-height: inherit}
+		#k2Frontend td.adminK2LeftCol{width: 10em;}
+			td.adminK2LeftCol label{display: inline-block; margin: 0 0.5em 0 0;}
+
+	#k2Frontend .button2-left .linkmacro {background: url("../images/system/rok_candy_button.png") no-repeat scroll 100% 0 transparent;}
+	#k2Frontend button.button{border-radius:0; background: none; color:inherit; padding:0;}
+
+	#editor-xtd-buttons {float: left; padding: 5px;}
+	div.toggle-editor {padding: 5px; text-align: right;}
+
+
+/* === SYSTEM MESSAGES ===*/
+
+/* OpenID icon style */
+input.system-openid, input.com-system-openid { background: url(http://openid.net/images/login-bg.gif) no-repeat;background-color: #fff;background-position: 0 50%;color: #000;padding-left: 18px;}
+
+/* Unpublished */
+.system-unpublished {background: #e8edf1;border-top: 4px solid #c4d3df;border-bottom: 4px solid #c4d3df;}
+
+/* System Messages */
+#system-message { margin-bottom: 10px; padding: 0;}
+#system-message dt { font-weight: bold; }
+#system-message dd { margin: 0; font-weight: bold; }
+#system-message dd ul { background: #BFD3E6; color: #0055BB; margin: 10px 0 10px 0; list-style: none; padding: 10px; border: 2px solid #84A7DB;}
+
+/* System Standard Messages */
+#system-message dt.message {display: none;}
+
+/* System Error Messages */
+#system-message dt.error {display: none;}
+#system-message dd.error ul {color: #c00;background-color: #EBC8C9;border: 2px solid #DE7A7B;}
+
+/* System Notice Messages */
+#system-message dt.notice {display: none;}
+#system-message dd.notice ul {color: #A08B4C;background: #F5ECC1;border: 2px solid #F0DC7E;}
+
+/* Debug */
+#system-debug {color: #ccc;background-color: #fff;padding: 10px;margin: 10px;}
+#system-debug div {font-size: 11px;}
+
+/*Mobile Styles*/
+.mobilePortrait{display: none !important;}
